@@ -470,7 +470,7 @@ th {
 html {
     font-family: gidoleregular, sans-serif;
     color: #555;
-    background-color: black;
+    background-color: white;
 	-webkit-font-smoothing: antialiased;
 }
 #content {
@@ -481,7 +481,7 @@ html {
   max-width: 740px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 70px 20px;
+  padding: 0 20px 10vw 20px;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -540,24 +540,29 @@ h1 {
 h2, .charmap {
   letter-spacing: -0.05em;  
   font-size: 8.5709vw;
-  line-height: 1.1428571429em;
-  margin-top: 1.1428571429em;
-  margin-bottom: 0.5079365079em;
+  line-height: 1.2em;
+  margin-top: 0.38em;
+  margin-bottom: -0.10em;
   max-font-size: 63px;
   min-font-size: 35px;
+}
+.charmap {
+  margin-top: 0.7em;
+  min-font-size: 25px;
+/*  max-font-size: 60px;*/
 }
 h3 {
   letter-spacing: -0.03em;
   font-size: 5.3065vw;
   line-height: 1.8461538462em;
-  margin-top: 0.9230769231em;
-  margin-bottom: 0.9230769231em;
+  margin-top: 1.24em;
+  margin-bottom: -1.24em;
   max-font-size: 39px;
   min-font-size: 25px;
 }
 p, ul, ol, pre, table, blockquote {
-  margin-top: 1.5empx;
-  margin-bottom: 1.5empx;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 
@@ -566,10 +571,15 @@ p, ul, ol, pre, table, blockquote {
 .fake {
   font-family: gidolelight;
 }
-#content.dark {
-  background-color: #222;
+.dark, .dark .jumbotron {
   color: white;
 }
+.dark #content {
+  background-color: rgb(34,34,34);
+}
+.dark .jumbotron::before {
+		background-image: linear-gradient(to top, rgba(34,34,34,1) 0%, rgba(34,34,34,0.95) 5%,rgba(34,34,34,0.6) 20%,rgba(34,34,34,0.5) 30%,rgba(34,34,34,0.5) 100%);
+  }
 .dark h2, .dark h3 {
   color: white;
 }
@@ -579,25 +589,33 @@ p, ul, ol, pre, table, blockquote {
 .jumbotron {
     height: 100%;
     width: 100%;
+    background: url(img/boys.jpg) no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover;
+    color: rgb(34,34,34);
+    position: relative;
+    opacity: 0;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-    background: url(img/boys.jpg) no-repeat center center;
-    background-attachment: scroll;
-    background-size: cover;
-    background-clip: border-box;
-    color: #FFFFFF;
-    position: relative;
-    opacity: 0;
     -webkit-animation: loadfade 2s ease forwards;
     -moz-animation: loadfade 2s ease forwards;
-    @media (max-width: 400px) {
-        background-attachment: scroll;
-    }  
+    padding-bottom: 100px;
 }
+.jumbotron::before {
+    content: '';
+		position: absolute;
+		bottom: 0;
+		height: 100%;
+		right: 0;
+		left: 0;
+		background-image: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 5%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.5) 30%,rgba(255,255,255,0.5) 100%);
+		opacity: 1;
+        z-index: -1;  
+  }
 
 @-webkit-keyframes loadfade { 
     from { opacity: 0 }
@@ -614,10 +632,12 @@ p, ul, ol, pre, table, blockquote {
   line-height: 90%;
   letter-spacing: -0.07em;
   font-size: 1.0em;
+  margin-left: -0.03em;
+  margin-top: -50px;
 }
 #tag {
   line-height: 90%;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   font-size: 0.35em;
 }
 
@@ -627,7 +647,7 @@ p, ul, ol, pre, table, blockquote {
 /* Scroll animation */
 #scrollhelp {
     position: absolute;
-    bottom: 25px;
+    bottom: 120px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -643,9 +663,9 @@ p, ul, ol, pre, table, blockquote {
 }
 .inTurnBlurringTextG {
     color: transparent;
-    text-shadow: rgba(255, 255, 255, 0) 0 0 3px;
-    margin-bottom: -0.5em;
-    font-size: 2em;
+    text-shadow: rgba(0,0,0,0) 0 0 3px;
+    margin-bottom: -1em;
+    font-size: 1em;
     -moz-animation-name: bounce_inTurnBlurringTextG;
     -moz-animation-duration: 3s;
     -moz-animation-iteration-count: infinite;
@@ -668,101 +688,101 @@ p, ul, ol, pre, table, blockquote {
     animation-direction: linear;
 }
 #inTurnBlurringTextG_1 {
-    -moz-animation-delay: 2.6s;
-    -webkit-animation-delay: 2.6s;
-    -o-animation-delay: 2.6s;
-    -ms-animation-delay: 2.6s;
-    animation-delay: 2.6s;
+    -moz-animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    -ms-animation-delay: 1.6s;
+    animation-delay: 1.6s;
 }
 #inTurnBlurringTextG_2 {
-    -moz-animation-delay: 2.65s;
-    -webkit-animation-delay: 2.65s;
-    -o-animation-delay: 2.65s;
-    -ms-animation-delay: 2.65s;
-    animation-delay: 2.65s;
+    -moz-animation-delay: 1.65s;
+    -webkit-animation-delay: 1.65s;
+    -o-animation-delay: 1.65s;
+    -ms-animation-delay: 1.65s;
+    animation-delay: 1.65s;
 }
 #inTurnBlurringTextG_3 {
-    -moz-animation-delay: 2.7s;
-    -webkit-animation-delay: 2.7s;
-    -o-animation-delay: 2.7s;
-    -ms-animation-delay: 2.7s;
-    animation-delay: 2.7s;
+    -moz-animation-delay: 1.7s;
+    -webkit-animation-delay: 1.7s;
+    -o-animation-delay: 1.7s;
+    -ms-animation-delay: 1.7s;
+    animation-delay: 1.7s;
 }
 #inTurnBlurringTextG_4 {
-    -moz-animation-delay: 2.75s;
-    -webkit-animation-delay: 2.75s;
-    -o-animation-delay: 2.75s;
-    -ms-animation-delay: 2.75s;
-    animation-delay: 2.75s;
+    -moz-animation-delay: 1.75s;
+    -webkit-animation-delay: 1.75s;
+    -o-animation-delay: 1.75s;
+    -ms-animation-delay: 1.75s;
+    animation-delay: 1.75s;
 }
 #inTurnBlurringTextG_5 {
-    -moz-animation-delay: 2.8s;
-    -webkit-animation-delay: 2.8s;
-    -o-animation-delay: 2.8s;
-    -ms-animation-delay: 2.8s;
-    animation-delay: 2.8s;
+    -moz-animation-delay: 1.8s;
+    -webkit-animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    -ms-animation-delay: 1.8s;
+    animation-delay: 1.8s;
 }
 #inTurnBlurringTextG_6 {
-    -moz-animation-delay: 2.85s;
-    -webkit-animation-delay: 2.85s;
-    -o-animation-delay: 2.85s;
-    -ms-animation-delay: 2.85s;
-    animation-delay: 2.85s;
+    -moz-animation-delay: 1.85s;
+    -webkit-animation-delay: 1.85s;
+    -o-animation-delay: 1.85s;
+    -ms-animation-delay: 1.85s;
+    animation-delay: 1.85s;
 }
 #inTurnBlurringTextG_7 {
-    -moz-animation-delay: 2.9s;
-    -webkit-animation-delay: 2.9s;
-    -o-animation-delay: 2.9s;
-    -ms-animation-delay: 2.9s;
-    animation-delay: 2.9s;
+    -moz-animation-delay: 1.9s;
+    -webkit-animation-delay: 1.9s;
+    -o-animation-delay: 1.9s;
+    -ms-animation-delay: 1.9s;
+    animation-delay: 1.9s;
 }
 @-moz-keyframes bounce_inTurnBlurringTextG { 
-    0% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
-    10% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    20% {    text-shadow: white 0 0 0px }
-    40% {    text-shadow: white 0 0 0px }
-    50% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    70% {    text-shadow: rgba(255, 255, 255, 1) 0 0 10px }
-    90% {    text-shadow: rgba(255, 255, 255, 0) 0 0 20px }
-    100% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
+    0% {text-shadow: rgba(0,0,0,0) 0 0 3px }
+    10% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.5), 1px -1px 0 rgba(0,0,0,0.5), -1px 1px 0 rgba(0,0,0,0.5), 1px 1px 0 rgba(0,0,0,0.5) }
+    20% {text-shadow: black 0 0 0px }
+    40% {text-shadow: black 0 0 0px }
+    50% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.5), 1px -1px 0 rgba(0,0,0,0.5), -1px 1px 0 rgba(0,0,0,0.5), 1px 1px 0 rgba(0,0,0,0.5) }
+    70% {text-shadow: rgba(0,0,0,1) 0 0 10px }
+    90% {text-shadow: rgba(0,0,0,0) 0 0 20px }
+    100% {text-shadow: rgba(0,0,0,0) 0 0 3px }
 }
 @-webkit-keyframes bounce_inTurnBlurringTextG { 
-    0% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
-    10% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    20% {    text-shadow: white 0 0 0px }
-    40% {    text-shadow: white 0 0 0px }
-    50% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    70% {    text-shadow: rgba(255, 255, 255, 1) 0 0 10px }
-    90% {    text-shadow: rgba(255, 255, 255, 0) 0 0 20px }
-    100% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
+    0% {text-shadow: rgba(0,0,0,0) 0 0 3px }
+    10% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.5), 1px -1px 0 rgba(0,0,0,0.5), -1px 1px 0 rgba(0,0,0,0.5), 1px 1px 0 rgba(0,0,0,0.5) }
+    20% {text-shadow: black 0 0 0px }
+    40% {text-shadow: black 0 0 0px }
+    50% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.5), 1px -1px 0 rgba(0,0,0,0.5), -1px 1px 0 rgba(0,0,0,0.5), 1px 1px 0 rgba(0,0,0,0.5) }
+    70% {text-shadow: rgba(0,0,0,1) 0 0 10px }
+    90% {text-shadow: rgba(0,0,0,0) 0 0 20px }
+    100% {text-shadow: rgba(0,0,0,0) 0 0 3px }
 }
 @-o-keyframes bounce_inTurnBlurringTextG { 
-    0% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
-    10% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    20% {    text-shadow: white 0 0 0px }
-    40% {    text-shadow: white 0 0 0px }
-    50% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    70% {    text-shadow: rgba(255, 255, 255, 1) 0 0 10px }
-    90% {    text-shadow: rgba(255, 255, 255, 0) 0 0 20px }
-    100% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
+    0% {text-shadow: rgba(0,0,0,0) 0 0 3px }
+    10% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3) }
+    20% {text-shadow: black 0 0 0px }
+    40% {text-shadow: black 0 0 0px }
+    50% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3) }
+    70% {text-shadow: rgba(0,0,0,1) 0 0 10px }
+    90% {text-shadow: rgba(0,0,0,0) 0 0 20px }
+    100% {text-shadow: rgba(0,0,0,0) 0 0 3px }
 }
 @-ms-keyframes bounce_inTurnBlurringTextG { 
-    0% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
-    10% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    20% {    text-shadow: white 0 0 0px }
-    40% {    text-shadow: white 0 0 0px }
-    50% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    70% {    text-shadow: rgba(255, 255, 255, 1) 0 0 10px }
-    90% {    text-shadow: rgba(255, 255, 255, 0) 0 0 20px }
-    100% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
+    0% {text-shadow: rgba(0,0,0,0) 0 0 3px }
+    10% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3) }
+    20% {text-shadow: black 0 0 0px }
+    40% {text-shadow: black 0 0 0px }
+    50% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3) }
+    70% {text-shadow: rgba(0,0,0,1) 0 0 10px }
+    90% {text-shadow: rgba(0,0,0,0) 0 0 20px }
+    100% {text-shadow: rgba(0,0,0,0) 0 0 3px }
 }
 @keyframes bounce_inTurnBlurringTextG { 
-     0% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
-    10% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    20% {    text-shadow: white 0 0 0px }
-    40% {    text-shadow: white 0 0 0px }
-    50% {    text-shadow: white 0 0 0px, -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3) }
-    70% {    text-shadow: rgba(255, 255, 255, 1) 0 0 10px }
-    90% {    text-shadow: rgba(255, 255, 255, 0) 0 0 20px }
-    100% {    text-shadow: rgba(255, 255, 255, 0) 0 0 3px }
+    0% {text-shadow: rgba(0,0,0,0) 0 0 3px }
+    10% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3) }
+    20% {text-shadow: black 0 0 0px }
+    40% {text-shadow: black 0 0 0px }
+    50% {text-shadow: black 0 0 0px, -1px -1px 0 rgba(0,0,0,0.3), 1px -1px 0 rgba(0,0,0,0.3), -1px 1px 0 rgba(0,0,0,0.3), 1px 1px 0 rgba(0,0,0,0.3) }
+    70% {text-shadow: rgba(0,0,0,1) 0 0 10px }
+    90% {text-shadow: rgba(0,0,0,0) 0 0 20px }
+    100% {text-shadow: rgba(0,0,0,0) 0 0 3px }
 }

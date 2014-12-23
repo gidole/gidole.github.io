@@ -4,65 +4,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Gidole Sans</title>
     <link rel="stylesheet" href="styles.css" type="text/css"/>
-<!--    <link rel="stylesheet" href="http://basehold.it/36">-->
   </head>
   <body>
     <div class="jumbotron">
-      <h1 class="text-center wrapper">
-        <div id="title">Gidole</div>
-        <div id="tag">Sans Free Font</div>
-      </h1>
-      <div id="scrollhelp" class="text-center no-select">
-        <div id="inTurnBlurringTextG">
-          <div id="inTurnBlurringTextG_1" class="inTurnBlurringTextG">.</div>
-          <div id="inTurnBlurringTextG_2" class="inTurnBlurringTextG">.</div>
-          <div id="inTurnBlurringTextG_3" class="inTurnBlurringTextG">.</div>
-          <div id="inTurnBlurringTextG_4" class="inTurnBlurringTextG">.</div>
-          <div id="inTurnBlurringTextG_5" class="inTurnBlurringTextG">.</div>
-          <div id="inTurnBlurringTextG_6" class="inTurnBlurringTextG">.</div>
-          <div id="inTurnBlurringTextG_7" class="inTurnBlurringTextG">.</div>
+      <div class="rap">
+        <h1 class="text-center">
+          <div id="title">Gidole</div>
+          <div id="tag">Sans Free Font</div>
+        </h1>
+        <div id="scrollhelp" class="text-center no-select">
+          <div id="inTurnBlurringTextG">
+            <div id="inTurnBlurringTextG_1" class="inTurnBlurringTextG">.</div>
+            <div id="inTurnBlurringTextG_2" class="inTurnBlurringTextG">.</div>
+            <div id="inTurnBlurringTextG_3" class="inTurnBlurringTextG">.</div>
+            <div id="inTurnBlurringTextG_4" class="inTurnBlurringTextG">.</div>
+            <div id="inTurnBlurringTextG_5" class="inTurnBlurringTextG">.</div>
+            <div id="inTurnBlurringTextG_6" class="inTurnBlurringTextG">.</div>
+            <div id="inTurnBlurringTextG_7" class="inTurnBlurringTextG">.</div>
+          </div>
         </div>
       </div>
     </div>
     <div id="content" contenteditable="false">
       <div class="wrapper">
         <h2>Gidole Sans</h2>
-        <p>An open source font by
-          <a href= "https://twitter.com/andreaslarsendk">Andreas</a>. View source and contribute on
-          <a href="https://github.com/gidole/sans">GitHub</a>. You can also download the latest release.</p>
+        <p><a href="https://github.com/gidole/sans/releases/">Download</a> the latest release or view the source and contribute on <a href="https://github.com/gidole/sans">GitHub</a> and remember to <a href="https://twitter.com/intent/tweet?hashtags=gidolesans&original_referer=https%3A%2F%2Fgidole.github.io&text=Gidole%20Sans%20Free%20Font&url=http%3A%2F%2Fgidole.github.io&via=andreaslarsendk">tweet</a> your friends.</p>
         <h3>
           Open Font License
         </h3>
         <p>I've made an exception to the OFL to allow webfont conversions without the 
           need for renaming. The OFL lets you use and modify the font freely in 
-          applications, web, desktop, documents etc.<br>
+          applications, web, desktop, documents etc.
         </p>
         <h3>
           Roadmap 
         </h3>
         <p>
+          &#187; Improve onscreen rendering<br>
           &#187; Better spacing + kerning<br>
-          &#187; Weights 100-900 <span class="comment">(I've made a "fake" ligth version)</span><br>
-          &#187; Opentype features <span class="comment">(alternates, tabular and more)</span><br>
+          &#187; Weights<br>
+          &#187; Opentype features<br>
           &#187; Your requests, ideas etc.<br>
         </p>
         <h3>
-          Playground 
+          Testdrive 
         </h3>
         <p>
             <input id="toggle-1" type="checkbox">
             <span class="switchtext">
-              Edit almost anything on this page <span class="comment">(copy, paste, type, delete)</span>
+              Edit anything on this page
             </span>
           <br>
             <input id="toggle-2" type="checkbox">
             <span class="switchtext">
-              See the "fake" light version 
+              Gidole-Light (draft - many errors) 
             </span>
           <br>
           <input id="toggle-3" type="checkbox">
             <span class="switchtext">
-              White text on dark background 
+              Nightmode 
             </span>
         </p>
         <h3>
@@ -71,8 +71,7 @@
         <p>
           Gidole Sans should support all latin languages - please
           <a href="https://github.com/gidole/sans/issues">tell</a>
-          me if you miss a glyph or find an error. See some of ~500 the glyphs
-          below.
+          me if you miss a glyph, find an error or think something could be improved.
         </p>
         <p class="charmap text-center">
           A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
@@ -113,18 +112,18 @@
           $("body").toggleClass("fake");
         });
         $("#toggle-3").click(function(){
-          $("#content").toggleClass("dark");
+          $("body").toggleClass("dark");
         });
 
         $(window).scroll(function() {
             var height = $(window).scrollTop();
 
-            if(height  > 100) {
+            if(height  > 10) {
               $("#scrollhelp").addClass("boom");
             }
-            if(height  < 100) {
-              $("#scrollhelp").removeClass("boom");
-            }
+//            if(height  < 10) {
+//              $("#scrollhelp").removeClass("boom");
+//            }
         });        
         
       });
