@@ -1,16 +1,133 @@
-<!DOCTYPE html>
-<html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Gidole Font</title>
-        <meta name="description" content="Gidole Sans Free Font by Andreas Larsen">
-    </head>
-    <body>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gidole Sans</title>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+<!--    <link rel="stylesheet" href="http://basehold.it/36">-->
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="text-center wrapper">
+        <div id="title">Gidole</div>
+        <div id="tag">Sans Free Font</div>
+      </h1>
+      <div id="scrollhelp" class="text-center no-select">
+        <div id="inTurnBlurringTextG">
+          <div id="inTurnBlurringTextG_1" class="inTurnBlurringTextG">.</div>
+          <div id="inTurnBlurringTextG_2" class="inTurnBlurringTextG">.</div>
+          <div id="inTurnBlurringTextG_3" class="inTurnBlurringTextG">.</div>
+          <div id="inTurnBlurringTextG_4" class="inTurnBlurringTextG">.</div>
+          <div id="inTurnBlurringTextG_5" class="inTurnBlurringTextG">.</div>
+          <div id="inTurnBlurringTextG_6" class="inTurnBlurringTextG">.</div>
+          <div id="inTurnBlurringTextG_7" class="inTurnBlurringTextG">.</div>
+        </div>
+      </div>
+    </div>
+    <div id="content" contenteditable="false">
+      <div class="wrapper">
+        <h2>Gidole Sans</h2>
+        <p>An open source font by
+          <a href= "https://twitter.com/andreaslarsendk">Andreas</a>. View source and contribute on
+          <a href="https://github.com/gidole/sans">GitHub</a>. You can also download the latest release.</p>
+        <h3>
+          Open Font License
+        </h3>
+        <p>I've made an exception to the OFL to allow webfont conversions without the 
+          need for renaming. The OFL lets you use and modify the font freely in 
+          applications, web, desktop, documents etc.<br>
+        </p>
+        <h3>
+          Roadmap 
+        </h3>
+        <p>
+          &#187; Better spacing + kerning<br>
+          &#187; Weights 100-900 <span class="comment">(I've made a "fake" ligth version)</span><br>
+          &#187; Opentype features <span class="comment">(alternates, tabular and more)</span><br>
+          &#187; Your requests, ideas etc.<br>
+        </p>
+        <h3>
+          Playground 
+        </h3>
+        <p>
+            <input id="toggle-1" type="checkbox">
+            <span class="switchtext">
+              Edit almost anything on this page <span class="comment">(copy, paste, type, delete)</span>
+            </span>
+          <br>
+            <input id="toggle-2" type="checkbox">
+            <span class="switchtext">
+              See the "fake" light version 
+            </span>
+          <br>
+          <input id="toggle-3" type="checkbox">
+            <span class="switchtext">
+              White text on dark background 
+            </span>
+        </p>
+        <h3>
+          Characters 
+        </h3>
+        <p>
+          Gidole Sans should support all latin languages - please
+          <a href="https://github.com/gidole/sans/issues">tell</a>
+          me if you miss a glyph or find an error. See some of ~500 the glyphs
+          below.
+        </p>
+        <p class="charmap text-center">
+          A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+          a b c d e f g h i j k l m n o p q r s t u v w x y z<br><br>
+          1 2 3 4 5 6 7 8 9 0<br><br>
+          &amp; @ # % &#182; &#167; &#169; &#174; ™<br>
+          $ € &#163; &#165; ₹ ₺ &#162; π β Ω † ‡<br>
+          ( ) [ ] { } | / \<br>
+          &#39; &quot; ‘ ’ “ ” * &#176; ′ ″ ‴ &#171; &#187; ‹ ›<br>
+          . , … _ : ; &#161; ! &#191; ? &#183; • - – — ~<br>
+          + − &#247; &#215; &#177; = ≠ ≈ &lt; &gt; ≤ ≥ √<br><br>
+          Å &#198; &#199; Đ Ə Ğ Ȋ Ĵ Ķ Ŀ Ŋ Ø Œ &#222; Ṛ Ș Ŧ Ų Ẅ Ỹ Ž<br>
+          ą &#230; &#229; &#231; &#240; ə ǵ ﬁ ﬂ ħ ī ĵ ĸ ł ŋ &#248; œ &#254; ȑ
+          &#223; ț μ ẁ &#255; ž          
+        </p>
+        <h3>Credits</h3>
+        <p>The image used is
+          <a title="Faces of Ethiopia" href="http://flickr.com/photos/deepblue66/3201396661">"Faces
+            of Ethiopia"</a>
+          by Dietmar Temps. Some people over at <a href="http://typophile.com/node/121996">Typophile</a> gave me very helpful feedback.</p>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/mm-fontsize.js"></script>
+    <script>
+      $(document).ready(function(){
         
-        <h1>Gidole Sans</h1>
-        <p>This is just an empty page so far</p>
+        $("#toggle-1").click(function(){
+          var value = $('#content').attr('contenteditable');
+          if (value == 'false') {
+              $('#content').attr('contenteditable','true');
+          }
+          else {
+              $('#content').attr('contenteditable','false');
+          }
+        });
+        $("#toggle-2").click(function(){
+          $("body").toggleClass("fake");
+        });
+        $("#toggle-3").click(function(){
+          $("#content").toggleClass("dark");
+        });
+
+        $(window).scroll(function() {
+            var height = $(window).scrollTop();
+
+            if(height  > 100) {
+              $("#scrollhelp").addClass("boom");
+            }
+            if(height  < 100) {
+              $("#scrollhelp").removeClass("boom");
+            }
+        });        
         
-    </body>
+      });
+    </script>    
+  </body>
 </html>
