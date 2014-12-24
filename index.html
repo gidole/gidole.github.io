@@ -30,17 +30,13 @@
     <div id="content" contenteditable="false">
       <div class="wrapper">
         <h2>Gidole Sans</h2>
-        <p><a target="_blank" href="https://github.com/gidole/sans/releases/">Download</a> the latest release or view the source and contribute on <a target="_blank" href="https://github.com/gidole/sans">GitHub</a> and remember to <a target="_blank" href="https://twitter.com/intent/tweet?hashtags=gidolesans&original_referer=https%3A%2F%2Fgidole.github.io&text=Gidole%20Sans%20Free%20Font&url=http%3A%2F%2Fgidole.github.io&via=andreaslarsendk">tweet</a> your friends.</p>
-        <h3>
-          Open Font License
-        </h3>
-        <p>I've made an exception to the OFL to allow webfont conversions without the 
-          need for renaming. The OFL lets you use and modify the font freely in 
-          applications, web, desktop, documents etc.
+        <p><a target="_blank" href="https://github.com/gidole/sans/releases/">Welcome, you can download</a> the latest release, view the source and contribute on
+          <a target="_blank" href="https://github.com/gidole/sans">GitHub</a>. Please remember to <a target="_blank" href="https://twitter.com/intent/tweet?hashtags=gidolesans&original_referer=https%3A%2F%2Fgidole.github.io&text=Gidole%20Sans%20Free%20Font&url=http%3A%2F%2Fgidole.github.io&via=andreaslarsendk">tweet</a> your friends.</p>
+        <h3>Open Font License</h3>
+        <p>
+          I've made an exception to the OFL to allow webfont conversions without the need for renaming. The OFL lets you use and modify the font freely in applications, web, desktop, documents etc.
         </p>
-        <h3>
-          Roadmap 
-        </h3>
+        <h3>Roadmap</h3>
         <p>
           &#187; Improve onscreen rendering<br>
           &#187; Better spacing + kerning<br>
@@ -49,33 +45,27 @@
           &#187; Your requests, ideas etc.<br>
         </p>
         <div id="testdrive">
-          <h3>
-            Testdrive 
-          </h3>
+          <h3>Testdrive </h3>
           <p>
-              <input id="toggle-1" type="checkbox">
-              <span class="switchtext">
-                Edit anything on this page
-              </span>
+            <input id="toggle-1" type="checkbox">
+            <span class="switchtext">
+              Edit anything on this page
+            </span>
             <br>
-              <input id="toggle-2" type="checkbox">
-              <span class="switchtext">
-                Gidole-Light (draft - many errors) 
-              </span>
+            <input id="toggle-2" type="checkbox">
+            <span class="switchtext">
+              Gidole-Light (draft - many errors)
+            </span>
             <br>
             <input id="toggle-3" type="checkbox">
-              <span class="switchtext">
-                Nightmode 
-              </span>
+            <span class="switchtext">
+              Nightmode 
+            </span>
           </p>
-        </div>
-        <h3>
-          Characters 
-        </h3>
+        </div> <!-- Testdrive -->
+        <h3>Characters </h3>
         <p>
-          Gidole Sans should support all latin languages - please
-          <a target="_blank" href="https://github.com/gidole/sans/issues">tell</a>
-          me if you miss a glyph, find an error or think something could be improved.
+          Gidole Sans should support all latin languages - please <a target="_blank" href="https://github.com/gidole/sans/issues">tell</a> me if you miss a glyph, find an error or think something could be improved.
         </p>
         <p class="charmap text-center">
           A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
@@ -89,46 +79,44 @@
           + − &#247; &#215; &#177; = ≠ ≈ &lt; &gt; ≤ ≥ √<br><br>
           Å &#198; &#199; Đ Ə Ğ Ȋ Ĵ Ķ Ŀ Ŋ Ø Œ &#222; Ṛ Ș Ŧ Ų Ẅ Ỹ Ž<br>
           ą &#230; &#229; &#231; &#240; ə ǵ ﬁ ﬂ ħ ī ĵ ĸ ł ŋ &#248; œ &#254; ȑ
-          &#223; ț μ ẁ &#255; ž          
+          &#223; ț μ ẁ &#255; ž
         </p>
         <h3>Credits</h3>
-        <p>The image used is
-          <a title="Faces of Ethiopia" target="_blank" href="http://flickr.com/photos/deepblue66/3201396661">"Faces
-            of Ethiopia"</a>
-          by Dietmar Temps. Some people over at <a target="_blank" href="http://typophile.com/node/121996">Typophile</a> gave me very helpful feedback.
+        <p>The image used is <a title="Faces of Ethiopia" target="_blank" href="http://flickr.com/photos/deepblue66/3201396661">"Faces of Ethiopia"</a> by Dietmar Temps. Some people over at <a target="_blank" href="http://typophile.com/node/121996">Typophile</a> gave me very helpful feedback.
         </p>
       </div>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/mm-fontsize.js"></script>
     <script>
-      $(document).ready(function(){
-        
-        $("#toggle-1").click(function(){
+      $(document).ready(function () {
+
+        $("#toggle-1").click(function () {
           var value = $('#content').attr('contenteditable');
           if (value == 'false') {
-              $('#content').attr('contenteditable','true');
-          }
-          else {
-              $('#content').attr('contenteditable','false');
+            $('#content').attr('contenteditable', 'true');
+          } else {
+            $('#content').attr('contenteditable', 'false');
           }
         });
-        $("#toggle-2").click(function(){
+        
+        $("#toggle-2").click(function () {
           $("body").toggleClass("fake");
         });
-        $("#toggle-3").click(function(){
+        
+        $("#toggle-3").click(function () {
           $("body").toggleClass("dark");
         });
 
-        $(window).scroll(function() {
-            var height = $(window).scrollTop();
+        $(window).scroll(function () {
+          var height = $(window).scrollTop();
 
-            if(height  > 10) {
-              $("#scrollhelp").addClass("boom");
-            }
-        });        
-        
+          if (height > 10) {
+            $("#scrollhelp").addClass("boom");
+          }
+        });
+
       });
-    </script>    
+    </script>
   </body>
 </html>
