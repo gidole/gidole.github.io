@@ -4,8 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Gidole Sans</title>
     <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <noscript><style>#testdrive{opacity:0.25;pointer-events:none;}</style></noscript>
   </head>
   <body>
+    <noscript class="text-center">The Testdrive functions require javascript (and the fontsize may be "off")</noscript>
     <div class="jumbotron">
       <div class="rap">
         <h1 class="text-center">
@@ -46,25 +48,27 @@
           &#187; Opentype features<br>
           &#187; Your requests, ideas etc.<br>
         </p>
-        <h3>
-          Testdrive 
-        </h3>
-        <p>
-            <input id="toggle-1" type="checkbox">
-            <span class="switchtext">
-              Edit anything on this page
-            </span>
-          <br>
-            <input id="toggle-2" type="checkbox">
-            <span class="switchtext">
-              Gidole-Light (draft - many errors) 
-            </span>
-          <br>
-          <input id="toggle-3" type="checkbox">
-            <span class="switchtext">
-              Nightmode 
-            </span>
-        </p>
+        <div id="testdrive">
+          <h3>
+            Testdrive 
+          </h3>
+          <p>
+              <input id="toggle-1" type="checkbox">
+              <span class="switchtext">
+                Edit anything on this page
+              </span>
+            <br>
+              <input id="toggle-2" type="checkbox">
+              <span class="switchtext">
+                Gidole-Light (draft - many errors) 
+              </span>
+            <br>
+            <input id="toggle-3" type="checkbox">
+              <span class="switchtext">
+                Nightmode 
+              </span>
+          </p>
+        </div>
         <h3>
           Characters 
         </h3>
@@ -91,7 +95,8 @@
         <p>The image used is
           <a title="Faces of Ethiopia" target="_blank" href="http://flickr.com/photos/deepblue66/3201396661">"Faces
             of Ethiopia"</a>
-          by Dietmar Temps. Some people over at <a target="_blank" href="http://typophile.com/node/121996">Typophile</a> gave me very helpful feedback.</p>
+          by Dietmar Temps. Some people over at <a target="_blank" href="http://typophile.com/node/121996">Typophile</a> gave me very helpful feedback.
+        </p>
       </div>
     </div>
     <script src="js/jquery.js"></script>
@@ -121,9 +126,6 @@
             if(height  > 10) {
               $("#scrollhelp").addClass("boom");
             }
-//            if(height  < 10) {
-//              $("#scrollhelp").removeClass("boom");
-//            }
         });        
         
       });
