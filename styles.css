@@ -314,7 +314,8 @@ blockquote,ol,p,pre,table,ul {
 }
 
 .dark,.dark .jumbotron {
-  color:#fff
+  color:#fff;
+  background-color:#222
 }
 
 .dark #content {
@@ -346,8 +347,8 @@ blockquote,ol,p,pre,table,ul {
   -webkit-justify-content:center;
       -ms-flex-pack:center;
           justify-content:center;
-  -webkit-animation:loadfade 2s ease forwards;
-          animation:loadfade 2s ease forwards;
+  -webkit-animation:fade 2s ease forwards;
+          animation:fade 2s ease forwards;
   padding-bottom:100px
 }
 
@@ -364,41 +365,38 @@ blockquote,ol,p,pre,table,ul {
   z-index:-1
 }
 
-@-webkit-keyframes loadfade {
+@-webkit-keyframes fade {
   from {
     opacity:0;
     filter:alpha(opacity=0);
-    -webkit-transform:scale(0.9,.9);
-            transform:scale(0.9,.9)
   }
 
   to {
     opacity:1;
     filter:alpha(opacity=100);
-    -webkit-transform:scale(1,1);
-            transform:scale(1,1)
   }
 }
 
-@keyframes loadfade {
+@keyframes fade {
   from {
     opacity:0;
     filter:alpha(opacity=0);
-    -webkit-transform:scale(0.9,.9);
-            transform:scale(0.9,.9)
   }
 
   to {
     opacity:1;
     filter:alpha(opacity=100);
-    -webkit-transform:scale(1,1);
-            transform:scale(1,1)
   }
 }
 
 .jumbotron div {
   width:100%
 }
+#title, #tag {
+  -webkit-animation:scale 2s ease forwards;
+          animation:sclae 2s ease forwards;
+}
+
 
 #title {
   line-height:90%;
@@ -413,6 +411,31 @@ blockquote,ol,p,pre,table,ul {
   letter-spacing:-.04em;
   font-size:.35em
 }
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform:scale(0.9,.9);
+            transform:scale(0.9,.9)
+  }
+
+  to {
+    -webkit-transform:scale(1,1);
+            transform:scale(1,1)
+  }
+}
+
+@keyframes scale {
+  from {
+    -webkit-transform:scale(0.9,.9);
+            transform:scale(0.9,.9)
+  }
+
+  to {
+    -webkit-transform:scale(1,1);
+            transform:scale(1,1)
+  }
+}
+
+
 
 #scrollhelp {
   position:absolute;
