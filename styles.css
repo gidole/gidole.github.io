@@ -5,7 +5,12 @@ html {
 }
 
 body {
-  margin:0
+  margin:0;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";  
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
@@ -282,7 +287,7 @@ h1 {
 }
 
 .charmap,h2 {
-  letter-spacing:-.05em;
+  letter-spacing:-.03em;
   font-size:8.5709vw;
   line-height:1.2em;
   margin-top:.38em;
@@ -296,7 +301,7 @@ h1 {
 }
 
 h3 {
-  letter-spacing:-.03em;
+  letter-spacing:-.01em;
   font-size:5.3065vw;
   line-height:1.8461538462em;
   margin-top:1.24em;
@@ -400,15 +405,15 @@ blockquote,ol,p,pre,table,ul {
 
 #title {
   line-height:90%;
-  letter-spacing:-.07em;
+  letter-spacing:-.03em;
   font-size:1em;
-  margin-left:-.03em;
+  margin-left:-.05em;
   margin-top:-50px
 }
 
 #tag {
   line-height:90%;
-  letter-spacing:-.04em;
+  letter-spacing:-.02em;
   font-size:.35em
 }
 @-webkit-keyframes scale {

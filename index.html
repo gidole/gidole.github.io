@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css" type="text/css"/>
     <noscript><style>#testdrive{opacity:0.25;pointer-events:none;}</style></noscript>
   </head>
-  <body>
+  <body contenteditable="false">
     <noscript class="text-center">The Testdrive functions require javascript (and the fontsize may be "off")</noscript>
     <div class="jumbotron">
       <div class="rap">
@@ -27,11 +27,11 @@
         </div>
       </div>
     </div>
-    <div id="content" contenteditable="false">
+    <div id="content">
       <div class="wrapper">
         <h2>Gidole Sans</h2>
-        <p><a target="_blank" href="https://github.com/gidole/sans/releases/">Welcome, you can download</a> the latest release, view the source and contribute on
-          <a target="_blank" href="https://github.com/gidole/sans">GitHub</a>. Please remember to <a target="_blank" href="https://twitter.com/intent/tweet?hashtags=gidolesans&original_referer=https%3A%2F%2Fgidole.github.io&text=Gidole%20Sans%20Free%20Font&url=http%3A%2F%2Fgidole.github.io&via=andreaslarsendk">tweet</a> your friends.</p>
+        <p>Welcome, you can <a target="_blank" href="https://github.com/gidole/sans/releases/">download</a> the latest release, view the source and contribute on
+          <a target="_blank" href="https://github.com/gidole/sans">GitHub</a> and maybe <a target="_blank" href="https://twitter.com/intent/tweet?hashtags=gidolesans&original_referer=https%3A%2F%2Fgidole.github.io&text=Gidole%20Sans%20Free%20Font&url=http%3A%2F%2Fgidole.github.io&via=andreaslarsendk">tweet</a> your friends.</p>
         <h3>Open Font License</h3>
         <p>
           I've made an exception to the OFL to allow webfont conversions without the need for renaming. The OFL lets you use and modify the font freely in applications, web, desktop, documents etc.
@@ -52,11 +52,13 @@
               Edit anything on this page
             </span>
             <br>
+<!--
             <input id="toggle-2" type="checkbox">
             <span class="switchtext">
               Gidole-Light (draft - many errors)
             </span>
             <br>
+-->
             <input id="toggle-3" type="checkbox">
             <span class="switchtext">
               Nightmode 
@@ -81,7 +83,7 @@
           ą &#230; &#229; &#231; &#240; ə ǵ ﬁ ﬂ ħ ī ĵ ĸ ł ŋ &#248; œ &#254; ȑ
           &#223; ț μ ẁ &#255; ž
         </p>
-        <h3>Credits</h3>
+        <h3>Acknowledgements</h3>
         <p>The image used is <a title="Faces of Ethiopia" target="_blank" href="http://flickr.com/photos/deepblue66/3201396661">"Faces of Ethiopia"</a> by Dietmar Temps. Some people over at <a target="_blank" href="http://typophile.com/node/121996">Typophile</a> gave me very helpful feedback.
         </p>
       </div>
@@ -92,11 +94,11 @@
       $(document).ready(function () {
 
         $("#toggle-1").click(function () {
-          var value = $('#content').attr('contenteditable');
+          var value = $('body').attr('contenteditable');
           if (value == 'false') {
-            $('#content').attr('contenteditable', 'true');
+            $('body').attr('contenteditable', 'true');
           } else {
-            $('#content').attr('contenteditable', 'false');
+            $('body').attr('contenteditable', 'false');
           }
         });
         
