@@ -1,16 +1,11 @@
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%
+  -webkit-text-size-adjust:100%;
 }
 
 body {
   margin:0;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "kern";
-  -webkit-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern=1";  
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
@@ -203,7 +198,8 @@ html {
   font-family:gidoleregular,sans-serif;
   color:#555;
   background-color:#fff;
-  -webkit-font-smoothing:antialiased
+  -webkit-font-smoothing:antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 noscript {
@@ -269,10 +265,12 @@ h2,h3 {
   color:#fff
 }
 
+
+/*Typography*/
 body {
   font-size:3.2654vw;
   line-height:1.5em;
-  min-font-size:18px
+  min-font-size:18px;
 }
 
 h1,h2,h3 {
@@ -283,7 +281,7 @@ h1 {
   line-height:108px;
   margin-top:72px;
   margin-bottom:36px;
-  font-size:35vw
+  font-size:35vw;
 }
 
 .charmap,h2 {
@@ -292,12 +290,12 @@ h1 {
   line-height:1.2em;
   margin-top:.38em;
   margin-bottom:-.1em;
-  min-font-size:35px
+  min-font-size:35px;
 }
 
 .charmap {
   margin-top:.7em;
-  min-font-size:25px
+  min-font-size:25px;
 }
 
 h3 {
@@ -306,17 +304,20 @@ h3 {
   line-height:1.8461538462em;
   margin-top:1.24em;
   margin-bottom:-1.24em;
-  min-font-size:20px
+  min-font-size:20px;
 }
 
 blockquote,ol,p,pre,table,ul {
   margin-top:1.5em;
-  margin-bottom:1.5em
+  margin-bottom:1.5em;
 }
 
+/*THEMES*/
+/*
 .fake {
-  font-family:gidolelight
+  font-family:gidolelight;
 }
+*/
 
 .dark,.dark .jumbotron {
   color:#fff;
@@ -334,7 +335,32 @@ blockquote,ol,p,pre,table,ul {
 .dark h2,.dark h3 {
   color:#fff
 }
+/*
 
+.smallcaps { 
+  -webkit-font-feature-settings: "smcp" on; 
+          font-feature-settings: "smcp" on; 
+}
+.noligs { 
+  -webkit-font-feature-settings: "liga" 0; 
+          font-feature-settings: "liga" 0; 
+}
+td.tabular { 
+  -webkit-font-feature-settings: "tnum"; 
+          font-feature-settings: "tnum"; 
+}
+.fractions { 
+  -webkit-font-feature-settings: "frac";
+          font-feature-settings: "frac"; 
+}
+.tech {
+  -webkit-font-feature-settings: "salt" 1;
+          font-feature-settings: "salt" 1;
+}
+*/
+
+
+/*JUMBOTRON*/
 .jumbotron {
   height:100%;
   width:100%;
