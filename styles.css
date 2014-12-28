@@ -264,9 +264,6 @@ html {
   color:hsl(200, 11%, 35%);
   background-color:#fff;
 }
-#content {
-  background-color:#fff
-}
 a {
     color:hsl(200, 100%, 45%);
 }
@@ -369,25 +366,34 @@ blockquote,ol,p,pre,table,ul {
   font-family:gidolelight;
 }
 */
-
-.dark, .dark #content  {
-  color:#9DA9AF;
-  background-color:rgba(32,34,35,1);
+.comment {
+  color:hsl(200, 8%, 59%)
 }
-.dark .jumbotron {
-  color:#E8F7FF;
+.dark .social.fixed {
+  background-color: hsla(200, 4%, 13%, 0.9);
+  border-bottom: 1px solid black;
+}
+.dark, .dark .social path {
+  color:hsl(200, 5%, 65%);
+  fill:hsl(200, 5%, 65%);
+  background-color:hsl(200, 4%, 13%);
 }
 .dark a {
   color:hsl(200, 100%, 40%);
+}
+.dark h1, .dark #githubicon:hover path, .dark #downloadicon:hover path {
+  color:hsl(200, 50%, 95%);
+  fill:hsl(200, 50%, 95%);
+}
+.dark h2, .dark h3 {
+  color:hsl(200, 10%, 77%);
 }
 
 .dark .jumbotron:before {
   background-image:linear-gradient(to top,rgba(32,34,35,1) 0%,rgba(32,34,35,.98) 4%,rgba(32,34,35,.94) 8%,rgba(32,34,35,.85) 12%,rgba(32,34,35,.76) 16%,rgba(32,34,35,.72) 20%,rgba(32,34,35,.7) 24%,rgba(32,34,35,.7) 100%);
 }
 
-.dark h2,.dark h3 {
-  color:#B9C8D0;
-}
+
 /*
 
 .smallcaps { 
