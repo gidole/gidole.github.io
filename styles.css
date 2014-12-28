@@ -212,6 +212,9 @@ noscript {
 .social {
   height:50px;
   margin-bottom: -50px;
+  line-height: 30px;
+  font-size: 20px;
+  padding-top: 5px;
 }
 .social svg {
   width:40px;
@@ -221,7 +224,7 @@ noscript {
   top: 0px;
   left: 0px;
   width: 100%;
-  padding-top: 5px;
+  padding-top: 10px;
   height: 35px;
 }
 .social.fixed svg {
