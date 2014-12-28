@@ -196,8 +196,6 @@ td,th {
 
 html {
   font-family:gidoleregular,sans-serif;
-  color:#555;
-  background-color:#fff;
   -webkit-font-smoothing:antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -210,8 +208,24 @@ noscript {
   width:100%
 }
 
-#content {
-  background-color:#fff
+/*SOCIAL*/
+.social {
+  height:50px;
+  margin-bottom: -50px;
+}
+.social svg {
+  width:40px;
+}
+.social.fixed{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 5px;
+  height: 35px;
+}
+.social.fixed svg {
+  width:20px;
 }
 
 .wrapper {
@@ -239,20 +253,47 @@ input[type=checkbox],input[type=radio] {
 }
 
 a {
-  color:#0098e5;
   text-decoration:none
 }
 
+/*COLORS*/
+html {
+  color:hsl(200, 11%, 35%);
+  background-color:#fff;
+}
+#content {
+  background-color:#fff
+}
+a {
+    color:hsl(200, 100%, 45%);
+}
+h1 {
+  color:hsl(200, 17%, 15%)
+}
 h2,h3 {
-  color:#444
+  color:hsl(200, 14%, 25%)
 }
-
 .comment {
-  color:#999
+  color:hsl(200, 8%, 59%)
 }
-
-.charmap {
-  color:#ccc
+.social.fixed {
+  background-color: rgba(255,255,255,0.9);
+  border-bottom: 1px solid hsl(200, 23%, 90%);
+}
+.social path {
+  fill:hsl(200, 9%, 59%)
+}
+#githubicon:hover path, #downloadicon:hover path {
+  fill:hsl(200, 14%, 25%)
+}
+#twittericon:hover path {
+  fill:#55acee;
+}
+#facebookicon:hover path {
+  fill:#3b5998;
+}
+#pinteresticon:hover path {
+  fill:#cc2127;
 }
 
 ::-moz-selection {
@@ -284,18 +325,14 @@ h1 {
   font-size:35vw;
 }
 
-.charmap,h2 {
+h2 {
   letter-spacing:-.03em;
   font-size:8.5709vw;
   line-height:1.2em;
-  margin-top:.38em;
-  margin-bottom:-.1em;
+  margin-top:1.18em;
+  margin-bottom:-.66em;
+  margin-left: -0.03em;
   min-font-size:35px;
-}
-
-.charmap {
-  margin-top:.7em;
-  min-font-size:25px;
 }
 
 h3 {
@@ -304,6 +341,7 @@ h3 {
   line-height:1.8461538462em;
   margin-top:1.24em;
   margin-bottom:-1.24em;
+  margin-left: -0.02em;  
   min-font-size:20px;
 }
 
@@ -312,6 +350,16 @@ blockquote,ol,p,pre,table,ul {
   margin-bottom:1.5em;
 }
 
+.reduced {
+  letter-spacing: -0.07em;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+
+
 /*THEMES*/
 /*
 .fake {
@@ -319,21 +367,23 @@ blockquote,ol,p,pre,table,ul {
 }
 */
 
-.dark,.dark .jumbotron {
-  color:#fff;
-  background-color:#222
+.dark, .dark #content  {
+  color:#9DA9AF;
+  background-color:rgba(32,34,35,1);
 }
-
-.dark #content {
-  background-color:#222
+.dark .jumbotron {
+  color:#E8F7FF;
+}
+.dark a {
+  color:hsl(200, 100%, 40%);
 }
 
 .dark .jumbotron:before {
-  background-image:linear-gradient(to top,rgba(34,34,34,1) 0,rgba(34,34,34,.95) 5%,rgba(34,34,34,.6) 20%,rgba(34,34,34,.5) 30%,rgba(34,34,34,.5) 100%)
+  background-image:linear-gradient(to top,rgba(32,34,35,1) 0%,rgba(32,34,35,.98) 4%,rgba(32,34,35,.94) 8%,rgba(32,34,35,.85) 12%,rgba(32,34,35,.76) 16%,rgba(32,34,35,.72) 20%,rgba(32,34,35,.7) 24%,rgba(32,34,35,.7) 100%);
 }
 
 .dark h2,.dark h3 {
-  color:#fff
+  color:#B9C8D0;
 }
 /*
 
@@ -365,7 +415,6 @@ td.tabular {
   height:100%;
   width:100%;
   background:url(img/boys.jpg) center center/cover no-repeat;
-  color:#222;
   position:relative;
   opacity:0;
   filter:alpha(opacity=0);
@@ -390,7 +439,7 @@ td.tabular {
   height:100%;
   right:0;
   left:0;
-  background-image:linear-gradient(to top,rgba(255,255,255,1) 0,rgba(255,255,255,.95) 5%,rgba(255,255,255,.6) 20%,rgba(255,255,255,.5) 30%,rgba(255,255,255,.5) 100%);
+  background-image:linear-gradient(to top,rgba(255,255,255,1) 0%,rgba(255,255,255,.98) 4%,rgba(255,255,255,.94) 8%,rgba(255,255,255,.85) 12%,rgba(255,255,255,.76) 16%,rgba(255,255,255,.72) 20%,rgba(255,255,255,.7) 24%,rgba(255,255,255,.7) 100%);
   opacity:1;
   filter:alpha(opacity=100);
   z-index:-1
@@ -423,7 +472,7 @@ td.tabular {
 .jumbotron div {
   width:100%
 }
-#title, #tag {
+.jumbotron h1 {
   -webkit-animation:scale 2s ease forwards;
           animation:sclae 2s ease forwards;
 }
@@ -433,15 +482,17 @@ td.tabular {
   line-height:90%;
   letter-spacing:-.03em;
   font-size:1em;
-  margin-left:-.05em;
+/*  margin-left:-.05em;*/
+/*  padding-right: 0.1em;*/
   margin-top:-50px
 }
 
 #tag {
   line-height:90%;
   letter-spacing:-.02em;
-  font-size:.35em
+  font-size:.38em
 }
+
 @-webkit-keyframes scale {
   from {
     -webkit-transform:scale(0.9,.9);

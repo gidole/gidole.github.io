@@ -24,6 +24,26 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/gidoletypeface.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/gidoletypeface.png",
+		"outputAbbreviatedPath": "\/img\/gidoletypeface.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/js\/jquery.js": {
 		"fileType": 64,
 		"ignore": 0,
