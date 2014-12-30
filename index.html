@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Gidole Sans</title>
     <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <noscript><style>#testdrive{opacity:0.25;pointer-events:none;}</style></noscript>
   </head>
   <body contenteditable="false">
@@ -45,7 +46,18 @@
     </nav>    
     <main class="wrapper">
       <h2>Gidole</h2>
-      <p>I spent 4 childhood years in Gidole and therefore named this font after it. Gidole is a small beautiful rural town in Ethiopia @ 5°38'57.8"N 37°22'08.7"E overlooking the Great Rift Valley (<a target="_blank" href="https://www.google.com/maps/place/Gidole,+Etiopien/@9.0261392,40.0094517,6z/data=!4m2!3m1!1s0x17bad5f68ec42f83:0xacbf25dd0377cfb7">map</a>).</p>
+      <p>I spent 4 childhood years in Gidole and therefore named this font after it. 
+<!--        Gidole is a small beautiful rural town in Ethiopia @ 5°38'57.8"N 37°22'08.7"E overlooking the Great Rift Valley (<a target="_blank" href="https://www.google.com/maps/place/Gidole,+Etiopien/@9.0261392,40.0094517,6z/data=!4m2!3m1!1s0x17bad5f68ec42f83:0xacbf25dd0377cfb7">map</a>).-->
+      </p>
+      <h3>Screenshots</h3>
+      <div class="screenshots">
+        <div><img data-lazy="img/slice1@2x.png"/></div>
+        <div><img data-lazy="img/slice2@2x.png"/></div>
+        <div><img data-lazy="img/slice3@2x.png"/></div>
+        <div><img data-lazy="img/slice4@2x.png"/></div>
+        <div><img data-lazy="img/slice5@2x.png"/></div>
+        <div><img data-lazy="img/AaBb.gif"/></div>
+      </div>
       <aside id="testdrive">
         <h3>Settings</h3>
         <p>
@@ -124,6 +136,7 @@
     </main>
     <script src="js/jquery.js"></script>
     <script src="js/mm-fontsize.js"></script>
+    <script src="slick/slick.min.js"></script>    
     <script>
       $(document).ready(function () {
 
@@ -167,7 +180,15 @@
         });        
         $(window).resize(function(){
           offset = $( ".social" ).offset();
-        });   
+        });  
+        
+        $('.screenshots').slick({
+          lazyLoad: 'progressive',
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
+        });
 
       });
     </script>
