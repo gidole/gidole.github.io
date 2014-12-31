@@ -199,7 +199,6 @@ html {
   -webkit-font-smoothing:antialiased;
   text-rendering: optimizeLegibility;
 }
-
 noscript {
   position:fixed;
   z-index:100;
@@ -207,58 +206,74 @@ noscript {
   color:#fff;
   width:100%
 }
-
-/*SOCIAL*/
-.social {
-  height:50px;
-  margin-bottom: -50px;
-  line-height: 30px;
-  font-size: 20px;
-  padding-top: 5px;
-}
-.social svg {
-  width:40px;
-}
-.social.fixed{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  padding-top: 10px;
-  height: 35px;
-  z-index: 100;  
-}
-.social.fixed svg {
-  width:20px;
-}
-
 .wrapper {
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
-  padding:0 30px 10vw
+  padding:2em 30px 10vw
 }
-
 input[type=checkbox],input[type=radio] {
   vertical-align:middle;
   position:relative;
   bottom:2px
 }
-
 .no-select {
   -webkit-user-select:none;
      -moz-user-select:none;
       -ms-user-select:none;
           user-select:none
 }
-
 .text-center {
   text-align:center
 }
-
 a {
   text-decoration:none
 }
+
+/*SOCIAL*/
+.social {
+  height:50px;
+  margin-bottom: -55px;
+  line-height: 0px;
+/*  font-size: 20px;*/
+  padding-top: 5px;
+}
+.social svg {
+  width:40px;
+}
+.social.fixed{  
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 10px;
+  height: 30px;
+  z-index: 100;  
+}
+.social.fixed svg {
+  width:20px;
+}
+.social.fixed span {
+  display: none;
+}
+.socialwrap {
+  max-width:760px;
+  margin:0 auto;
+  padding: 0 30px;
+  box-sizing:border-box;
+}
+.social .settings {
+  float: right;
+  display: none;
+}
+.social.fixed .settings {
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+
+
 
 /*COLORS*/
 html {
@@ -274,7 +289,7 @@ h1 {
 h2,h3 {
   color:hsl(200, 14%, 25%)
 }
-.comment {
+.comment, .charmap {
   color:hsl(200, 8%, 59%)
 }
 .social.fixed {
@@ -284,17 +299,34 @@ h2,h3 {
 .social path {
   fill:hsl(200, 9%, 59%)
 }
-#githubicon:hover path, #downloadicon:hover path {
-  fill:hsl(200, 14%, 25%)
+.screenshots .slick-prev::before, 
+.screenshots .slick-next::before {
+  color:hsl(200, 11%, 35%);
 }
-#twittericon:hover path {
+.screenshots .slick-prev:hover:before, 
+.screenshots .slick-prev:focus:before, 
+.screenshots .slick-next:hover:before, 
+.screenshots .slick-next:focus:before,
+.defaulticon:hover path, 
+.defaulticon:focus path {
+  fill:hsl(200, 14%, 25%);
+  color:hsl(200, 14%, 25%);    
+}
+.twittericon:hover path,
+.twittericon:focus path {
   fill:#55acee;
 }
-#facebookicon:hover path {
+.facebookicon:hover path,
+.facebookicon:focus path {
   fill:#3b5998;
 }
-#pinteresticon:hover path {
+.pinteresticon:hover path,
+.pinteresticon:focus path {
   fill:#cc2127;
+}
+.behanceicon:hover path,
+.behanceicon:focus path {
+  fill:#1769ff;
 }
 
 ::-moz-selection {
@@ -326,7 +358,7 @@ h1 {
   font-size:35vw;
 }
 
-h2 {
+h2, .charmap {
   letter-spacing:-.03em;
   font-size:8.5709vw;
   line-height:1.2em;
@@ -367,14 +399,14 @@ blockquote,ol,p,pre,table,ul {
   font-family:gidolelight;
 }
 */
-.comment {
-  color:hsl(200, 8%, 59%)
-}
 .dark .social.fixed {
   background-color: hsla(200, 4%, 13%, 0.9);
   border-bottom: 1px solid black;
 }
-.dark, .dark .social path {
+.dark,
+.dark .social path,
+.dark .screenshots .slick-prev::before, 
+.dark .screenshots .slick-next::before {
   color:hsl(200, 5%, 65%);
   fill:hsl(200, 5%, 65%);
   background-color:hsl(200, 4%, 13%);
@@ -382,12 +414,24 @@ blockquote,ol,p,pre,table,ul {
 .dark a {
   color:hsl(200, 100%, 40%);
 }
-.dark h1, .dark #githubicon:hover path, .dark #downloadicon:hover path {
-  color:hsl(200, 50%, 95%);
+.dark .screenshots .slick-prev:hover:before, 
+.dark .screenshots .slick-prev:focus:before, 
+.dark .screenshots .slick-next:hover:before, 
+.dark .screenshots .slick-next:focus:before,
+.dark .defaulticon:hover path, 
+.dark .defaulticon:focus path {
   fill:hsl(200, 50%, 95%);
+  color:hsl(200, 50%, 95%);
+}
+
+.dark h1 {
+  color:hsl(200, 50%, 95%);
 }
 .dark h2, .dark h3 {
   color:hsl(200, 10%, 77%);
+}
+.dark .comment, .dark .charmap {
+  color:hsl(200, 14%, 25%)
 }
 
 .dark .jumbotron:before {
@@ -429,10 +473,9 @@ td.tabular {
 }
 .screenshots img {
   max-width: 100%;
+  padding: 0 1px;
+  box-sizing: border-box;
 /*  height: 100%;*/
-}
-.screenshots .slick-prev::before, .screenshots .slick-next::before {
-  color:hsl(200, 11%, 35%);
 }
 .screenshots .slick-dots {
   bottom: 0px ;
@@ -694,5 +737,17 @@ td.tabular {
 
   h3 {
     font-size:39px
+  }
+}
+
+@media all and (max-width:600px) {
+  .social svg {
+    width:20px;
+  }
+}
+
+@media all and (max-width:450px) {
+  .social span {
+    display: none;
   }
 }
