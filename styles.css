@@ -179,21 +179,14 @@ td,th {
 }
 
 @font-face {
-  font-family:gidoleregular;
-  src:url(fonts/gidole-regular.eot);
-  src:url(fonts/gidole-regular.eot?#iefix) format("embedded-opentype"),url(fonts/gidole-regular.woff2) format("woff2"),url(fonts/gidole-regular.woff) format("woff"),url(fonts/gidole-regular.ttf) format("truetype"),url(fonts/gidole-regular.svg#gidoleregular) format("svg");
-  font-weight:400;
-  font-style:normal
-}
+    font-family: 'gidoleregular';
+    src: url('gidole-regular.woff2') format('woff2'),
+         url('gidole-regular.woff') format('woff'),
+         url('gidole-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
-@font-face {
-  font-family:gidolelight;
-  src:url(fonts/gidole-light.eot);
-  src:url(fonts/gidole-light.eot?#iefix) format("embedded-opentype"),url(fonts/gidole-light.woff2) format("woff2"),url(fonts/gidole-light.woff) format("woff"),url(fonts/gidole-light.ttf) format("truetype"),url(fonts/gidole-light.svg#gidoleregular) format("svg");
-  font-weight:400;
-  font-style:normal
 }
-
 html {
   font-family:gidoleregular,sans-serif;
   -webkit-font-smoothing:antialiased;
