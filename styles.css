@@ -180,9 +180,9 @@ td,th {
 
 @font-face {
     font-family: 'gidoleregular';
-    src: url('gidole-regular.woff2') format('woff2'),
-         url('gidole-regular.woff') format('woff'),
-         url('gidole-regular.ttf') format('truetype');
+    src: url('fonts/gidole-regular.woff2') format('woff2'),
+         url('fonts/gidole-regular.woff') format('woff'),
+         url('fonts/gidole-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
