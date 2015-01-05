@@ -2,16 +2,16 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gidole Sans</title>
+    <title>Gidole Free Typeface</title>
     <link rel="stylesheet" href="styles.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <noscript><style>#testdrive{opacity:0.25;pointer-events:none;}</style></noscript>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
   </head>
   <body contenteditable="false">
     <noscript class="text-center">The Testdrive functions require javascript (and the fontsize may be "off")</noscript>
@@ -35,7 +35,7 @@
     <nav class="social text-center">
       <div class="socialwrap">
         <span>Get:</span>
-        <a href="https://github.com/gidole/sans/blob/master/gidole.zip?raw=true" class="defaulticon">
+        <a href="https://github.com/gidole/sans/blob/master/gidole.zip?raw=true" class="defaulticon" id="downloadlink">
           <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" clip-rule="evenodd" stroke-miterlimit="1.41421"><path d="m27.6 40h-15.2c-2.592 0-4.48-.013-6.32-.798-2.371-1.011-4.271-2.912-5.282-5.282-.785-1.84-.798-3.729-.798-6.32v-15.2c0-2.592.013-4.48.798-6.32 1.011-2.371 2.912-4.271 5.282-5.282 1.84-.785 3.729-.798 6.32-.798h15.2c2.592 0 4.48.013 6.32.798 2.371 1.011 4.271 2.912 5.282 5.282.785 1.84.798 3.729.798 6.32v15.2c0 2.592-.013 4.48-.798 6.32-1.011 2.371-2.912 4.271-5.282 5.282-1.84.785-3.729.798-6.32.798m-19.6-6h24v-4h-24v4m22-18h-6v-10h-8v10h-6l10 10"/></svg>
         </a>
         <a target="_blank" href="https://github.com/gidole/sans" class="defaulticon">
@@ -199,6 +199,33 @@
           slidesToShow: 1,
           cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
         });
+        
+        var loading = function() {
+            // add the overlay with loading image to the page
+            var over = '<div id="overlay">' +
+                '<div>' +
+                '<h2>Thanks for downloading</h2>' +
+                '<p>Please consider appreciating it <a href="https://www.behance.net/gallery/22341011/Gidole-Free-Typeface-gidolegithubio" target="_blank">on Behance</a> to thank me</p>' +                
+                '</div>' +
+                '</div>';
+            $(over).appendTo('body');
+
+            // click on the overlay to remove it
+            $('#overlay').click(function() {
+                $(this).remove();
+            });
+
+            // hit escape to close the overlay
+            $(document).keyup(function(e) {
+                if (e.which === 27) {
+                    $('#overlay').remove();
+                }
+            });
+        };
+
+        // you won't need this button click
+        // just call the loading function directly
+        $('#downloadlink').click(loading);
 
       });
     </script>
