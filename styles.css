@@ -307,19 +307,19 @@ h2,h3 {
 }
 .twittericon:hover path,
 .twittericon:focus path {
-  fill:#55acee;
+  fill:#55acee !important;
 }
 .facebookicon:hover path,
 .facebookicon:focus path {
-  fill:#3b5998;
+  fill:#3b5998 !important;
 }
 .pinteresticon:hover path,
 .pinteresticon:focus path {
-  fill:#cc2127;
+  fill:#cc2127 !important;
 }
 .behanceicon:hover path,
 .behanceicon:focus path {
-  fill:#1769ff;
+  fill:#1769ff !important;
 }
 
 ::-moz-selection {
