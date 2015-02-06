@@ -266,11 +266,13 @@ a {
   float: right;
   visibility: hidden;
   transition: all 0s linear 0s;
+  width: 0;
 }
 .social.fixed .settings {
   visibility: visible;
   display: inline-block;
   cursor: pointer;
+  width: auto;
 }
 .social .settings svg {
   opacity: 0;
