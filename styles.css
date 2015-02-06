@@ -185,8 +185,16 @@ td,th {
          url('fonts/gidole-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
+@font-face {
+    font-family: 'gidole_playregular';
+    src: url('fonts/gidoleplay-regular.woff2') format('woff2'),
+         url('fonts/gidoleplay-regular.woff') format('woff'),
+         url('fonts/gidoleplay-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
   font-family:gidoleregular,sans-serif;
   text-rendering: optimizeLegibility;
@@ -227,7 +235,6 @@ a {
   height:50px;
   margin-bottom: -55px;
   line-height: 0px;
-/*  font-size: 20px;*/
   padding-top: 5px;
 }
 .social svg {
@@ -244,6 +251,7 @@ a {
 }
 .social.fixed svg {
   width:20px;
+  transition: width 0.1s linear 0s;
 }
 .social.fixed span {
   display: none;
@@ -256,11 +264,20 @@ a {
 }
 .social .settings {
   float: right;
-  display: none;
+  visibility: hidden;
+  transition: all 0s linear 0s;
 }
 .social.fixed .settings {
+  visibility: visible;
   display: inline-block;
   cursor: pointer;
+}
+.social .settings svg {
+  opacity: 0;
+}
+.social.fixed .settings svg {
+  transition: opacity 0.8s cubic-bezier(.6, 0, .4, 1) .1s;
+  opacity: 1;
 }
 
 
@@ -299,8 +316,8 @@ h2,h3 {
 .screenshots .slick-prev:focus:before, 
 .screenshots .slick-next:hover:before, 
 .screenshots .slick-next:focus:before,
-.defaulticon:hover path, 
-.defaulticon:focus path {
+.defaulticon svg:hover path, 
+.defaulticon svg:focus path {
   fill:hsl(200, 14%, 25%);
   color:hsl(200, 14%, 25%);    
 }
@@ -386,11 +403,9 @@ blockquote,ol,p,pre,table,ul {
 
 
 /*THEMES*/
-/*
-.fake {
-  font-family:gidolelight;
+.play {
+  font-family:gidole_playregular;
 }
-*/
 .dark .social.fixed {
   background-color: hsla(200, 4%, 13%, 0.9);
   border-bottom: 1px solid black;
@@ -410,8 +425,8 @@ blockquote,ol,p,pre,table,ul {
 .dark .screenshots .slick-prev:focus:before, 
 .dark .screenshots .slick-next:hover:before, 
 .dark .screenshots .slick-next:focus:before,
-.dark .defaulticon:hover path, 
-.dark .defaulticon:focus path {
+.dark .defaulticon svg:hover path, 
+.dark .defaulticon svg:focus path {
   fill:hsl(200, 50%, 95%);
   color:hsl(200, 50%, 95%);
 }
@@ -480,6 +495,7 @@ td.tabular {
 /*POPUP*/
 #overlay {
   position: fixed;
+  z-index: 101;  
   left: 0;
   top: 0;
   bottom: 0;
