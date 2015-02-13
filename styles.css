@@ -304,8 +304,8 @@ h2,h3 {
   color:hsl(200, 8%, 59%)
 }
 .social.fixed {
-  background-color: rgba(255,255,255,0.95);
-  border-bottom: 1px solid hsl(200, 11%, 70%);
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
 }
 .social path {
   fill:hsl(200, 9%, 59%)
@@ -416,7 +416,7 @@ blockquote,ol,p,pre,table,ul {
   font-family:gidolinyaregular;
 }
 .dark .social.fixed {
-  background-color: hsla(200, 4%, 13%, 0.95);
+  background-color: #000;
   border-bottom: 1px solid black;
 }
 .dark,
@@ -425,7 +425,7 @@ blockquote,ol,p,pre,table,ul {
 .dark .screenshots .slick-next::before {
   color:hsl(200, 5%, 65%);
   fill:hsl(200, 5%, 65%);
-  background-color:hsl(200, 4%, 13%);
+  background-color:#000;
 }
 .dark a {
   color:hsl(200, 100%, 40%);
@@ -451,11 +451,11 @@ blockquote,ol,p,pre,table,ul {
 }
 
 .dark .jumbotron:before {
-  background-image:linear-gradient(to top,rgba(32,34,35,1) 0%,rgba(32,34,35,.95) 4%,rgba(32,34,35,.8) 8%,rgba(32,34,35,.5) 12%,rgba(32,34,35,.2) 16%,rgba(32,34,35,.05) 20%,rgba(32,34,35,0) 24%,rgba(32,34,35,0) 100%);
+  background-image:linear-gradient(to top,rgba(0,0,0,1) 0%,rgba(0,0,0,.95) 4%,rgba(0,0,0,.8) 8%,rgba(0,0,0,.5) 12%,rgba(0,0,0,.2) 16%,rgba(0,0,0,.05) 20%,rgba(0,0,0,0) 24%,rgba(0,0,0,0) 100%);
   
 }
 .dark .jumbotron {
-    background:url(img/bgdarken.png) center center/cover no-repeat;
+    background:url(img/bgdark.png) center center/cover no-repeat;
 }
 
 
