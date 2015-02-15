@@ -210,7 +210,7 @@ noscript {
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
-  padding:2em 30px 10vw
+  padding:80px 30px 10vw
 }
 input[type=checkbox],input[type=radio] {
   vertical-align:middle;
@@ -233,9 +233,8 @@ a {
 /*SOCIAL*/
 .social {
   height:50px;
-  margin-bottom: -55px;
+  margin-bottom: -50px;
   line-height: 0px;
-  padding-top: 5px;
   z-index: 100;
 }
 .social div div {
@@ -249,19 +248,19 @@ a {
 }
 .social svg {
   width:40px;
+  transition: width 0.2s linear 0s;
 }
 .social.fixed{  
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  padding-top: 10px;
-  height: 30px;
-  box-shadow: 0px 0px 200px 0px rgba(0,0,0,0.1);
+  height: 40px;
+  margin: 0;
+  padding: 0;
 }
 .social.fixed svg {
   width:20px;
-  transition: width 0.2s linear 0s;
 }
 .social.fixed div div:not(:first-child) {
   padding-left: 10px;
@@ -274,23 +273,27 @@ a {
 .socialwrap {
   max-width:760px;
   margin:0 auto;
-  padding: 0 30px;
+  padding: 10px 30px;
   box-sizing:border-box;
   display: block;
+  height: 40px;
+  border-bottom-right-radius: 50% 4px;
+  border-bottom-left-radius: 50% 4px;  
+}
+.fixed .socialwrap {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
 .social .settings {
-  display: block;
   float: right;
   visibility: hidden;
-  transition: all 0s linear 0s;
-  width: 0;
+  transition: visibility 0s linear 0s;
+  width: 50px;
+  margin-left: -50px;
+  padding-left: 0 !important;
 }
 .social.fixed .settings {
   visibility: visible;
-  display: inline-block;
   cursor: pointer;
-  width: 50px;
-  margin-left: -50px;
 }
 .social .settings svg {
   opacity: 0;
@@ -299,7 +302,11 @@ a {
   transition: opacity 0.8s cubic-bezier(.6, 0, .4, 1) .3s;
   opacity: 1;
 }
-
+#navbg {
+  height: 40px;
+  margin: -40px 0;
+  background-color: white;
+}
 
 
 
@@ -377,7 +384,6 @@ h2,h3 {
 body {
   font-size:3.2654vw;
   line-height:1.5em;
-  min-font-size:18px;
 }
 
 h1,h2,h3 {
@@ -398,7 +404,6 @@ h2, .charmap {
   margin-top:1.18em;
   margin-bottom:-.66em;
   margin-left: -0.03em;
-  min-font-size:35px;
 }
 .charmap {
   margin-bottom: 1em;
@@ -411,7 +416,6 @@ h3 {
   margin-top:1.24em;
   margin-bottom:-1.24em;
   margin-left: -0.02em;  
-  min-font-size:20px;
 }
 
 blockquote,ol,p,pre,table,ul {
@@ -518,6 +522,9 @@ ul.like-buttons li iframe {
 }
 .fb-like {
   margin-top: 8px;
+}
+#fb-root {
+  max-width: 100%;
 }
 .noBottomMargin {
   margin-bottom: 0;
@@ -810,14 +817,19 @@ ul.like-buttons li iframe {
   }
 }
 
-@media all and (max-width:600px) {
+@media all and (max-width:460px) {
+  body {
+    font-size: 14px;
+  }
+  #me, .social span {
+    display: none;
+  }
   .social svg {
-    width:20px;
+    width:8vw;
   }
 }
-
-@media all and (max-width:450px) {
-  .social span {
+@media all and (max-width:380px) {
+  #share {
     display: none;
   }
 }
