@@ -478,31 +478,6 @@ blockquote,ol,p,pre,table,ul {
 }
 
 
-/*
-
-.smallcaps { 
-  -webkit-font-feature-settings: "smcp" on; 
-          font-feature-settings: "smcp" on; 
-}
-.noligs { 
-  -webkit-font-feature-settings: "liga" 0; 
-          font-feature-settings: "liga" 0; 
-}
-td.tabular { 
-  -webkit-font-feature-settings: "tnum"; 
-          font-feature-settings: "tnum"; 
-}
-.fractions { 
-  -webkit-font-feature-settings: "frac";
-          font-feature-settings: "frac"; 
-}
-.tech {
-  -webkit-font-feature-settings: "salt" 1;
-          font-feature-settings: "salt" 1;
-}
-*/
-
-
 /*Slider*/
 .screenshots {
   margin-top: 1.5em;
@@ -525,7 +500,7 @@ td.tabular {
 
 
 /*Social*/
-ul.like-buttons{
+ul.like-buttons {
 float: left;
 list-style: none;
 margin: 5px 0 20px 0;
@@ -533,7 +508,7 @@ padding: 0;
 width: 100%;
 }
 
-ul.like-buttons li{
+ul.like-buttons li {
     display: block;
     float: left;
     margin-right: 10px;
@@ -541,6 +516,9 @@ ul.like-buttons li{
 }
 ul.like-buttons li iframe {
 	vertical-align: middle;
+}
+li.fb-like {
+  margin-top: 6px;
 }
 .noBottomMargin {
   margin-bottom: 0;
