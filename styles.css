@@ -517,8 +517,8 @@ ul.like-buttons li {
 ul.like-buttons li iframe {
 	vertical-align: middle;
 }
-li.fb-like {
-  margin-top: 6px;
+.fb-like {
+  margin-top: 8px;
 }
 .noBottomMargin {
   margin-bottom: 0;
