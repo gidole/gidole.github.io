@@ -317,7 +317,7 @@ html {
   background-color:#fff;
 }
 a {
-    color:hsl(200, 100%, 45%);
+  color:hsl(200, 100%, 45%);
 }
 h1 {
   color:hsl(200, 17%, 15%)
@@ -536,6 +536,13 @@ ul.like-buttons li iframe {
   color:hsl(200, 11%, 35%) !important;
   display: none;
 }
+#overlay h2 {
+  color:hsl(200, 11%, 35%) !important;
+}
+#overlay a {
+  color:hsl(200, 100%, 45%) !important;
+}
+
 #overlay.downloaded {
   display:-webkit-flex;
   display:-ms-flexbox;
