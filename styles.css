@@ -236,6 +236,16 @@ a {
   margin-bottom: -55px;
   line-height: 0px;
   padding-top: 5px;
+  z-index: 100;
+}
+.social div div {
+  display: inline-block
+}
+.social div div:not(:first-child) {
+  padding-left: 20px;
+}
+.social span {
+  line-height: 40px;
 }
 .social svg {
   width:40px;
@@ -247,12 +257,18 @@ a {
   width: 100%;
   padding-top: 10px;
   height: 30px;
-  z-index: 100;  
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s linear 0s;
 }
 .social.fixed svg {
   width:20px;
-  transition: width 0.1s linear 0s;
+  transition: width 0.2s linear 0s;
 }
+.social.fixed div div:not(:first-child) {
+  padding-left: 10px;
+  transition: padding-left 0.2s linear 0s;
+}
+
 .social.fixed span {
   display: none;
 }
@@ -261,8 +277,10 @@ a {
   margin:0 auto;
   padding: 0 30px;
   box-sizing:border-box;
+  display: block;
 }
 .social .settings {
+  display: block;
   float: right;
   visibility: hidden;
   transition: all 0s linear 0s;
@@ -272,13 +290,14 @@ a {
   visibility: visible;
   display: inline-block;
   cursor: pointer;
-  width: auto;
+  width: 50px;
+  margin-left: -50px;
 }
 .social .settings svg {
   opacity: 0;
 }
 .social.fixed .settings svg {
-  transition: opacity 0.8s cubic-bezier(.6, 0, .4, 1) .1s;
+  transition: opacity 0.8s cubic-bezier(.6, 0, .4, 1) .3s;
   opacity: 1;
 }
 
@@ -505,6 +524,29 @@ td.tabular {
 }
 
 
+/*Social*/
+ul.like-buttons{
+float: left;
+list-style: none;
+margin: 5px 0 20px 0;
+padding: 0;
+width: 100%;
+}
+
+ul.like-buttons li{
+    display: block;
+    float: left;
+    margin-right: 10px;
+  	font-size: 1px;
+}
+ul.like-buttons li iframe {
+	vertical-align: middle;
+}
+.noBottomMargin {
+  margin-bottom: 0;
+}
+
+
 /*POPUP*/
 #overlay {
   position: fixed;
@@ -513,11 +555,7 @@ td.tabular {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
-  cursor: pointer;
-  display:-webkit-flex;
-  display:-ms-flexbox;
-  display:flex;
+  background: rgba(255, 255, 255, 0.94);
   -webkit-align-items:center;
       -ms-flex-align:center;
           align-items:center;
@@ -526,11 +564,17 @@ td.tabular {
           justify-content:center;
   -webkit-animation:fade .5s ease forwards;
           animation:fade .5s ease forwards;
+  color:hsl(200, 11%, 35%) !important;
+  display: none;
 }
-#overlay h2, #overlay p {
-  color: white !important;
+#overlay.downloaded {
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
 }
-
+#close {
+  cursor: pointer;
+}
 
 /*JUMBOTRON*/
 .jumbotron {
@@ -551,7 +595,7 @@ td.tabular {
           justify-content:center;
   -webkit-animation:fade 2s ease forwards;
           animation:fade 2s ease forwards;
-  padding-bottom:100px
+  padding-bottom:150px;
 }
 
 .jumbotron:before {
@@ -646,7 +690,7 @@ td.tabular {
 
 #scrollhelp {
   position:absolute;
-  bottom:120px;
+  bottom:170px;
   margin-left:auto;
   margin-right:auto;
   left:0;
