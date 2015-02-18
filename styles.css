@@ -374,6 +374,7 @@ h2,h3 {
 /*Typography*/
 body {
   font-size:3.2654vw;
+  letter-spacing:0.8px;
   line-height:1.5em;
 }
 
@@ -389,7 +390,7 @@ h1 {
 }
 
 h2, .charmap {
-  letter-spacing:-.03em;
+  letter-spacing:-0.3px;
   font-size:8.5709vw;
   line-height:1.2em;
   margin-top:1.18em;
@@ -401,7 +402,6 @@ h2, .charmap {
 }
 
 h3 {
-  letter-spacing:-.01em;
   font-size:5.3065vw;
   line-height:1.8461538462em;
   margin-top:1.24em;
