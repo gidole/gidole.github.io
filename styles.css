@@ -207,6 +207,7 @@ noscript {
   width:100%
 }
 .wrapper {
+  width:100%;
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
@@ -286,14 +287,12 @@ a {
 .social .settings {
   float: right;
   visibility: hidden;
-  transition: visibility 0s linear 0s;
   width: 50px;
   margin-left: -50px;
   padding-left: 0 !important;
 }
 .social.fixed .settings {
   visibility: visible;
-  cursor: pointer;
 }
 .social .settings svg {
   opacity: 0;
@@ -414,10 +413,12 @@ blockquote,ol,p,pre,table,ul {
   margin-bottom:1.5em;
 }
 
-.reduced {
-  letter-spacing: -0.07em;
+.decrease {
+  letter-spacing: -0.1em;
 }
-
+.increase {
+  letter-spacing: 0.3em;
+}
 .strike {
   text-decoration: line-through;
 }
@@ -466,26 +467,25 @@ blockquote,ol,p,pre,table,ul {
 }
 
 
-/*Slider*/
-.screenshots {
-  margin-top: 1.5em;
+/*Slideshow*/
+.slideshow {
+  position: relative;
 }
-.screenshots .slick-slide {
-  height: auto;
+.slideshow p {
+  margin-right: 180px;
 }
-.screenshots img {
+.slideshow .slideimg {
+  position: absolute;
+  top: .2em;
+  right: 0px;
+  width: 150px;
+}
+.slideshow .slideimg img {
   max-width: 100%;
-  padding: 0 1px;
-  box-sizing: border-box;
-/*  height: 100%;*/
 }
-.screenshots .slick-dots {
-  bottom: 0px ;
+.slideshow .slideimg img:first-child {
+  margin-bottom: 0.5em;
 }
-.screenshots ul {
-  margin: 0;
-}
-
 
 /*Social*/
 ul.like-buttons {
@@ -494,6 +494,13 @@ list-style: none;
 margin: 5px 0 20px 0;
 padding: 0;
 width: 100%;
+height: 30px;
+}
+.twitter-like {
+  display: none;
+}
+.downloaded .twitter-like {
+  display: inline;
 }
 
 ul.like-buttons li {
@@ -517,7 +524,7 @@ ul.like-buttons li iframe {
 
 
 /*POPUP*/
-#overlay {
+.overlay {
   position: fixed;
   z-index: 101;  
   left: 0;
@@ -531,24 +538,43 @@ ul.like-buttons li iframe {
   -webkit-justify-content:center;
       -ms-flex-pack:center;
           justify-content:center;
-  -webkit-animation:fade .5s ease forwards;
-          animation:fade .5s ease forwards;
   color:hsl(200, 11%, 35%) !important;
-  display: none;
-}
-#overlay h2 {
-  color:hsl(200, 11%, 35%) !important;
-}
-#overlay a {
-  color:hsl(200, 100%, 45%) !important;
-}
-
-#overlay.downloaded {
   display:-webkit-flex;
   display:-ms-flexbox;
   display:flex;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(.6, 0, .4, 1);
+  pointer-events: none;
 }
-#close {
+.overlay div {
+  transform: scale(0.5,0.5);
+  transition: 0.6s cubic-bezier(.6, 0, .4, 1);
+}
+.overlay h2 {
+  color:hsl(200, 11%, 35%) !important;
+}
+.overlay a {
+  color:hsl(200, 100%, 45%) !important;
+}
+.overlay img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+.overlay.gallery div {
+    max-height: 100%;
+  max-width: 100%;
+}
+.overlay.visible div, .overlay.visible img {
+  transform: scale(1,1)
+}
+.overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.pointer {
   cursor: pointer;
 }
 
@@ -813,13 +839,34 @@ ul.like-buttons li iframe {
   body {
     font-size: 14px;
   }
+  h3 { 
+    font-size: 23px;
+  }
   #me, .social span {
     display: none;
   }
   .social svg {
     width:8vw;
   }
-}
+  .slideshow p {
+      margin-right: 0px;
+  }
+  .slideshow .slideimg {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+    overflow: hidden;
+  }
+  .slideshow .slideimg a {
+      width: 45%;
+  }
+  .slideshow .slideimg a:nth-child(1) {
+    float: left;
+  }
+  .slideshow .slideimg a:nth-child(2) {
+    float: right;
+  }
+}  
 @media all and (max-width:380px) {
   #share {
     display: none;
