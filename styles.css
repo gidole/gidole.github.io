@@ -623,8 +623,8 @@ blockquote,ol,p,pre,table,ul {
   -webkit-justify-content:center;
       -ms-flex-pack:center;
           justify-content:center;
-  -webkit-animation:fade 2s ease forwards;
-          animation:fade 2s ease forwards;
+  -webkit-animation:fade 1s ease forwards 0.5s;
+          animation:fade 1s ease forwards 0.5s;
   padding-bottom:150px;
 }
 
@@ -670,8 +670,8 @@ blockquote,ol,p,pre,table,ul {
 }
 .jumbotron h1 {
   z-index: 20;
-  -webkit-animation:scale 2s ease forwards;
-          animation:scale 2s ease forwards;
+  -webkit-animation:scale 1s ease forwards 0.5s;
+          animation:scale 1s ease forwards 0.5s;
 }
 
 
