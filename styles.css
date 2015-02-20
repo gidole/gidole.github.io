@@ -243,13 +243,14 @@ a {
 }
 .social div div:not(:first-child) {
   padding-left: 20px;
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
 }
 .social span {
   line-height: 40px;
 }
 .social svg {
   width:40px;
-  transition: width 0.2s linear 0s;
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
 }
 .social.fixed, .social.fixedbig{  
   position: fixed;
@@ -263,22 +264,20 @@ a {
   height: 40px;
 }
 .social.fixedbig {
-  height: 80px;
+  height: 60px;
 }
 .social.fixed svg {
   width:20px;
 }
 .social.fixedbig svg {
   width:40px;
-  transition: all 0.8s cubic-bezier(.6, 0, .4, 1);  
 }
 .social.fixed div div:not(:first-child) {
-  padding-left: 10px;
-  transition: padding-left 0.2s linear 0s;
+  padding-left: 10px;  
 }
 .social.fixedbig div div:not(:first-child) {
   padding-left: 20px;
-  transition: padding-left 0.2s linear 0s;
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1);    
 }
 .social.fixed span, .social.fixedbig span {
   display: none;
@@ -295,12 +294,12 @@ a {
 }
 .fixed .socialwrap {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-  transition: box-shadow 0.2s linear 0s;
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1);  
   height: 40px;  
 }
 .fixedbig .socialwrap {
   box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
-  transition: all 0.8s cubic-bezier(.6, 0, .4, 1);  
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1);  
   height: 60px;
 }
 .social .settings {
@@ -318,19 +317,23 @@ a {
 }
 .social .settings svg {
   opacity: 0;
+  transition: opacity 0s linear;
+  cursor: pointer;
 }
 .social.fixed .settings svg {
-  transition: opacity 0.8s cubic-bezier(.6, 0, .4, 1) .3s;
+  transition: opacity 0.5s cubic-bezier(.6, 0, .4, 1) 0.5s;
   opacity: 1;
 }
 .social.fixedbig .settings svg {
-  transition: all 0.8s cubic-bezier(.6, 0, .4, 1) 0s;
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
   opacity: 0;
 }
 #navbg {
   height: 60px;
   margin: -60px 0;
   background-color: white;
+  transition: height 0.5s cubic-bezier(.6, 0, .4, 1);
+  transition: margin 0.5s cubic-bezier(.6, 0, .4, 1);    
 }
 .fixed #navbg {
   height: 40px;
@@ -339,15 +342,14 @@ a {
 .fixedbig #navbg {
   height: 60px;
   margin: -60px 0;
-  transition: all 0.8s cubic-bezier(.6, 0, .4, 1);  
 }
-/*
-.social.fixedbig .settings {
+.fixedbig #downloadlink svg {
+  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
+  opacity: 0;
   visibility: hidden;
-  transition: visibility 0.8s cubic-bezier(.6, 0, .4, 1);    
+  margin-left: -40px;
 }
-*/
-
+  
 
 
 /*COLORS*/
@@ -355,8 +357,9 @@ html {
   color:hsl(200, 11%, 35%);
   background-color:#fff;
 }
-a {
+a, .linklook {
   color:hsl(200, 100%, 45%);
+  cursor: pointer;
 }
 h1 {
   color:hsl(200, 17%, 15%)
@@ -413,7 +416,7 @@ h2,h3 {
 /*Typography*/
 body {
   font-size:3.2654vw;
-  letter-spacing:0.8px;
+  letter-spacing:0.3px;
   line-height:1.5em;
 }
 
@@ -429,7 +432,7 @@ h1 {
 }
 
 h2, .charmap {
-  letter-spacing:-0.3px;
+  letter-spacing:-0.04em;
   font-size:8.5709vw;
   line-height:1.2em;
   margin-top:1.18em;
@@ -446,18 +449,12 @@ h3 {
   margin-top:1.24em;
   margin-bottom:-1.24em;
   margin-left: -0.02em;  
+  letter-spacing:0;
 }
 
 blockquote,ol,p,pre,table,ul {
   margin-top:1.5em;
   margin-bottom:1.5em;
-}
-
-.decrease {
-  letter-spacing: -0.1em;
-}
-.increase {
-  letter-spacing: 0.3em;
 }
 .strike {
   text-decoration: line-through;
@@ -469,6 +466,9 @@ blockquote,ol,p,pre,table,ul {
 .play {
   font-family:gidolinyaregular;
 }
+.trackingtest, .trackingtest h3 {
+  letter-spacing: 0px !important;
+}
 .dark .social.fixed {
   background-color: hsl(200, 5%, 15%);
 }
@@ -478,8 +478,8 @@ blockquote,ol,p,pre,table,ul {
 .dark,
 .dark .social path,
 .dark #navbg {
-  color:hsl(200, 5%, 85%);
-  fill:hsl(200, 5%, 85%);
+  color:hsl(200, 2%, 90%);
+  fill:hsl(200, 2%, 90%);
   background-color: rgb(36, 39, 40);
 }
 .dark a {
@@ -492,7 +492,7 @@ blockquote,ol,p,pre,table,ul {
 }
 
 .dark h1, .dark h2, .dark h3 {
-  color:hsl(200, 95%, 98%);
+  color:hsl(200, 100%, 100%);
 }
 .dark .comment, .dark .charmap {
   color:hsl(200, 5%, 45%)
@@ -527,40 +527,6 @@ blockquote,ol,p,pre,table,ul {
   margin-bottom: 0.5em;
 }
 
-/*Social*/
-ul.like-buttons {
-float: left;
-list-style: none;
-margin: 5px 0 20px 0;
-padding: 0;
-width: 100%;
-height: 30px;
-}
-.twitter-like {
-  display: none;
-}
-.downloaded .twitter-like {
-  display: inline;
-}
-
-ul.like-buttons li {
-    display: block;
-    float: left;
-    margin-right: 10px;
-  	font-size: 1px;
-}
-ul.like-buttons li iframe {
-	vertical-align: middle;
-}
-.fb-like {
-  margin-top: 8px;
-}
-#fb-root {
-  max-width: 100%;
-}
-.noBottomMargin {
-  margin-bottom: 0;
-}
 
 
 /*POPUP*/
@@ -606,6 +572,17 @@ ul.like-buttons li iframe {
   margin: 0 auto;
   height: auto;
   display: block;
+  cursor: -webkit-zoom-out;  
+  cursor: zoom-out;
+}
+.slideimg img {
+  cursor: -webkit-zoom-in;  
+  cursor: zoom-in;
+  transition: 0.2s;
+}
+.slideimg img:hover {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
 }
 .overlay.gallery div {
   max-height: 100%;
@@ -619,7 +596,7 @@ ul.like-buttons li iframe {
   opacity: 1;
   pointer-events: all;
 }
-.pointer {
+#close {
   cursor: pointer;
 }
 
@@ -756,11 +733,8 @@ ul.like-buttons li iframe {
   h3 { 
     font-size: 23px;
   }
-  #me, .social span {
-    display: none;
-  }
   .social svg {
-    width:8vw;
+    width:20px;
   }
   .slideshow p {
       margin-right: 0px;
@@ -780,9 +754,27 @@ ul.like-buttons li iframe {
   .slideshow .slideimg a:nth-child(2) {
     float: right;
   }
+  .settings {
+    visibility: hidden !important;
+  }
+  .social.fixedbig {
+    height: 40px;
+  }
+  .social.fixedbig svg {
+    width:20px;
+  }
+  .social.fixedbig div div:not(:first-child) {
+    padding-left: 10px;
+  }
+  .fixedbig .socialwrap {
+    height: 40px;
+  }
+  .fixedbig #downloadlink svg {
+    margin-left: -20px;
+  }
+  .social div div:not(:first-child) {
+  padding-left: 10px;
+  }
 }  
 @media all and (max-width:380px) {
-  #share {
-    display: none;
-  }
 }
