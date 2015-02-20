@@ -243,14 +243,14 @@ a {
 }
 .social div div:not(:first-child) {
   padding-left: 20px;
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
 }
 .social span {
   line-height: 40px;
 }
 .social svg {
   width:40px;
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
 }
 .social.fixed, .social.fixedbig{  
   position: fixed;
@@ -277,7 +277,7 @@ a {
 }
 .social.fixedbig div div:not(:first-child) {
   padding-left: 20px;
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1);    
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
 }
 .social.fixed span, .social.fixedbig span {
   display: none;
@@ -291,15 +291,15 @@ a {
   height: 60px;
   border-bottom-right-radius: 50% 4px;
   border-bottom-left-radius: 50% 4px;
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
 }
 .fixed .socialwrap {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1);  
+  transition: box-shadow 0.1s;
   height: 40px;  
 }
 .fixedbig .socialwrap {
   box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1);  
   height: 60px;
 }
 .social .settings {
@@ -321,21 +321,22 @@ a {
   cursor: pointer;
 }
 .social.fixed .settings svg {
-  transition: opacity 0.5s cubic-bezier(.6, 0, .4, 1) 0.5s;
+  transition: opacity 0.3s cubic-bezier(.6, 0, .4, 1) 0.3s;
   opacity: 1;
 }
 .social.fixedbig .settings svg {
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
   opacity: 0;
 }
 #navbg {
   height: 60px;
   margin: -60px 0;
   background-color: white;
-  transition: height 0.5s cubic-bezier(.6, 0, .4, 1);
-  transition: margin 0.5s cubic-bezier(.6, 0, .4, 1);    
+  transition: height 0.3s cubic-bezier(.6, 0, .4, 1);
+  transition: margin 0.3s cubic-bezier(.6, 0, .4, 1);    
 }
 .fixed #navbg {
+  transition: height 0.1s;
   height: 40px;
   margin: -40px 0;
 }
@@ -344,7 +345,7 @@ a {
   margin: -60px 0;
 }
 .fixedbig #downloadlink svg {
-  transition: all 0.5s cubic-bezier(.6, 0, .4, 1) 0s;
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
   opacity: 0;
   visibility: hidden;
   margin-left: -40px;
@@ -549,7 +550,7 @@ blockquote,ol,p,pre,table,ul {
   display:-ms-flexbox;
   display:flex;
   opacity: 0;
-  transition: 0.6s cubic-bezier(.6, 0, .4, 1);
+  transition: 0.3s cubic-bezier(.6, 0, .4, 1);
   pointer-events: none;
 }
 .overlay.gallery {
@@ -558,7 +559,7 @@ blockquote,ol,p,pre,table,ul {
 .overlay div {
   transform: scale(0.8);
   -webkit-transform: scale(0.8);
-  transition: 0.6s cubic-bezier(.6, 0, .4, 1);
+  transition: 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .overlay h2 {
   color:hsl(200, 11%, 35%) !important;
@@ -574,6 +575,9 @@ blockquote,ol,p,pre,table,ul {
   display: block;
   cursor: -webkit-zoom-out;  
   cursor: zoom-out;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .slideimg img {
   cursor: -webkit-zoom-in;  
@@ -591,6 +595,8 @@ blockquote,ol,p,pre,table,ul {
 .overlay.visible div, .overlay.visible img {
   transform: scale(1);
   -webkit-transform: scale(1);
+  -webkit-filter: blur(0px);
+  filter: blur(0px);  
 }
 .overlay.visible {
   opacity: 1;
@@ -665,7 +671,7 @@ blockquote,ol,p,pre,table,ul {
 .jumbotron h1 {
   z-index: 20;
   -webkit-animation:scale 2s ease forwards;
-          animation:sclae 2s ease forwards;
+          animation:scale 2s ease forwards;
 }
 
 
