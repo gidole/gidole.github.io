@@ -31,8 +31,6 @@
     <meta property="og:site_name" content="Gidole & Gidolinya Free Typefaces" />
   
     <link rel="stylesheet" href="styles.css" type="text/css"/>
-    <script src="js/prefixfree.js"></script>
-    
     <noscript><style>#testdrive{opacity:0.25;pointer-events:none;}</style></noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
@@ -49,17 +47,6 @@
           <div id="title">Gidole</div>
           <div id="tag">&amp; Gidolinya</div>
         </h1>
-        <div id="scrollhelp" class="text-center no-select" contenteditable="false">
-          <div id="inTurnBlurringTextG">
-            <div id="inTurnBlurringTextG_1" class="inTurnBlurringTextG">.</div>
-            <div id="inTurnBlurringTextG_2" class="inTurnBlurringTextG">.</div>
-            <div id="inTurnBlurringTextG_3" class="inTurnBlurringTextG">.</div>
-            <div id="inTurnBlurringTextG_4" class="inTurnBlurringTextG">.</div>
-            <div id="inTurnBlurringTextG_5" class="inTurnBlurringTextG">.</div>
-            <div id="inTurnBlurringTextG_6" class="inTurnBlurringTextG">.</div>
-            <div id="inTurnBlurringTextG_7" class="inTurnBlurringTextG">.</div>
-          </div>
-        </div>
     </header >
     <nav class="social text-center" contenteditable="false">
       <div class="socialwrap">
@@ -95,7 +82,7 @@
         <a href="https://www.behance.net/andreaslarsen" target="_blank" class="behanceicon pointer">
           <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" clip-rule="evenodd" stroke-miterlimit="1.41421"><path d="m27.6 40h-15.2c-2.592 0-4.48-.013-6.32-.798-2.371-1.01-4.271-2.912-5.282-5.282-.785-1.84-.798-3.729-.798-6.32v-15.2c0-2.592.013-4.48.798-6.32 1.01-2.371 2.912-4.271 5.282-5.282 1.84-.785 3.729-.798 6.32-.798h15.2c2.592 0 4.48.013 6.32.798 2.371 1.01 4.271 2.912 5.282 5.282.785 1.84.798 3.729.798 6.32v15.2c0 2.592-.013 4.48-.798 6.32-1.01 2.371-2.912 4.271-5.282 5.282-1.84.785-3.729.798-6.32.798m-13.268-28.56c.808 0 1.606.068 2.29.254.684.124 1.284.389 1.781.7.497.311.896.776 1.145 1.336.249.56.382 1.289.382 2.035 0 .87-.201 1.667-.636 2.226-.373.559-1.035 1.09-1.781 1.463 1.057.311 1.92.908 2.417 1.654.497.746.827 1.742.827 2.799 0 .87-.198 1.668-.509 2.29-.311.622-.84 1.217-1.399 1.59-.56.373-1.289.704-2.035.89-.746.187-1.544.318-2.29.318h-8.523v-17.555m20.29 14.565c.497.497 1.295.763 2.29.763.684 0 1.347-.198 1.845-.509.497-.373.83-.772.954-1.145h3.117c-.497 1.492-1.295 2.624-2.29 3.307-.995.622-2.259 1.018-3.689 1.018-.995 0-1.927-.198-2.735-.509-.808-.311-1.476-.778-2.035-1.399-.559-.559-1.023-1.291-1.272-2.099-.311-.808-.445-1.74-.445-2.735 0-.933.134-1.863.445-2.671.311-.808.776-1.541 1.336-2.163.559-.559 1.289-1.088 2.035-1.399.808-.311 1.677-.509 2.671-.509 1.057 0 2.054.201 2.862.636.808.435 1.474.971 1.972 1.717.497.684.896 1.547 1.145 2.417.124.87.189 1.804.127 2.799h-9.223c0 .995.393 1.983.89 2.481m-12.276.064c.373 0 .771-.065 1.081-.127.311-.062.642-.195.891-.382.249-.186.45-.389.636-.7.124-.311.254-.71.254-1.145 0-.87-.266-1.537-.763-1.972-.497-.373-1.227-.573-2.035-.573h-4.198v4.898m20.417-6.742c-.435-.435-1.164-.7-1.972-.7-.559 0-1.026.131-1.399.318-.373.186-.642.451-.89.7-.249.249-.383.58-.445.89-.062.311-.127.578-.127.827h5.724c-.124-.933-.455-1.6-.89-2.035m-16.474-.763c.684 0 1.282-.198 1.717-.509.435-.311.636-.906.636-1.59 0-.373-.067-.769-.191-1.018-.124-.249-.324-.45-.573-.636-.249-.124-.516-.256-.827-.318-.311-.062-.645-.064-1.018-.064h-3.689v4.134m14.82-5.915h7.124v1.717h-7.124v-1.717"/></svg>
         </a>
-        <a href="https://twitter.com/intent/follow?screen_name=andreaslarsendk" target="_blank" class="twittericon pointer">
+        <a href="https://twitter.com/intent/follow?screen_name=andreaslarsendk" target="_blank" class="twittericon pointer" id="mytwitter">
           <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" clip-rule="evenodd" stroke-miterlimit="1.41421"><path d="m27.6 40h-15.2c-2.592 0-4.48-.013-6.32-.798-2.371-1.011-4.271-2.912-5.282-5.282-.785-1.84-.798-3.729-.798-6.32v-15.2c0-2.592.013-4.48.798-6.32 1.011-2.371 2.912-4.271 5.282-5.282 1.84-.785 3.729-.798 6.32-.798h15.2c2.592 0 4.48.013 6.32.798 2.371 1.011 4.271 2.912 5.282 5.282.785 1.84.798 3.729.798 6.32v15.2c0 2.592-.013 4.48-.798 6.32-1.011 2.371-2.912 4.271-5.282 5.282-1.84.785-3.729.798-6.32.798m5.423-26.19c-.14 9.24-8.326 18.02-17.15 18.415-3.64.16-7.577-1.378-9.877-2.839 2.68.42 7.2-.972 9-2.492-2.64-.28-4.937-2.198-5.677-4.338.76.12 1.911.071 2.631-.069-2.38-.8-4.72-3.105-4.8-6.185.66.32 1.711.702 2.631.762-1.78-1.02-3.323-5.822-1.823-8.262 2.64 2.9 7.518 6.118 12.738 6.438-1.32-5.6 7.515-9.394 10.615-5.654 1.32-.24 2.906-.917 3.946-1.477-.42 1.28-1.585 2.672-2.585 3.392 1.08-.14 2.503-.526 3.323-.946-.5 1.06-2.02 2.454-2.977 3.254"/></svg>
         </a>
         </div>
@@ -144,14 +131,15 @@
         ą &#230; &#229; &#231; &#240; ə ǵ ﬁ ﬂ ħ ī ĵ ĸ ł ŋ &#248; œ &#254; ȑ
         &#223; ț μ ẁ &#255; ž
       </p>
-      <h3>The End</h3>
+      <h3>Fin</h3>
       <p>You can contact me on Twitter and let me know if you're using these - I'd love to see it!</p>
     </main>
     <div contenteditable="false" id="downloaded" class="overlay">
-      <div class="wrapper">
+      <div class="wrapper" id="dlthanks">
         <h2><span id="close" class="pointer">×</span></h2>
-        <h2>Get karma</h2>
-        <p>Spread the word and appreciate my projects on <a href="http://behance.net/andreaslarsen" target="_blank">Behance</a>.
+        <h2>Gidole karma</h2>
+        <p>Star on github // Spread the word // Appreciate on Behance<br>Thank you!</p>
+        <!--
         <ul class="like-buttons">
           <li class="twitter-like">
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gidole.github.io" data-via="andreaslarsendk" data-hashtags="gidole">Tweet</a>
@@ -162,34 +150,29 @@
             <div class="g-plusone" data-size="medium" data-href="https://gidole.github.io"></div>
           </li>
         </ul>
-          <a class="github-button" data-count-api="/repos/gidole/Gidole-Typefaces#stargazers_count" data-count-href="/gidole/Gidole-Typefaces/stargazers" data-icon="octicon-star" href="https://github.com/gidole/Gidole-Typefaces">Star</a>&nbsp;
-          <a class="github-button" href="https://github.com/andreaslarsen" data-count-href="/andreaslarsen/followers" data-count-api="/users/andreaslarsen#followers">Follow</a>&nbsp;        
-          <a class="github-button" href="https://github.com/gidole/Gidole-Typefaces" data-icon="octicon-git-branch" data-count-href="/gidole/Gidole-Typefaces/network" data-count-api="/repos/gidole/Gidole-Typefaces#forks_count">Fork</a>          
-        </p>
+-->
+        <div id="githubbuttons">
+        </div>
       </div>
     </div>  
-    <div contenteditable="false" class="overlay gallery" id="simple">
-      <div>     
-        <img src="img/GidoleSimple.png" class="pointer">
-      </div>
-    </div>
-    <div contenteditable="false" class="overlay gallery" id="smooth">
-      <div>
-        <img src="img/GidoleSmooth.png" class="pointer">
-      </div>
-    </div>
+    <div contenteditable="false" class="overlay gallery" id="simple"></div>
+    <div contenteditable="false" class="overlay gallery" id="smooth"></div>
 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!--  <script type="text/javascript" src="js/jquery.fluidbox.min.js"></script>-->
     <script>
       $(document).ready(function () {
-//        $(function () {
-//            $('a').fluidbox();
-//        });
+
+        $(document).one("scroll",function(){
+          $('#smooth').append('<div><img src="img/GidoleSmooth.png" class="pointer"></div>');
+          $('#simple').append('<div><img src="img/GidoleSimple.png" class="pointer"></div>');
+        });                       
+        
         $(document).keyup(function(e) {
           if (e.keyCode == 27) { 
-            $(".visible").removeClass('visible') 
+            $(".visible").removeClass('visible')
+            $('nav').removeClass('fixedbig');
           }   // esc
         });
 
@@ -203,14 +186,17 @@
 
         $("#downloadlink").click(function () {
           $("#downloaded").toggleClass("visible");
+          $('nav').addClass('fixedbig');
         });
 
         $('#close').click(function() {
           $("#downloaded").toggleClass("visible");
+          $('nav').removeClass('fixedbig');
         });
 
         $('#simplethumb').click(function() {
           $("#simple").toggleClass("visible");
+          $("#bigimage").attr("scr", $("#bigimage").data("scr"));
         });
         $('#simple').click(function() {
           $("#simple").toggleClass("visible");
@@ -222,14 +208,6 @@
           $("#smooth").toggleClass("visible");
         });
         
-        $(window).scroll(function () {
-          var height = $(window).scrollTop();
-          if (height > 10) {
-            $("#scrollhelp").addClass("boom");
-          }
-        });
-        
-        
         var offset = $( ".social" ).offset();
         var sticky = document.getElementById("social")
         $(window).scroll(function() {
@@ -239,22 +217,14 @@
                  $('.social').removeClass('fixed');
             }
         });        
-        $(window).resize(function(){
-          offset = $( ".social" ).offset();
-        });  
+        
+        if ( $('body').scrollTop()-34 > offset.top){
+          $('.social').addClass('fixed');
+        } else {
+          $('.social').removeClass('fixed');
+        }
         
       });
     </script>
-    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&appId=123806314476188&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>

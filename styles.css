@@ -233,8 +233,8 @@ a {
 
 /*SOCIAL*/
 .social {
-  height:50px;
-  margin-bottom: -50px;
+  height:60px;
+  margin-bottom: -60px;
   line-height: 0px;
   z-index: 100;
 }
@@ -251,24 +251,36 @@ a {
   width:40px;
   transition: width 0.2s linear 0s;
 }
-.social.fixed{  
+.social.fixed, .social.fixedbig{  
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 40px;
   margin: 0;
   padding: 0;
 }
+.social.fixed {
+  height: 40px;
+}
+.social.fixedbig {
+  height: 80px;
+}
 .social.fixed svg {
   width:20px;
+}
+.social.fixedbig svg {
+  width:40px;
+  transition: all 0.8s cubic-bezier(.6, 0, .4, 1);  
 }
 .social.fixed div div:not(:first-child) {
   padding-left: 10px;
   transition: padding-left 0.2s linear 0s;
 }
-
-.social.fixed span {
+.social.fixedbig div div:not(:first-child) {
+  padding-left: 20px;
+  transition: padding-left 0.2s linear 0s;
+}
+.social.fixed span, .social.fixedbig span {
   display: none;
 }
 .socialwrap {
@@ -277,22 +289,32 @@ a {
   padding: 10px 30px;
   box-sizing:border-box;
   display: block;
-  height: 40px;
+  height: 60px;
   border-bottom-right-radius: 50% 4px;
-  border-bottom-left-radius: 50% 4px;  
+  border-bottom-left-radius: 50% 4px;
 }
 .fixed .socialwrap {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s linear 0s;
+  height: 40px;  
+}
+.fixedbig .socialwrap {
+  box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
+  transition: all 0.8s cubic-bezier(.6, 0, .4, 1);  
+  height: 60px;
 }
 .social .settings {
   float: right;
   visibility: hidden;
-  width: 50px;
-  margin-left: -50px;
+  width: 100px;
+  margin-left: -100px;
   padding-left: 0 !important;
 }
 .social.fixed .settings {
   visibility: visible;
+}
+.social.fixedbig .settings {
+  visibility: hidden;
 }
 .social .settings svg {
   opacity: 0;
@@ -301,12 +323,30 @@ a {
   transition: opacity 0.8s cubic-bezier(.6, 0, .4, 1) .3s;
   opacity: 1;
 }
+.social.fixedbig .settings svg {
+  transition: all 0.8s cubic-bezier(.6, 0, .4, 1) 0s;
+  opacity: 0;
+}
 #navbg {
-  height: 40px;
-  margin: -40px 0;
+  height: 60px;
+  margin: -60px 0;
   background-color: white;
 }
-
+.fixed #navbg {
+  height: 40px;
+  margin: -40px 0;
+}
+.fixedbig #navbg {
+  height: 60px;
+  margin: -60px 0;
+  transition: all 0.8s cubic-bezier(.6, 0, .4, 1);  
+}
+/*
+.social.fixedbig .settings {
+  visibility: hidden;
+  transition: visibility 0.8s cubic-bezier(.6, 0, .4, 1);    
+}
+*/
 
 
 
@@ -526,7 +566,7 @@ ul.like-buttons li iframe {
 /*POPUP*/
 .overlay {
   position: fixed;
-  z-index: 101;  
+  z-index: 99;  
   left: 0;
   top: 0;
   bottom: 0;
@@ -546,8 +586,12 @@ ul.like-buttons li iframe {
   transition: 0.6s cubic-bezier(.6, 0, .4, 1);
   pointer-events: none;
 }
+.overlay.gallery {
+  z-index: 101;
+}
 .overlay div {
-  transform: scale(0.5,0.5);
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
   transition: 0.6s cubic-bezier(.6, 0, .4, 1);
 }
 .overlay h2 {
@@ -564,11 +608,12 @@ ul.like-buttons li iframe {
   display: block;
 }
 .overlay.gallery div {
-    max-height: 100%;
+  max-height: 100%;
   max-width: 100%;
 }
 .overlay.visible div, .overlay.visible img {
-  transform: scale(1,1)
+  transform: scale(1);
+  -webkit-transform: scale(1);
 }
 .overlay.visible {
   opacity: 1;
@@ -651,8 +696,6 @@ ul.like-buttons li iframe {
   line-height:90%;
   letter-spacing:-.03em;
   font-size:1em;
-/*  margin-left:-.05em;*/
-/*  padding-right: 0.1em;*/
   margin-top:-50px;
   font-family:gidoleregular;
 }
@@ -685,135 +728,6 @@ ul.like-buttons li iframe {
   to {
     -webkit-transform:scale(1,1);
             transform:scale(1,1)
-  }
-}
-
-
-
-#scrollhelp {
-  position:absolute;
-  bottom:170px;
-  margin-left:auto;
-  margin-right:auto;
-  left:0;
-  right:0;
-  text-align:center;
-  z-index: 20;    
-}
-
-#scrollhelp.boom {
-  opacity:0;
-  filter:alpha(opacity=0);
-  transition:opacity 1s ease-in-out
-}
-
-.inTurnBlurringTextG {
-  color:transparent;
-  text-shadow:transparent 0 0 3px;
-  margin-bottom:-1em;
-  font-size:1em;
-  -webkit-animation-name:scrollhint;
-          animation-name:scrollhint;
-  -webkit-animation-duration:3s;
-          animation-duration:3s;
-  -webkit-animation-iteration-count:infinite;
-          animation-iteration-count:infinite;
-  -webkit-animation-direction:linear;
-          animation-direction:linear
-}
-
-#inTurnBlurringTextG_1 {
-  -webkit-animation-delay:1.6s;
-          animation-delay:1.6s
-}
-
-#inTurnBlurringTextG_2 {
-  -webkit-animation-delay:1.65s;
-          animation-delay:1.65s
-}
-
-#inTurnBlurringTextG_3 {
-  -webkit-animation-delay:1.7s;
-          animation-delay:1.7s
-}
-
-#inTurnBlurringTextG_4 {
-  -webkit-animation-delay:1.75s;
-          animation-delay:1.75s
-}
-
-#inTurnBlurringTextG_5 {
-  -webkit-animation-delay:1.8s;
-          animation-delay:1.8s
-}
-
-#inTurnBlurringTextG_6 {
-  -webkit-animation-delay:1.85s;
-          animation-delay:1.85s
-}
-
-#inTurnBlurringTextG_7 {
-  -webkit-animation-delay:1.9s;
-          animation-delay:1.9s
-}
-
-@-webkit-keyframes scrollhint {
-  0% {
-    text-shadow:rgba(0,0,0,0) 0 0 3px
-  }
-
-  10% {
-    text-shadow:#000 0 0 0,-1px -1px 0 rgba(0,0,0,.3),1px -1px 0 rgba(0,0,0,.3),-1px 1px 0 rgba(0,0,0,.3),1px 1px 0 rgba(0,0,0,.3)
-  }
-
-  20%, 40% {
-    text-shadow:#000 0 0 0
-  }
-
-  50% {
-    text-shadow:#000 0 0 0,-1px -1px 0 rgba(0,0,0,.3),1px -1px 0 rgba(0,0,0,.3),-1px 1px 0 rgba(0,0,0,.3),1px 1px 0 rgba(0,0,0,.3)
-  }
-
-  70% {
-    text-shadow:rgba(0,0,0,1) 0 0 10px
-  }
-
-  90% {
-    text-shadow:rgba(0,0,0,0) 0 0 20px
-  }
-
-  100% {
-    text-shadow:transparent 0 0 3px
-  }
-}
-
-@keyframes scrollhint {
-  0% {
-    text-shadow:rgba(0,0,0,0) 0 0 3px
-  }
-
-  10% {
-    text-shadow:#000 0 0 0,-1px -1px 0 rgba(0,0,0,.3),1px -1px 0 rgba(0,0,0,.3),-1px 1px 0 rgba(0,0,0,.3),1px 1px 0 rgba(0,0,0,.3)
-  }
-
-  20%, 40% {
-    text-shadow:#000 0 0 0
-  }
-
-  50% {
-    text-shadow:#000 0 0 0,-1px -1px 0 rgba(0,0,0,.3),1px -1px 0 rgba(0,0,0,.3),-1px 1px 0 rgba(0,0,0,.3),1px 1px 0 rgba(0,0,0,.3)
-  }
-
-  70% {
-    text-shadow:rgba(0,0,0,1) 0 0 10px
-  }
-
-  90% {
-    text-shadow:rgba(0,0,0,0) 0 0 20px
-  }
-
-  100% {
-    text-shadow:transparent 0 0 3px
   }
 }
 
