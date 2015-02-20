@@ -211,7 +211,7 @@ noscript {
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
-  padding:80px 30px 10vw
+  padding:100px 30px 10vw
 }
 input[type=checkbox],input[type=radio] {
   vertical-align:middle;
@@ -233,75 +233,76 @@ a {
 
 /*SOCIAL*/
 .social {
-  height:60px;
-  margin-bottom: -60px;
   line-height: 0px;
-  z-index: 100;
 }
 .social div div {
-  display: inline-block
-}
-.social div div:not(:first-child) {
-  padding-left: 20px;
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
+  display: inline-block;
 }
 .social span {
   line-height: 40px;
+  margin-top: -40px:
 }
 .social svg {
-  width:40px;
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
-}
-.social.fixed, .social.fixedbig{  
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.social.fixed {
-  height: 40px;
-}
-.social.fixedbig {
-  height: 60px;
+  width: 40px;
+  transition: width 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .social.fixed svg {
-  width:20px;
+  width: 20px;
 }
 .social.fixedbig svg {
-  width:40px;
+  width: 40px;
 }
-.social.fixed div div:not(:first-child) {
-  padding-left: 10px;  
-}
-.social.fixedbig div div:not(:first-child) {
-  padding-left: 20px;
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
+.social div div:not(:first-child) {
+  padding-left: 10px;
 }
 .social.fixed span, .social.fixedbig span {
   display: none;
 }
-.socialwrap {
-  max-width:760px;
+.fixie {
+  height: 60px;
+  margin-bottom: -60px;
+  z-index: 100;
+  width: 100%;
+}
+.fixed .fixie, .fixedbig .fixie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+}
+.fixed #navbg {
+  background-color: white;
+}
+.fixedbig #navbg {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(.6, 0, .4, 1);
+}
+#shadow {
+  max-width: 760px;
+  width: 100%;
   margin:0 auto;
+  border-bottom-right-radius: 50% 4px;
+  border-bottom-left-radius: 50% 4px;
+  visibility: hidden;
+  height: 60px;
+}
+.fixed #shadow {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  visibility: visible;
+  height: 40px;
+  transition: box-shadow 0.3s cubic-bezier(.6, 0, .4, 1);
+}
+.fixedbig #shadow {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  transition: 0;
+}
+.socialwrap {
+  max-width: 760px;
+  margin:0 auto;
+  width:100%;
   padding: 10px 30px;
   box-sizing:border-box;
   display: block;
-  height: 60px;
-  border-bottom-right-radius: 50% 4px;
-  border-bottom-left-radius: 50% 4px;
-}
-.fixed .socialwrap {
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-/*  transition: box-shadow 0.1s;*/
-  height: 40px;  
-}
-.fixedbig .socialwrap {
-   transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
- box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
-  height: 60px;
 }
 .social .settings {
   float: right;
@@ -318,41 +319,22 @@ a {
 }
 .social .settings svg {
   opacity: 0;
-  transition: opacity 0s linear;
+  transition: opacity 0s ;
   cursor: pointer;
 }
-.social.fixed .settings svg {
+.fixed .settings svg {
   transition: opacity 0.3s cubic-bezier(.6, 0, .4, 1) 0.3s;
   opacity: 1;
 }
-.social.fixedbig .settings svg {
+.fixed #downloadlink svg, .fixed #mytwitter svg {
+  transition: opacity 0.3s cubic-bezier(.6, 0, .4, 1);
+  transition: width 0.3s cubic-bezier(.6, 0, .4, 1);
+  opacity: 1;
+}
+.fixedbig .settings svg, .fixedbig #downloadlink svg, .fixedbig #mytwitter svg {
   transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
   opacity: 0;
 }
-#navbg {
-  height: 60px;
-  margin: -60px 0 0 0 ;
-  background-color: white;
-  transition: height 0.3s cubic-bezier(.6, 0, .4, 1);
-  transition: margin 0.3s cubic-bezier(.6, 0, .4, 1);    
-}
-.fixed #navbg {
-/*  transition: height 0.1s;*/
-  height: 40px;
-  margin: -40px 0 0 0;
-}
-.fixedbig #navbg {
-  height: 60px;
-  margin: -60px 0 0 0;
-}
-.fixedbig #downloadlink svg {
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
-  opacity: 0;
-  visibility: hidden;
-  margin-left: -40px;
-}
-  
-
 
 /*COLORS*/
 html {
@@ -465,16 +447,16 @@ blockquote,ol,p,pre,table,ul {
 
 
 /*THEMES*/
+#smallplay {
+  display: none;
+}
 .play {
   font-family:gidolinyaregular;
 }
 .trackingtest, .trackingtest h3 {
   letter-spacing: 0px !important;
 }
-.dark .social.fixed {
-  background-color: hsl(200, 5%, 15%);
-}
-.dark .fixed .socialwrap {
+.dark .fixed #shadow {
   box-shadow: 0px 0px 6px 0px rgba(0,0,0,1);
 }
 .dark,
@@ -740,6 +722,12 @@ blockquote,ol,p,pre,table,ul {
   h3 { 
     font-size: 23px;
   }
+  #smallplay {
+    display: inline;
+  }
+  #bigplay {
+    display: none;
+  }
   .social svg {
     width:20px;
   }
@@ -764,23 +752,8 @@ blockquote,ol,p,pre,table,ul {
   .settings {
     visibility: hidden !important;
   }
-  .social.fixedbig {
-    height: 40px;
-  }
   .social.fixedbig svg {
     width:20px;
-  }
-  .social.fixedbig div div:not(:first-child) {
-    padding-left: 10px;
-  }
-  .fixedbig .socialwrap {
-    height: 40px;
-  }
-  .fixedbig #downloadlink svg {
-    margin-left: -20px;
-  }
-  .social div div:not(:first-child) {
-  padding-left: 10px;
   }
 }  
 @media all and (max-width:380px) {
