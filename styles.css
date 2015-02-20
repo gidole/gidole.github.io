@@ -291,15 +291,16 @@ a {
   height: 60px;
   border-bottom-right-radius: 50% 4px;
   border-bottom-left-radius: 50% 4px;
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
 }
 .fixed .socialwrap {
+  transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-  transition: box-shadow 0.1s;
+/*  transition: box-shadow 0.1s;*/
   height: 40px;  
 }
 .fixedbig .socialwrap {
-  box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
+   transition: all 0.3s cubic-bezier(.6, 0, .4, 1);    
+ box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
   height: 60px;
 }
 .social .settings {
@@ -330,19 +331,19 @@ a {
 }
 #navbg {
   height: 60px;
-  margin: -60px 0;
+  margin: -60px 0 0 0 ;
   background-color: white;
   transition: height 0.3s cubic-bezier(.6, 0, .4, 1);
   transition: margin 0.3s cubic-bezier(.6, 0, .4, 1);    
 }
 .fixed #navbg {
-  transition: height 0.1s;
+/*  transition: height 0.1s;*/
   height: 40px;
-  margin: -40px 0;
+  margin: -40px 0 0 0;
 }
 .fixedbig #navbg {
   height: 60px;
-  margin: -60px 0;
+  margin: -60px 0 0 0;
 }
 .fixedbig #downloadlink svg {
   transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
