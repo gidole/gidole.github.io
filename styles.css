@@ -211,7 +211,7 @@ noscript {
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
-  padding:100px 30px 10vw
+  padding:6em 30px 10vw
 }
 input[type=checkbox],input[type=radio] {
   vertical-align:middle;
@@ -399,9 +399,9 @@ h2,h3 {
 
 /*Typography*/
 body {
-  font-size:3.2654vw;
-  letter-spacing:0.3px;
-  line-height:1.5em;
+  font-size:3.53vw;
+  letter-spacing:0.5px;
+  line-height:1.6em;
 }
 
 h1,h2,h3 {
@@ -417,10 +417,10 @@ h1 {
 
 h2, .charmap {
   letter-spacing:-0.04em;
-  font-size:8.5709vw;
-  line-height:1.2em;
-  margin-top:1.18em;
-  margin-bottom:-.66em;
+  font-size:2.62em;
+  line-height:1.23em;
+  margin-top:0.7em;
+  margin-bottom:-.6em;
   margin-left: -0.03em;
 }
 .charmap {
@@ -428,17 +428,17 @@ h2, .charmap {
 }
 
 h3 {
-  font-size:5.3065vw;
-  line-height:1.8461538462em;
-  margin-top:1.24em;
-  margin-bottom:-1.24em;
+  font-size:1.618em;
+  line-height:0.99em;
+  margin-top:1.38em;
+  margin-bottom:-0.84em;
   margin-left: -0.02em;  
   letter-spacing:0;
 }
 
 blockquote,ol,p,pre,table,ul {
-  margin-top:1.5em;
-  margin-bottom:1.5em;
+  margin-top:1.6em;
+  margin-bottom:1.6em;
 }
 .strike {
   text-decoration: line-through;
@@ -492,23 +492,16 @@ blockquote,ol,p,pre,table,ul {
 
 
 /*Slideshow*/
-.slideshow {
-  position: relative;
-}
 .slideshow p {
-  margin-right: 180px;
-}
-.slideshow .slideimg {
-  position: absolute;
-  top: .2em;
-  right: 0px;
-  width: 150px;
+  margin-bottom: 0.8em;
 }
 .slideshow .slideimg img {
-  max-width: 100%;
+  max-width: 30%;
+  cursor: -webkit-zoom-in;  
+  cursor: zoom-in;  
 }
-.slideshow .slideimg img:first-child {
-  margin-bottom: 0.5em;
+.slideshow .slideimg img:not(:first-child) {
+  margin-left: 5%;
 }
 
 
@@ -540,8 +533,8 @@ blockquote,ol,p,pre,table,ul {
   z-index: 101;
 }
 .overlay div {
-  transform: scale(0.8);
-  -webkit-transform: scale(0.8);
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
   transition: 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .overlay h2 {
@@ -550,26 +543,17 @@ blockquote,ol,p,pre,table,ul {
 .overlay a {
   color:hsl(200, 100%, 45%) !important;
 }
+.overlay.gallery {
+  cursor: -webkit-zoom-out;  
+  cursor: zoom-out;  
+}
 .overlay img {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 95%;
+  max-width: 95%;
   margin: 0 auto;
   height: auto;
   display: block;
-  cursor: -webkit-zoom-out;  
-  cursor: zoom-out;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
   transition: 0.3s cubic-bezier(.6, 0, .4, 1);
-}
-.slideimg img {
-  cursor: -webkit-zoom-in;  
-  cursor: zoom-in;
-  transition: 0.2s;
-}
-.slideimg img:hover {
-  -webkit-filter: blur(1px);
-  filter: blur(1px);
 }
 .overlay.gallery div {
   max-height: 100%;
@@ -578,8 +562,6 @@ blockquote,ol,p,pre,table,ul {
 .overlay.visible div, .overlay.visible img {
   transform: scale(1);
   -webkit-transform: scale(1);
-  -webkit-filter: blur(0px);
-  filter: blur(0px);  
 }
 .overlay.visible {
   opacity: 1;
@@ -606,8 +588,8 @@ blockquote,ol,p,pre,table,ul {
   -webkit-justify-content:center;
       -ms-flex-pack:center;
           justify-content:center;
-  -webkit-animation:fade 1s ease forwards 0.5s;
-          animation:fade 1s ease forwards 0.5s;
+  -webkit-animation:fade 4s ease forwards 0.5s;
+          animation:fade 4s ease forwards 0.5s;
   padding-bottom:150px;
 }
 
@@ -699,28 +681,23 @@ blockquote,ol,p,pre,table,ul {
 
 @media all and (min-width:740px) {
   body {
-    font-size:24px
+    font-size:26px
   }
 
   h1 {
     font-size:300px
   }
-
-  .charmap,h2 {
-    font-size:63px
-  }
-
-  h3 {
-    font-size:39px
-  }
 }
 
 @media all and (max-width:460px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
-  h3 { 
-    font-size: 23px;
+  h3 {
+    font-size:5.71vw;
+  }
+  .charmap {
+    font-size:9.2vw;
   }
   #smallplay {
     display: inline;
@@ -757,4 +734,10 @@ blockquote,ol,p,pre,table,ul {
   }
 }  
 @media all and (max-width:380px) {
+/*
+  h3 { 
+    font-size: 23px;
+  }
+*/
+
 }

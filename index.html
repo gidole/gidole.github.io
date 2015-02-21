@@ -108,7 +108,7 @@
       <div class="slideshow">
         <p>The typefaces are inspired by the classic DIN #1451. The letters are drawn with Euler spirals using circles as guidelines. This gives them a minimal look with the smoothest curves and curve to tangent transitions possible.</p>
         <div class="slideimg">
-          <img id="simplethumb" src="img/GidoleSimpleSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" />
+          <img id="simplethumb" src="img/GidoleSimpleSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />
         </div>
       </div>  
 
@@ -141,7 +141,7 @@
       <div contenteditable="true">
         <h3>Characters</h3>
         <p>Some of the >500 characters are shown below</p>
-        <p class="text-center charmap">
+        <p class="charmap">
           A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
           a b c d e f g h i j k l m n o p q r s t u v w x y z<br><br>
           1 2 3 4 5 6 7 8 9 0<br><br>
@@ -168,6 +168,7 @@
     </div>  
     <div class="overlay gallery" id="simple"></div>
     <div class="overlay gallery" id="smooth"></div>
+    <div class="overlay gallery" id="legible"></div>
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -213,7 +214,6 @@
 
         $('#simplethumb').on('click touchstart', function() {
           $("#simple").toggleClass("visible");
-          $("#bigimage").attr("scr", $("#bigimage").data("scr"));
         });
         $('#simple').on('click touchstart', function() {
           $("#simple").toggleClass("visible");
@@ -223,6 +223,12 @@
         });
         $('#smooth').on('click touchstart', function() {
           $("#smooth").toggleClass("visible");
+        });
+        $('#legiblethumb').on('click touchstart', function() {
+          $("#legible").toggleClass("visible");
+        });
+        $('#legible').on('click touchstart', function() {
+          $("#legible").toggleClass("visible");
         });
         
         var offset = $( ".social" ).offset();
@@ -245,6 +251,7 @@
       $(window).load(function () {
         $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
         $('#simple').append('<div><img src="img/GidoleSimple.png"></div>');
+        $('#legible').append('<div><img src="img/GidoleLegible.png"></div>');
       });                       
     </script>
   </body>
