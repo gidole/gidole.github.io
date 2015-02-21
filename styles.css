@@ -211,7 +211,7 @@ noscript {
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
-  padding:6em 30px 10vw
+  padding:4em 30px 10vw
 }
 input[type=checkbox],input[type=radio] {
   vertical-align:middle;
@@ -235,25 +235,39 @@ a {
 .social {
   line-height: 0px;
 }
-.social div div {
+.socialwrap > div > div {
   display: inline-block;
 }
 .social span {
   line-height: 40px;
   margin-top: -40px:
 }
-.social svg {
-  width: 40px;
-  transition: width 0.3s cubic-bezier(.6, 0, .4, 1);
+.socialwrap {
+  max-width: 760px;
+  margin:0 auto;
+  width:100%;
+  height: 0px;
 }
-.social.fixed svg {
-  width: 20px;
+#soul {
+  box-sizing:border-box;
+  display: block;
 }
-.social.fixedbig svg {
-  width: 40px;
+#soul, #settings {
+  transform: scale(1.0) translate3d(0,5px,0);
+  -webkit-transform: scale(1.0) translate3d(0,5px,0);
+  transition: transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease;
 }
-.social div div:not(:first-child) {
-  padding-left: 10px;
+.fixed #soul, .fixed #settings {
+  -webkit-transform: scale(0.5) translate3d(0,0,0);
+  transform: scale(0.5) translate3d(0,0,0);
+}
+.fixedbig #soul, .fixedbig #settings {
+  transform: scale(1.0) translate3d(0,30px,0);
+  -webkit-transform: scale(1.0) translate3d(0,30px,0);
+}
+.socialwrap > div > div:not(:first-child) {
+  padding-left: 20px;
 }
 .social.fixed span, .social.fixedbig span {
   display: none;
@@ -275,7 +289,6 @@ a {
 }
 .fixedbig #navbg {
   opacity: 0;
-  transition: opacity 0.7s cubic-bezier(.6, 0, .4, 1);
 }
 #shadow {
   max-width: 760px;
@@ -284,32 +297,20 @@ a {
   border-bottom-right-radius: 50% 4px;
   border-bottom-left-radius: 50% 4px;
   visibility: hidden;
-  height: 60px;
 }
 .fixed #shadow {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   visibility: visible;
   height: 40px;
-  transition: box-shadow 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .fixedbig #shadow {
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-  transition: 0;
-}
-.socialwrap {
-  max-width: 760px;
-  margin:0 auto;
-  width:100%;
-  padding: 10px 30px;
-  box-sizing:border-box;
-  display: block;
+  box-shadow: none;
 }
 .social .settings {
   float: right;
   visibility: hidden;
   width: 100px;
   margin-left: -100px;
-  padding-left: 0 !important;
 }
 .social.fixed .settings {
   visibility: visible;
@@ -317,22 +318,19 @@ a {
 .social.fixedbig .settings {
   visibility: hidden;
 }
-.social .settings svg {
-  opacity: 0;
-  transition: opacity 0s ;
+.settings svg {
   cursor: pointer;
 }
-.fixed .settings svg {
-  transition: opacity 0.3s cubic-bezier(.6, 0, .4, 1) 0.3s;
-  opacity: 1;
-}
 .fixed #downloadlink svg, .fixed #mytwitter svg {
-  transition: opacity 0.3s cubic-bezier(.6, 0, .4, 1);
-  transition: width 0.3s cubic-bezier(.6, 0, .4, 1);
   opacity: 1;
+  transform: translate3d(0,0,100%);
+  -webkit-transform: translate3d(0,0,100%);
+  transition: transform 300ms ease, opacity 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease, opacity 300ms ease;;
 }
 .fixedbig .settings svg, .fixedbig #downloadlink svg, .fixedbig #mytwitter svg {
-  transition: all 0.3s cubic-bezier(.6, 0, .4, 1) 0s;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
   opacity: 0;
 }
 
@@ -430,7 +428,7 @@ h2, .charmap {
 h3 {
   font-size:1.618em;
   line-height:0.99em;
-  margin-top:1.38em;
+  margin-top:2.38em;
   margin-bottom:-0.84em;
   margin-left: -0.02em;  
   letter-spacing:0;
@@ -525,17 +523,15 @@ blockquote,ol,p,pre,table,ul {
   display:-webkit-flex;
   display:-ms-flexbox;
   display:flex;
-  opacity: 0;
-  transition: 0.3s cubic-bezier(.6, 0, .4, 1);
+  transform: translate3d(0,0,1px);
+  -webkit-transform: translate3d(0,0,1px);
+  transition: transform 300ms ease, opacity 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease, opacity 300ms ease;  
   pointer-events: none;
+  opacity: 0;
 }
 .overlay.gallery {
   z-index: 101;
-}
-.overlay div {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  transition: 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .overlay h2 {
   color:hsl(200, 11%, 35%) !important;
@@ -548,24 +544,36 @@ blockquote,ol,p,pre,table,ul {
   cursor: zoom-out;  
 }
 .overlay img {
-  max-height: 95%;
-  max-width: 95%;
+  max-height: 90%;
+  max-width: 90%;
   margin: 0 auto;
   height: auto;
   display: block;
-  transition: 0.3s cubic-bezier(.6, 0, .4, 1);
 }
 .overlay.gallery div {
   max-height: 100%;
   max-width: 100%;
 }
-.overlay.visible div, .overlay.visible img {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-}
 .overlay.visible {
-  opacity: 1;
   pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  transition: transform 300ms ease, opacity 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease, opacity 300ms ease;  
+}
+.overlay > div {
+  transform: scale(0.5) translate3d(0,0,1px);
+  -webkit-transform: scale(0.5) translate3d(0,0,1px);
+  transition: transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease;
+}
+.overlay.visible > div {
+  transform: translate3d(0,0,0) scale(1);
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transition: transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms ease;
 }
 #close {
   cursor: pointer;
@@ -578,7 +586,7 @@ blockquote,ol,p,pre,table,ul {
   background:url(img/bg.png) center center/cover no-repeat;
   position:relative;
   opacity:0;
-  filter:alpha(opacity=0);
+  filter:alpha(opacity=1);
   display:-webkit-flex;
   display:-ms-flexbox;
   display:flex;
@@ -588,9 +596,11 @@ blockquote,ol,p,pre,table,ul {
   -webkit-justify-content:center;
       -ms-flex-pack:center;
           justify-content:center;
-  -webkit-animation:fade 4s ease forwards 0.5s;
-          animation:fade 4s ease forwards 0.5s;
   padding-bottom:150px;
+  transition: opacity 1s ease;
+}
+.jumbotron.loaded {
+  opacity: 1;
 }
 
 .jumbotron:before {
@@ -605,40 +615,12 @@ blockquote,ol,p,pre,table,ul {
   filter:alpha(opacity=100);
   z-index:10;
 }
-
-@-webkit-keyframes fade {
-  from {
-    opacity:0;
-    filter:alpha(opacity=0);
-  }
-
-  to {
-    opacity:1;
-    filter:alpha(opacity=100);
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity:0;
-    filter:alpha(opacity=0);
-  }
-
-  to {
-    opacity:1;
-    filter:alpha(opacity=100);
-  }
-}
-
 .jumbotron div {
   width:100%
 }
 .jumbotron h1 {
   z-index: 20;
-  -webkit-animation:scale 1s ease forwards 0.5s;
-          animation:scale 1s ease forwards 0.5s;
 }
-
 
 #title {
   line-height:90%;
@@ -653,30 +635,6 @@ blockquote,ol,p,pre,table,ul {
   letter-spacing:-.02em;
   font-size:.38em;
   font-family:gidolinyaregular;    
-}
-
-@-webkit-keyframes scale {
-  from {
-    -webkit-transform:scale(0.9,.9);
-            transform:scale(0.9,.9)
-  }
-
-  to {
-    -webkit-transform:scale(1,1);
-            transform:scale(1,1)
-  }
-}
-
-@keyframes scale {
-  from {
-    -webkit-transform:scale(0.9,.9);
-            transform:scale(0.9,.9)
-  }
-
-  to {
-    -webkit-transform:scale(1,1);
-            transform:scale(1,1)
-  }
 }
 
 @media all and (min-width:740px) {
@@ -696,6 +654,12 @@ blockquote,ol,p,pre,table,ul {
   h3 {
     font-size:5.71vw;
   }
+  .jumbotron {
+    margin-bottom: 20px;
+  }
+  .wrapper {
+    padding-top: 3em;
+  }
   .charmap {
     font-size:9.2vw;
   }
@@ -705,32 +669,19 @@ blockquote,ol,p,pre,table,ul {
   #bigplay {
     display: none;
   }
-  .social svg {
-    width:20px;
+  svg {
+    width: 20px;
   }
-  .slideshow p {
-      margin-right: 0px;
+  #soul, #settings {
+    transform: scale(1) translate3d(0,-25px,0);
+    -webkit-transform: scale(1) translate3d(0,-25px,0);
   }
-  .slideshow .slideimg {
-    position: relative;
-    width: 100%;
-    margin-bottom: 1em;
-    overflow: hidden;
-  }
-  .slideshow .slideimg a {
-      width: 45%;
-  }
-  .slideshow .slideimg a:nth-child(1) {
-    float: left;
-  }
-  .slideshow .slideimg a:nth-child(2) {
-    float: right;
+  .fixed #soul,.fixed #settings, .fixedbig #soul,.fixedbig #settings {
+    transform: scale(1) translate3d(0,10px,0);
+    -webkit-transform: scale(1) translate3d(0,10px,0);
   }
   .settings {
     visibility: hidden !important;
-  }
-  .social.fixedbig svg {
-    width:20px;
   }
 }  
 @media all and (max-width:380px) {
