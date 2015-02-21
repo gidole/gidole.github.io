@@ -184,7 +184,7 @@
         });
 
         $("#darktoggle,#mobiledarktoggle").on('click touchstart', function() {
-          $("body").toggleClass("dark");
+          $("body").toggleClass("dark",0);
         });
 
         $("#typetoggle,#mobiletypetoggle").on('click touchstart', function() {
@@ -205,7 +205,6 @@
         $("#downloadlink").on('click touchstart', function() {
           $("#downloaded").toggleClass("visible");
           $('nav').addClass('fixedbig');
-          $("body").removeClass("dark");
         });
 
         $('#close').on('click touchstart', function() {

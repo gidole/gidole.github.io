@@ -414,14 +414,15 @@ h1 {
 }
 
 h2, .charmap {
-  letter-spacing:-0.04em;
+  letter-spacing:0;
   font-size:2.62em;
   line-height:1.23em;
   margin-top:0.7em;
-  margin-bottom:-.6em;
+  margin-bottom:-.7em;
   margin-left: -0.03em;
 }
 .charmap {
+  letter-spacing:-0.1em;
   margin-bottom: 1em;
 }
 
@@ -457,12 +458,18 @@ blockquote,ol,p,pre,table,ul {
 .dark .fixed #shadow {
   box-shadow: 0px 0px 6px 0px rgba(0,0,0,1);
 }
+.dark .fixedbig #shadow {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
 .dark,
 .dark .social path,
 .dark #navbg {
   color:hsl(200, 2%, 90%);
   fill:hsl(200, 2%, 90%);
   background-color: rgb(36, 39, 40);
+}
+.dark .overlay {
+  background-color: rgba(36, 39, 40, 0.90);
 }
 .dark a {
   color:hsl(200, 95%, 70%);
@@ -473,8 +480,8 @@ blockquote,ol,p,pre,table,ul {
   color:white;
 }
 
-.dark h1, .dark h2, .dark h3 {
-  color:hsl(200, 100%, 100%);
+.dark h1, .dark h2, .dark h3, .dark .overlay p, .dark .overlay h2 {
+  color:hsl(200, 100%, 100%) !important;
 }
 .dark .comment, .dark .charmap {
   color:hsl(200, 5%, 45%)
@@ -512,7 +519,7 @@ blockquote,ol,p,pre,table,ul {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.90);
   -webkit-align-items:center;
       -ms-flex-align:center;
           align-items:center;
