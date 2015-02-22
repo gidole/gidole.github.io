@@ -48,6 +48,15 @@ a {
   z-index: 35;
   transform: translateY(0px);  
   transition: transform 1s ease;
+}
+.social a {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.is-sticky .social a {
+  opacity: 0.1;
+}
+.social a:hover, .social a:focus, .social.fixedbig a {
   opacity: 1;
 }
 .social > div {
