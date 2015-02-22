@@ -49,23 +49,24 @@ a {
   transform: translateY(0px);  
   transition: transform 1s ease;
 }
-.social a {
+.social a, .social span {
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
+}
+.social span {
+  line-height: 40px;
 }
 .is-sticky .social a {
   opacity: 0.1;
+}
+.is-sticky .social span {
+  opacity: 0;
 }
 .social a:hover, .social a:focus, .social.fixedbig a {
   opacity: 1;
 }
 .social > div {
   display: inline-block;
-}
-.social span {
-  opacity: 1;
-  line-height: 40px;
-  transition: opacity 0.5s ease 1s;
 }
 .social > div:not(:first-child) {
   padding-left: 3.9vw;
