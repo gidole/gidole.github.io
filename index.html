@@ -41,13 +41,20 @@
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/combi.js"></script>
+<!--
     <script src="js/prefixfree.js"></script>
     <script src="js/toggles.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
+-->
     <script>
       $(document).ready(function () {
 
-        $("#sticky").sticky({topSpacing:-33});    
+        $("#sticky").sticky({
+          topSpacing:-33,
+          getWidthFrom:"body",
+          responsiveWidth:true
+        });    
 
         $(document).keyup(function(e) {
           if (e.keyCode == 27) { 
@@ -92,19 +99,13 @@
         $('#simplethumb').on('click touchstart', function() {
           $("#simple").toggleClass("visible");
         });
-        $('#simple').on('click touchstart', function() {
-          $("#simple").toggleClass("visible");
+        $('.gallery').on('click touchstart', function() {
+          $(".gallery").removeClass("visible");
         });
         $('#smooththumb').on('click touchstart', function() {
           $("#smooth").toggleClass("visible");
         });
-        $('#smooth').on('click touchstart', function() {
-          $("#smooth").toggleClass("visible");
-        });
         $('#legiblethumb').on('click touchstart', function() {
-          $("#legible").toggleClass("visible");
-        });
-        $('#legible').on('click touchstart', function() {
           $("#legible").toggleClass("visible");
         });
 
@@ -168,9 +169,7 @@
       <h3>Design</h3>
       <div class="slideshow">
         <p>The typefaces are inspired by the classic DIN #1451. The letters are drawn with Euler spirals using circles as guidelines. This gives them a minimal look with the smoothest curves and curve to tangent transitions possible.</p>
-        <div class="slideimg">
-          <img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />
-        </div>
+        <div class="slideimg"><img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" /></div>
       </div>  
 
       

@@ -48,6 +48,7 @@ a {
   z-index: 35;
   transform: translateY(0px);  
   transition: transform 1s ease;
+  width: 100%;
 }
 .social a, .social span {
   opacity: 1;
@@ -57,7 +58,7 @@ a {
   line-height: 40px;
 }
 .is-sticky .social a {
-  opacity: 0.1;
+  opacity: 0.5;
 }
 .is-sticky .social span {
   opacity: 0;
