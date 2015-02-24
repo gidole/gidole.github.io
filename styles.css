@@ -33,7 +33,8 @@ noscript {
   max-width:760px;
   margin:0 auto;
   box-sizing:border-box;
-  padding:2em 15px 10vw
+  padding:2em 15px 0;
+  transform: translateY(-150px);
 }
 .text-center {
   text-align:center
@@ -41,57 +42,67 @@ noscript {
 a {
   text-decoration:none
 }
+iframe {
+  width: 340px;
+  height: 458px;
+}
 
 /*SOCIAL*/
 .social {
   line-height: 0px;
   z-index: 35;
-  transform: translateY(0px);  
-  transition: transform 1s ease;
   width: 100%;
 }
-.social a, .social span {
-  opacity: 1;
-  transition: opacity 1s ease;
+.social > div {
+  margin-top: 0px;
+  transition: transform 1s cubic-bezier(.17,0,.17,1);
+  transform: translate3d(0,-150px,0);
+}
+.social > div, .social > div > div {
+  display: inline-block;
+}
+.is-sticky #showscroll {
+  transition: transform 1s ease;
+  transform: translate3d(27.25vw,-4px,0) scale(0.8);
+}
+#showscroll > div {
+  transform: translate3d(0,0,0);
+  transition: transform 1s cubic-bezier(.17,0,.17,1);
+}
+.is-sticky #donate {
+  transform: translate3d(-2vw,0,0);
+  transition: transform 1s ease;
 }
 .social span {
   line-height: 40px;
+  margin: 0 -40px;
 }
-.is-sticky .social a {
-  opacity: 0.5;
+.social > div > div {
+  padding-left: 3vw;
 }
-.is-sticky .social span {
-  opacity: 0;
+#get {
+  padding-left: 0;
 }
-.social a:hover, .social a:focus, .social.fixedbig a {
-  opacity: 1;
-}
-.social > div {
-  display: inline-block;
-}
-.social > div:not(:first-child) {
-  padding-left: 3.9vw;
-}
-.social > div > div > a:not(:first-child) {
-  padding-left: 1.3vw;
+.social > div > div > div > a:not(:first-child) {
+  padding-left: 1vw;
 }
 svg {
-  width: 8.1vw;
+  width: 6vw;
 }
-.settings svg {
-  cursor: pointer;
+.social a {
+  height: 6vw;
+  display: inline-block;
 }
-.social.fixedbig {
+.fixedbig {
   position: fixed;
-  top: -33px !important;
-  left: 0;
-  right: 0;
-  transform: translateY(30px) scale(1) !important;
-  transition: transform 1s ease 0s;
+  top:-30px !important;
 }
-.fixedbig span {
-  opacity: 0;
-  transition: opacity 0s; 
+.social.fixedbig > div {
+  transform: translate3d(0,40px,0) scale(1) !important;
+  transition: 2s ease;
+}
+.social.fixedbig #donate {
+  transform: translate3d(0,0,0) !important;
 }
   
 /*COLORS*/
@@ -104,7 +115,7 @@ html {
 p, span {
   color: hsl(200, 11%, 35%);
 }
-a, .linklook {
+a, .linklook, svg {
   color:hsl(200, 100%, 45%);
   cursor: pointer;
 }
@@ -118,28 +129,31 @@ h2, h3 {
   color:hsl(200, 8%, 59%)
 }
 #twittericon path {
-  fill:#55acee;
+  fill:#01579B;
 }
 #facebookicon path {
-  fill:#3b5998;
+  fill:#01579B;
 }
 #googleicon path {
-  fill:#dd4b39;
+  fill:#B71C1C;
 }
 #pinteresticon path {
-  fill:#cc2127;
+  fill:#B71C1C;
 }
 #behanceicon path {
-  fill:#1769ff;
+  fill:#01579B;
 }
 #downloadlink path {
-  fill:#6cc644;
+  fill:#1B5E20;
 }
 #githubicon path {
-  fill:#4183c4;
+  fill:#FFD600;
 }
 #linkedin path {
-  fill:#0976b4;
+  fill:#01579B;
+}
+#donateicon path {
+  fill:#B71C1C;
 }
 
 ::-moz-selection {
@@ -224,7 +238,6 @@ blockquote,ol,p,pre,table,ul {
 }
 .toggle-slide .toggle-blob {
   position: relative;
-  cursor: hand;
 }
 .toggle-slide {
   border-radius: 9999px;
@@ -314,7 +327,7 @@ p, h1, h2, h3, span, .charmap {
   opacity: 0;
   transition: opacity 500ms ease;
 }
-.overlay.gallery {
+.overlay.gallery, #donateiframe {
   z-index: 40;
 }
 .overlay h2 {
@@ -322,9 +335,6 @@ p, h1, h2, h3, span, .charmap {
 }
 .overlay a {
   color:hsl(200, 100%, 45%) !important;
-}
-.overlay.gallery {
-  cursor: zoom-out;  
 }
 .overlay img {
   max-height: 90%;
@@ -341,6 +351,7 @@ p, h1, h2, h3, span, .charmap {
   pointer-events: all;
   opacity: 1;
   transition: opacity 500ms ease;  
+  cursor: zoom-out;  
 }
 .overlay > div {
   transform: scale(0.95);
@@ -366,6 +377,7 @@ p, h1, h2, h3, span, .charmap {
   justify-content:center;
   padding-bottom:150px;
   transition: opacity 1s ease;
+  margin-bottom: 150px;
 }
 .jumbotron.loaded {
   opacity: 1;
@@ -405,6 +417,7 @@ p, h1, h2, h3, span, .charmap {
   font-family:gidolinyaregular;    
 }
 
+
 @media all and (min-width:740px) {
   body {
     font-size:26px
@@ -412,25 +425,6 @@ p, h1, h2, h3, span, .charmap {
   h1 {
     font-size:300px
   }
-  svg {
-    width: 60px;
-  }
-  .social > div:not(:first-child) {
-    padding-left: 30px;
-  }
-  .social > div > div > a:not(:first-child) {
-    padding-left: 10px;
-  }
-}
-@media all and (min-width:600px) {
-    .is-sticky .social {
-    transform: scale(0.67) translate3d(0,-7px,0);
-  }  
-}
-@media all and (min-width:500px) {
-    .is-sticky .social {
-    transform: scale(0.8) translate3d(0,-3px,0);
-  }  
 }
 @media all and (max-width:650px) {
   .toggle {
