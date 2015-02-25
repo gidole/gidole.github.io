@@ -41,14 +41,7 @@
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-<!--    <script src="js/jquery.js"></script>-->
     <script src="js/combi.js"></script>
-<!--
-    <script src="js/prefixfree.js"></script>
-    <script src="js/toggles.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
--->
     <script>
       $(document).ready(function () {
 
@@ -75,30 +68,45 @@
         });
 
         $('#darktoggle').on('toggle', function() {
-          $("html").toggleClass("dark");
+          $("html").addClass("fadewhite").delay(500).queue(function(){
+            $("html").toggleClass("dark").removeClass("fadewhite").dequeue();
+          });
         });
-
         $("#typetoggle").on('toggle', function() {
           $("html").addClass("fade").delay(500).queue(function(){
             $(this).toggleClass("Play").removeClass("fade").dequeue();
           });
         });
-          
         $("#trackingtoggle").on('toggle', function() {
           $("html").toggleClass("trackingtest");
         });
 
         $("#downloadlink").on('click touchstart', function() {
+          if($("#donateiframe").hasClass("visible")){
+            $("#donateiframe").removeClass("visible");
+            $("#downloaded").addClass("visible");
+          }
+          else {
           $('nav').addClass('fixedbig');
-          $("#downloaded").toggleClass("visible");
+          $("#downloaded").addClass("visible");
+          }
         });
-
+        $('#donateicon').on('click touchstart', function() {
+          if($("#downloaded").hasClass("visible")){
+            $("#downloaded").removeClass("visible");
+            $("#donateiframe").addClass("visible");
+          }
+          else {
+          $('nav').addClass('fixedbig');
+          $("#donateiframe").addClass("visible");
+          }
+        });
+        $('#donateicon').one('click touchstart', function() {
+          $('#donatewrapper').append('<iframe src="donate.html" ></iframe>');
+        });
         $('.overlay').on('click touchstart', function() {
           $(".overlay").removeClass("visible");
           $('nav').removeClass('fixedbig');
-        });
-        $('#donateicon').on('click touchstart', function() {
-          $("#donateiframe").toggleClass("visible");
         });
         
 
@@ -118,7 +126,6 @@
         $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
         $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
         $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
-        $('#donatewrapper').append('<iframe src="donate.html" ></iframe>');
       });                       
     </script>      
     
@@ -128,7 +135,16 @@
     <header class="jumbotron">
         <h1 class="text-center">
           <div id="title">Gidole</div>
-          <div id="tag">&amp; Gidolinya</div>
+<!--          <div id="tag">&amp; Gidolinya</div>-->
+          <div id="tag" class="cd-headline rotate-1">
+			<span class="cd-words-wrapper">
+				<b class="is-visible">&amp; Gidolinya</b>
+				<b>100% Free</b>
+				<b>Open Source</b>
+                <b>Modern DIN</b>
+			</span>
+		  </h1>
+
         </h1>
     </header >
     <nav class="social text-center" id="sticky">
@@ -238,14 +254,15 @@
         <h2>Thank me</h2>
         <p>Donate to the Ethiopian Red Cross Society (ERCS)<br>
           Tell your friends, like on Github &amp; Behance<br>
-          Thank you,<br>
+          Follow me for updates<br>
           Andreas
         </p>
       </div>
     </div>
     <div id="donateiframe" class="overlay">
       <div class="wrapper" id="donatewrapper">
-        <p>Thank you! You can use the widget below or the <a href="https://www.ammado.com/community/153173" target="_blank">fundraising webpage</a> to donate to ERCS.</p>
+        <p>Thank you! You can use the widget or the fundraising <a href="https://www.ammado.com/community/153173" target="_blank">webpage</a> to donate to ERCS.</p>
+        <div id="iframeloading"><p>Iframe loading...</p></div>
       </div>
     </div>
     <div class="overlay gallery" id="simple"></div>

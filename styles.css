@@ -42,9 +42,19 @@ noscript {
 a {
   text-decoration:none
 }
-iframe {
+#iframeloading, iframe {
   width: 340px;
   height: 458px;
+  display: block;
+  margin: 0 auto;
+}
+#iframeloading {
+  text-align: center;
+  padding-top: 1em;
+  box-sizing: border-box;
+}
+iframe {
+  margin-top: -458px;
 }
 
 /*SOCIAL*/
@@ -63,7 +73,7 @@ iframe {
 }
 .is-sticky #showscroll {
   transition: transform 1s ease;
-  transform: translate3d(27.25vw,-4px,0) scale(0.8);
+  transform: translate3d(34.5vw,-4px,0) scale(0.8);
 }
 #showscroll > div {
   transform: translate3d(0,0,0);
@@ -87,10 +97,9 @@ iframe {
   padding-left: 1vw;
 }
 svg {
-  width: 6vw;
+  width: 8.1vw;
 }
 .social a {
-  height: 6vw;
   display: inline-block;
 }
 .fixedbig {
@@ -119,8 +128,8 @@ a, .linklook, svg {
   color:hsl(200, 100%, 45%);
   cursor: pointer;
 }
-h1 {
-  color:hsl(200, 17%, 15%)
+h1, h1 span {
+  color:hsl(200, 17%, 15%);
 }
 h2, h3 {
   color:hsl(200, 14%, 25%)
@@ -260,8 +269,8 @@ p, h1, h2, h3, span, .charmap {
 .dark a {
   color:hsl(200, 95%, 70%);
 }
-.dark h1, .dark h2, .dark h3, .dark .overlay p, .dark .overlay h2 {
-  color:hsl(200, 100%, 100%) !important;
+.dark h1, .dark h1 span, .dark h2, .dark h3, .dark .overlay p, .dark .overlay h2 {
+  color:hsl(200, 100%, 100%);
 }
 .dark .comment, .dark .charmap {
   color:hsl(200, 5%, 45%)
@@ -303,14 +312,8 @@ p, h1, h2, h3, span, .charmap {
   opacity: 0;
   transition: opacity 500ms ease;
 }
-.overlay.gallery, #donateiframe {
+.overlay.gallery {
   z-index: 40;
-}
-.overlay h2 {
-  color:hsl(200, 11%, 35%) !important;
-}
-.overlay a {
-  color:hsl(200, 100%, 45%) !important;
 }
 .overlay img {
   max-height: 90%;
@@ -351,7 +354,7 @@ p, h1, h2, h3, span, .charmap {
   align-items:center;
   justify-content:center;
   padding-bottom:150px;
-  transition: opacity 2s ease;
+  transition: opacity 2s ease 0.2s;
   margin-bottom: 150px;
 }
 .jumbotron.loaded {
@@ -377,16 +380,91 @@ p, h1, h2, h3, span, .charmap {
   letter-spacing:-.03em;
   font-size:1em;
   margin-top:-50px;
-  font-family:gidoleregular;
 }
 
 #tag {
   line-height:90%;
   letter-spacing:-.02em;
   font-size:.38em;
-  font-family:gidolinyaregular;    
 }
 
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+.cd-headline.rotate-1 .cd-words-wrapper {
+  perspective: 1000px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+}
+.cd-headline.rotate-1 b.is-visible {
+  opacity: 1;
+  transform: rotateX(0deg);
+  animation: cd-rotate-1-in 1s;
+}
+.cd-headline.rotate-1 b.is-hidden {
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1s;
+}
+
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
 
 @media all and (min-width:740px) {
   body {
@@ -395,6 +473,26 @@ p, h1, h2, h3, span, .charmap {
   h1 {
     font-size:300px
   }
+  .is-sticky #donate {
+    transform: translate3d(-13px,0,0);
+  }
+  .is-sticky #showscroll {
+    transform: translate3d(260px,-4px,0) scale(0.8);
+  }  
+  .social > div > div {
+    padding-left: 22px;
+  }
+  .social > div > div > div > a:not(:first-child) {
+    padding-left: 9px;
+  }
+  svg {
+    width: 60px;
+    transition: transform .2s ease;
+  }
+  svg:hover {
+    transform: scale(1.2)
+  }
+
 }
 @media all and (max-width:650px) {
   .toggle {
