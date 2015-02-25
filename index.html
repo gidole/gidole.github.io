@@ -41,15 +41,27 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-
+      $(window).load(function () {
+        $('.jumbotron').addClass('loaded');
+        $('.slideimg').append('<img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />');        
+        $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
+        $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
+        $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
+        $('#simplethumb').on('click touchstart', function() {
+          $("#simple").toggleClass("visible");
+        });
+        $('#smooththumb').on('click touchstart', function() {
+          $("#smooth").toggleClass("visible");          
+        });
+        $('#legiblethumb').on('click touchstart', function() {
+          $("#legible").toggleClass("visible");
+        });
         $(document).keyup(function(e) {
           if (e.keyCode == 27) { 
             $(".visible").removeClass('visible');
             $('nav').removeClass('fixedbig');
           }
         });
-
         $('#darktoggle').on('click touchstart', function() {
           $("html").addClass("fadewhite").delay(0).queue(function(){
             $("html").toggleClass("dark").removeClass("fadewhite").dequeue();
@@ -63,7 +75,6 @@
         $("#trackingtoggle").on('click touchstart', function() {
           $("html").toggleClass("trackingtest");
         });
-
         $("#downloadlink").on('click touchstart', function() {
           if($("#donateiframe").hasClass("visible")){
             $("#donateiframe").removeClass("visible");
@@ -90,26 +101,6 @@
         $('.overlay').on('click touchstart', function() {
           $(".overlay").removeClass("visible");
           $('nav').removeClass('fixedbig');
-        });
-        
-
-      });
-      $(window).load(function () {
-        $('.jumbotron').addClass('loaded');
-        $('.slideimg').append('<img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />');        
-        $('#simplethumb').on('click touchstart', function() {
-          $("#simple").toggleClass("visible");
-        });
-        $('#smooththumb').on('click touchstart', function() {
-          $("#smooth").toggleClass("visible");          
-        });
-        $('#legiblethumb').on('click touchstart', function() {
-          $("#legible").toggleClass("visible");
-        });
-        $('.slideimg').one('click touchstart', function() {
-          $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
-          $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
-          $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
         });
       });                       
     </script>      
