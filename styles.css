@@ -499,6 +499,12 @@ p, h1, h2, h3, span, .charmap {
     width: 30px;
     height: 20px;
   }
+    .is-sticky #showscroll {
+    transform: translate3d(0,-150px,0) scale(1);
+  }
+  .is-sticky #donate {
+    transform: translate3d(0,0,0);
+  }  
 }
 @media all and (max-width:460px) {
   body {
@@ -514,6 +520,8 @@ p, h1, h2, h3, span, .charmap {
     width: 26px;
     height: 16px;
   }
+
+
 }  
 @media all and (max-width:380px) {
 /*

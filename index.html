@@ -115,17 +115,17 @@
         $('.jumbotron').addClass('loaded');
         $('.slideimg').append('<img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />');        
         $('#simplethumb').on('click touchstart', function() {
+          $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
           $("#simple").toggleClass("visible");
         });
         $('#smooththumb').on('click touchstart', function() {
-          $("#smooth").toggleClass("visible");
+          $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
+          $("#smooth").toggleClass("visible");          
         });
         $('#legiblethumb').on('click touchstart', function() {
+          $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
           $("#legible").toggleClass("visible");
         });
-        $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
-        $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
-        $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
       });                       
     </script>      
     
