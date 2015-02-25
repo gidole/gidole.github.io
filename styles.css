@@ -128,32 +128,8 @@ h2, h3 {
 .comment, .charmap {
   color:hsl(200, 8%, 59%)
 }
-#twittericon path {
-  fill:#01579B;
-}
-#facebookicon path {
-  fill:#01579B;
-}
-#googleicon path {
-  fill:#B71C1C;
-}
-#pinteresticon path {
-  fill:#B71C1C;
-}
-#behanceicon path {
-  fill:#01579B;
-}
-#downloadlink path {
-  fill:#1B5E20;
-}
-#githubicon path {
-  fill:#FFD600;
-}
-#linkedin path {
-  fill:#01579B;
-}
-#donateicon path {
-  fill:#B71C1C;
+path {
+  fill:hsl(200, 14%, 25%)
 }
 
 ::-moz-selection {
@@ -242,10 +218,7 @@ blockquote,ol,p,pre,table,ul {
 .toggle-slide {
   border-radius: 9999px;
 }
-.toggle-on {
-  background: #6cc644;  
-}
-.toggle-off {
+.toggle-on, .toggle-off {
   background:hsl(200, 11%, 52%);
 }
 .toggle-blob {
@@ -274,6 +247,9 @@ p, h1, h2, h3, span, .charmap {
 }
 .dark {
   background-color: rgb(36, 39, 40);
+}
+.dark path {
+  fill:hsl(200, 100%, 100%)
 }
 .dark p, .dark span {
   color:hsl(200, 2%, 90%);
@@ -371,18 +347,15 @@ p, h1, h2, h3, span, .charmap {
   background:url(img/bg.png) center center/cover no-repeat;
   position:relative;
   opacity:0;
-  filter:alpha(opacity=1);
   display:flex;
   align-items:center;
   justify-content:center;
   padding-bottom:150px;
-  transition: opacity 2s ease, transform 2s ease;
-  transform: translate3d(0,0,0) scale(1.2);
+  transition: opacity 2s ease;
   margin-bottom: 150px;
 }
 .jumbotron.loaded {
   opacity: 1;
-  transform: translate3d(0,0,1px) scale(1);
 }
 
 .jumbotron:before {
@@ -394,19 +367,9 @@ p, h1, h2, h3, span, .charmap {
   top:0;
   background-image:linear-gradient(to top,rgba(255,255,255,1) 0%,rgba(255,255,255,.95) 4%,rgba(255,255,255,.8) 8%,rgba(255,255,255,.5) 12%,rgba(255,255,255,.2) 16%,rgba(255,255,255,.05) 20%,rgba(255,255,255,0) 24%,rgba(255,255,255,0) 100%);
   opacity:1;
-  filter:alpha(opacity=100);
-  z-index: 10;
 }
 .jumbotron div {
   width:100%
-}
-.jumbotron h1 {
-  z-index: 20;
-  transition: transform 2s ease;
-  transform: translate3d(0,5vh,0) scale(0.6);  
-}
-.jumbotron.loaded h1 {
-  transform: translate3d(0,0,0) scale(1);  
 }
 
 #title {
