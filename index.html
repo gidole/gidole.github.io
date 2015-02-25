@@ -40,10 +40,9 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">    
     
     
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     
-    <script src="js/jquery.js"></script>
-
+<!--    <script src="js/jquery.js"></script>-->
     <script src="js/combi.js"></script>
 <!--
     <script src="js/prefixfree.js"></script>
@@ -94,18 +93,9 @@
           $("#downloaded").toggleClass("visible");
         });
 
-        $('#simplethumb').on('click touchstart', function() {
-          $("#simple").toggleClass("visible");
-        });
         $('.overlay').on('click touchstart', function() {
           $(".overlay").removeClass("visible");
           $('nav').removeClass('fixedbig');
-        });
-        $('#smooththumb').on('click touchstart', function() {
-          $("#smooth").toggleClass("visible");
-        });
-        $('#legiblethumb').on('click touchstart', function() {
-          $("#legible").toggleClass("visible");
         });
         $('#donateicon').on('click touchstart', function() {
           $("#donateiframe").toggleClass("visible");
@@ -115,9 +105,20 @@
       });
       $(window).load(function () {
         $('.jumbotron').addClass('loaded');
+        $('.slideimg').append('<img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />');        
+        $('#simplethumb').on('click touchstart', function() {
+          $("#simple").toggleClass("visible");
+        });
+        $('#smooththumb').on('click touchstart', function() {
+          $("#smooth").toggleClass("visible");
+        });
+        $('#legiblethumb').on('click touchstart', function() {
+          $("#legible").toggleClass("visible");
+        });
         $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
         $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
         $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
+        $('#donatewrapper').append('<iframe src="donate.html" ></iframe>');
       });                       
     </script>      
     
@@ -179,7 +180,7 @@
       <h3>Design</h3>
       <div class="slideshow">
         <p>The typefaces are inspired by the classic DIN #1451. The letters are drawn with Euler spirals using circles as guidelines. This gives them a minimal look with the smoothest curves and curve to tangent transitions possible.</p>
-        <div class="slideimg"><img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" /></div>
+        <div class="slideimg"></div>
       </div>  
 
       
@@ -242,7 +243,11 @@
         </p>
       </div>
     </div>
-    <div id="donateiframe" class="overlay"><iframe src="donate.html" ></iframe></div>
+    <div id="donateiframe" class="overlay">
+      <div class="wrapper" id="donatewrapper">
+        <p>Thank you! You can use the widget below or the <a href="https://www.ammado.com/community/153173" target="_blank">fundraising webpage</a> to donate to ERCS.</p>
+      </div>
+    </div>
     <div class="overlay gallery" id="simple"></div>
     <div class="overlay gallery" id="smooth"></div>
     <div class="overlay gallery" id="legible"></div>

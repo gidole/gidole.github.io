@@ -376,11 +376,13 @@ p, h1, h2, h3, span, .charmap {
   align-items:center;
   justify-content:center;
   padding-bottom:150px;
-  transition: opacity 1s ease;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translate3d(0,0,0) scale(1.2);
   margin-bottom: 150px;
 }
 .jumbotron.loaded {
   opacity: 1;
+  transform: translate3d(0,0,1px) scale(1);
 }
 
 .jumbotron:before {
@@ -400,6 +402,11 @@ p, h1, h2, h3, span, .charmap {
 }
 .jumbotron h1 {
   z-index: 20;
+  transition: transform 2s ease;
+  transform: translate3d(0,5vh,0) scale(0.6);  
+}
+.jumbotron.loaded h1 {
+  transform: translate3d(0,0,0) scale(1);  
 }
 
 #title {
