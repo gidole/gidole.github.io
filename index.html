@@ -86,13 +86,13 @@
           };
         };
         $('#simplethumb').on('click', function() {
-          $("#simple").toggleClass("visible");
+          $("#simple").toggleClass("visible").delay(200);
         });
         $('#smooththumb').on('click', function() {
-          $("#smooth").toggleClass("visible");          
+          $("#smooth").toggleClass("visible").delay(200);          
         });
         $('#legiblethumb').on('click', function() {
-          $("#legible").toggleClass("visible");
+          $("#legible").toggleClass("visible").delay(200);
         });
         $(document).keyup(function(e) {
           if (e.keyCode == 27) { 
@@ -102,16 +102,14 @@
         });
         $('#darktoggle').on('click', function() {
           $("html").addClass("fadewhite").delay(0).queue(function(){
-            $("html").toggleClass("dark").removeClass("fadewhite").dequeue();
+            $("html").toggleClass("dark").removeClass("fadewhite").dequeue().delay(200);
           });
         });
         $("#typetoggle").on('click', function() {
-          $("html").addClass("fade").delay(500).queue(function(){
-            $(this).toggleClass("Play").removeClass("fade").dequeue();
-          });
+          $("html").toggleClass("Play").delay(200)
         });
         $("#trackingtoggle").on('click', function() {
-          $("html").toggleClass("trackingtest");
+          $("html").toggleClass("trackingtest").delay(200);
         });
         $("#downloadlink").on('click', function() {
           if($("#donateiframe").hasClass("visible")){
