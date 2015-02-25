@@ -47,13 +47,51 @@
         $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
         $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
         $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
-        $('#simplethumb').on('click touchend', function() {
+
+        $.fn.addTouch = function(){
+          this.each(function(i,el){
+            $(el).bind('touchstart touchmove touchend touchcancel',function(){
+              handleTouch(event);
+            });
+          });
+
+          var handleTouch = function(event)
+          {
+            var touches = event.changedTouches,
+                    first = touches[0],
+                    type = '';
+
+            switch(event.type)
+            {
+              case 'touchstart':
+                type = 'mousedown';
+                break;
+
+              case 'touchmove':
+                type = 'mousemove';
+                event.preventDefault();
+                break;
+
+              case 'touchend':
+                type = 'mouseup';
+                break;
+
+              default:
+                return;
+            }
+
+            var simulatedEvent = document.createEvent('MouseEvent');
+            simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0/*left*/, null);
+            first.target.dispatchEvent(simulatedEvent);
+          };
+        };
+        $('#simplethumb').on('click', function() {
           $("#simple").toggleClass("visible");
         });
-        $('#smooththumb').on('click touchend', function() {
+        $('#smooththumb').on('click', function() {
           $("#smooth").toggleClass("visible");          
         });
-        $('#legiblethumb').on('click touchend', function() {
+        $('#legiblethumb').on('click', function() {
           $("#legible").toggleClass("visible");
         });
         $(document).keyup(function(e) {
@@ -62,43 +100,43 @@
             $('nav').removeClass('fixedbig');
           }
         });
-        $('#darktoggle').on('click touchend', function() {
+        $('#darktoggle').on('click', function() {
           $("html").addClass("fadewhite").delay(0).queue(function(){
             $("html").toggleClass("dark").removeClass("fadewhite").dequeue();
           });
         });
-        $("#typetoggle").on('click touchend', function() {
+        $("#typetoggle").on('click', function() {
           $("html").addClass("fade").delay(500).queue(function(){
             $(this).toggleClass("Play").removeClass("fade").dequeue();
           });
         });
-        $("#trackingtoggle").on('click touchend', function() {
+        $("#trackingtoggle").on('click', function() {
           $("html").toggleClass("trackingtest");
         });
-        $("#downloadlink").on('click touchend', function() {
+        $("#downloadlink").on('click', function() {
           if($("#donateiframe").hasClass("visible")){
             $("#donateiframe").removeClass("visible");
-            $("#downloaded").addClass("visible");
+            $("#downloaded").addClass("visible").delay(200);
           }
           else {
           $('nav').addClass('fixedbig');
-          $("#downloaded").addClass("visible");
+          $("#downloaded").addClass("visible").delay(200);
           }
         });
-        $('#donateicon').on('click touchend', function() {
+        $('#donateicon').on('click', function() {
           if($("#downloaded").hasClass("visible")){
             $("#downloaded").removeClass("visible");
-            $("#donateiframe").addClass("visible");
+            $("#donateiframe").addClass("visible").delay(200);
           }
           else {
           $('nav').addClass('fixedbig');
-          $("#donateiframe").addClass("visible");
+          $("#donateiframe").addClass("visible").delay(200);
           }
         });
-        $('#donateicon').one('click touchend', function() {
+        $('#donateicon').one('click', function() {
           $('#donatewrapper').append('<iframe src="donate.html" ></iframe>');
         });
-        $('.overlay').on('click touchend', function() {
+        $('.overlay').on('click', function() {
           $(".overlay").removeClass("visible");
           $('nav').removeClass('fixedbig');
         });
