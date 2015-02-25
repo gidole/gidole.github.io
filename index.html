@@ -47,13 +47,13 @@
         $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
         $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
         $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
-        $('#simplethumb').on('click touchstart', function() {
+        $('#simplethumb').on('click touchend', function() {
           $("#simple").toggleClass("visible");
         });
-        $('#smooththumb').on('click touchstart', function() {
+        $('#smooththumb').on('click touchend', function() {
           $("#smooth").toggleClass("visible");          
         });
-        $('#legiblethumb').on('click touchstart', function() {
+        $('#legiblethumb').on('click touchend', function() {
           $("#legible").toggleClass("visible");
         });
         $(document).keyup(function(e) {
@@ -62,20 +62,20 @@
             $('nav').removeClass('fixedbig');
           }
         });
-        $('#darktoggle').on('click touchstart', function() {
+        $('#darktoggle').on('click touchend', function() {
           $("html").addClass("fadewhite").delay(0).queue(function(){
             $("html").toggleClass("dark").removeClass("fadewhite").dequeue();
           });
         });
-        $("#typetoggle").on('click touchstart', function() {
+        $("#typetoggle").on('click touchend', function() {
           $("html").addClass("fade").delay(500).queue(function(){
             $(this).toggleClass("Play").removeClass("fade").dequeue();
           });
         });
-        $("#trackingtoggle").on('click touchstart', function() {
+        $("#trackingtoggle").on('click touchend', function() {
           $("html").toggleClass("trackingtest");
         });
-        $("#downloadlink").on('click touchstart', function() {
+        $("#downloadlink").on('click touchend', function() {
           if($("#donateiframe").hasClass("visible")){
             $("#donateiframe").removeClass("visible");
             $("#downloaded").addClass("visible");
@@ -85,7 +85,7 @@
           $("#downloaded").addClass("visible");
           }
         });
-        $('#donateicon').on('click touchstart', function() {
+        $('#donateicon').on('click touchend', function() {
           if($("#downloaded").hasClass("visible")){
             $("#downloaded").removeClass("visible");
             $("#donateiframe").addClass("visible");
@@ -95,10 +95,10 @@
           $("#donateiframe").addClass("visible");
           }
         });
-        $('#donateicon').one('click touchstart', function() {
+        $('#donateicon').one('click touchend', function() {
           $('#donatewrapper').append('<iframe src="donate.html" ></iframe>');
         });
-        $('.overlay').on('click touchstart', function() {
+        $('.overlay').on('click touchend', function() {
           $(".overlay").removeClass("visible");
           $('nav').removeClass('fixedbig');
         });
