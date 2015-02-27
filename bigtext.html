@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>Bigtext test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bigtext.js"></script>
+    <style>
+      @font-face {
+        font-family: 'gidoleregular';
+        src: url('fonts/gidole-regular.woff2') format('woff2'),
+             url('fonts/gidole-regular.woff') format('woff'),
+             url('fonts/gidole-regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      #bigtext {
+/*        font-family: gidoleregular;*/
+        max-width: 600px;
+        width: 100%; 
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bigtext">
+    <span>BIGTEXT</span>
+    <span>Makes Text Big</span>
+</div>
+<script>
+$(window).bind("load", function() {
+  if( 'querySelectorAll' in document ) {
+      $('#bigtext').bigtext();    
+  }
+});  
+</script>
+  </body>
+</html>
