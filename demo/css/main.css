@@ -242,7 +242,7 @@ nav > div {
 }
 #worldcenter {
   opacity: 0;
-  animation: fadein .5s ease-in 0s forwards;
+  animation: fadein .8s ease-in 0.2s forwards;
   position: relative;
   margin: 0 auto;
   white-space: nowrap;
