@@ -7,36 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
-    <script>
-      $(function() {
-//        $("#skrollr-body").css("height", "100%");
-//{forceHeight:false}
-        var s = skrollr.init();
-
-        $.fn.addTouch=function(){this.each(function(t,n){$(n).bind("touchstart touchmove touchend touchcancel",function(){e(event)})});var e=function(e){var t=e.changedTouches,n=t[0],c="";switch(e.type){case"touchstart":c="mousedown";break;case"touchmove":c="mousemove",e.preventDefault();break;case"touchend":c="mouseup";break;default:return}var o=document.createEvent("MouseEvent");o.initMouseEvent(c,!0,!0,window,1,n.screenX,n.screenY,n.clientX,n.clientY,!1,!1,!1,!1,0,null),n.target.dispatchEvent(o)}};
-        
-        $('#get').on('click', function() {
-          $("#get").toggleClass("visible");
-          $("#share,#me").removeClass("visible");
-        });
-        $('#share').on('click', function() {
-          $("#share").toggleClass("visible");
-          $("#get,#me").removeClass("visible");
-        });
-        $('#me').on('click', function() {
-          $("#me").toggleClass("visible");
-          $("#share,#get").removeClass("visible");
-        });
-        
-      });
-    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -320,7 +291,7 @@
       <p>Gidole is named after a beautiful mountain town in southern Ethiopia where I lived there as a child. I've open sourced this project since it's my first font.</p>
         </div>
     </div>
-    <div id="world" class="behind" data-900="opacity[quadratic]:.5;transform[quadratic]:scale(0.3)" data-1400="opacity[quadratic]:1;transform[quadratic]:scale(.6)" data-1800="opacity[quadratic]:0;transform[quadratic]:scale(2)">
+    <div id="world" class="behind" data-100="opacity[quadratic]:0;" data-900="opacity[quadratic]:.5;transform[quadratic]:scale(0.3)" data-1400="opacity[quadratic]:1;transform[quadratic]:scale(.6)" data-1800="opacity[quadratic]:0;transform[quadratic]:scale(2)">
       <div id="worldcenter">
         ....................................................................................................................................................................................................................................................................................................................................................................................................................<br>
         ....................................................................................................................................................................................................................................................................................................................................................................................................................<br>
@@ -506,6 +477,30 @@
         <p>Have you got any other ideas for animations? <a href="http://www.reddit.com/r/web_design/comments/2ysih7/any_web_examples_of_cool_text_animation/" style="text-decoration:underline;pointer-events:all;">Reddit</a> thread.</p>
       </div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
+    <script>
+      $(function() {
+        var s = skrollr.init();
+
+        $.fn.addTouch=function(){this.each(function(t,n){$(n).bind("touchstart touchmove touchend touchcancel",function(){e(event)})});var e=function(e){var t=e.changedTouches,n=t[0],c="";switch(e.type){case"touchstart":c="mousedown";break;case"touchmove":c="mousemove",e.preventDefault();break;case"touchend":c="mouseup";break;default:return}var o=document.createEvent("MouseEvent");o.initMouseEvent(c,!0,!0,window,1,n.screenX,n.screenY,n.clientX,n.clientY,!1,!1,!1,!1,0,null),n.target.dispatchEvent(o)}};
+        
+        $('#get').on('click', function() {
+          $("#get").toggleClass("visible");
+          $("#share,#me").removeClass("visible");
+        });
+        $('#share').on('click', function() {
+          $("#share").toggleClass("visible");
+          $("#get,#me").removeClass("visible");
+        });
+        $('#me').on('click', function() {
+          $("#me").toggleClass("visible");
+          $("#share,#get").removeClass("visible");
+        });
+        
+      });
+    </script>
 
   </body>
 </html>
