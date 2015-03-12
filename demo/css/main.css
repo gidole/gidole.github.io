@@ -30,7 +30,6 @@ video {
    Author's custom styles
    ========================================================================== */
 
-/*
 @font-face {
     font-family: 'gidole2regular';
     src: url('/demo/fonts/Gidole2-Regular.woff2') format('woff2'),
@@ -48,7 +47,7 @@ video {
     font-style: normal;
 
 }
-*/
+/*
 @font-face {
     font-family: 'gidole2regular';
     src: url('/fonts/Gidole2-Regular.woff2') format('woff2'),
@@ -66,6 +65,7 @@ video {
     font-style: normal;
 
 }
+*/
 
 html {
   font-family: 'gidole2regular';
@@ -74,7 +74,6 @@ html {
 }
 body {
   width: 100%;
-  margin: 0 20px;
   font-size: 2.2em;
   line-height: 1.5em;
   letter-spacing: .1rem;  
@@ -84,6 +83,7 @@ body {
 }
 h2 {
   font-size: 2.62em;
+  margin-bottom: 0.55em;
 }
 nav, body > div {
   position: fixed;
@@ -134,13 +134,13 @@ svg {
   animation: fadein .5s ease-in 2s forwards;
 }
 #downarrow {
-  font-size: 2rem;  
+  font-size: 2em;  
   position: fixed;
   margin: 0 auto;
   opacity: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   text-align: center;
   animation: fadein .5s ease-in 2.5s forwards;
 }
