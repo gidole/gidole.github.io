@@ -1,57 +1,11 @@
-/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
 audio,
 canvas,
 iframe,
@@ -59,24 +13,6 @@ img,
 svg,
 video {
     vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
 }
 
 /* ==========================================================================
@@ -94,6 +30,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*
 @font-face {
     font-family: 'gidole2regular';
     src: url('/demo/fonts/Gidole2-Regular.woff2') format('woff2'),
@@ -111,21 +48,42 @@ textarea {
     font-style: normal;
 
 }
+*/
+@font-face {
+    font-family: 'gidole2regular';
+    src: url('/fonts/Gidole2-Regular.woff2') format('woff2'),
+         url('/fonts/Gidole2-Regular.woff') format('woff'),
+         url('/fonts/Gidole2-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gidolemono';
+    src: url('/fonts/Gidole-Mono.woff2') format('woff2'),
+         url('/fonts/Gidole-Mono.woff') format('woff'),
+         url('/fonts/Gidole-Mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html {
   font-family: 'gidole2regular';
   color: hsla(201, 14%, 68%, 100);
   background-color: hsl(201, 19%, 20%);
 }
-html, body {
-  width: 100%;
-  font-size: 1.4rem;  
-  letter-spacing: .2rem;  
-}
 body {
+  width: 100%;
+  margin: 0 20px;
+  font-size: 2.2em;
+  line-height: 1.5em;
+  letter-spacing: .1rem;  
   height: 5000px;
   pointer-events: none;
   user-select:none;  
+}
+h2 {
+  font-size: 2.62em;
 }
 nav, body > div {
   position: fixed;
@@ -149,16 +107,16 @@ a {
   color: hsla(201, 14%, 68%, 100);
 }
 .spaced {
-  letter-spacing: .8rem;
-  margin-right: -0.8rem;
+  letter-spacing: .6rem;
+  margin-right: -0.6rem;
 }
 .wrap {
   width: 800px;
   margin: 0 auto;
 }
 svg {
+  width: 90%;
   max-height: 90%;
-  max-width: 90%;
   margin: 0 auto;
 }
 #uno {
@@ -167,7 +125,7 @@ svg {
   text-align: center;  
 }
 #uno svg {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto 1.4rem;
   display: block;
 }
@@ -201,7 +159,7 @@ nav {
   pointer-events: none;
   cursor: default;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 nav > div {
   text-align: center;
@@ -219,7 +177,7 @@ nav > div {
   visibility: hidden;
 }
 .links a {
-  margin-right: -.2rem;
+  margin-right: -.1rem;
 }
 .visible .links {
   transform: translate3d(0,1.3rem,0);
@@ -317,20 +275,14 @@ data-2595="@blur:0" data-2600="@blur:1" data-2995="@blur:1" data-3000="@blur:0"
    Helper classes
    ========================================================================== */
 
-/*
- * Hide visually and from screen readers:
- * http://juicystudio.com/article/screen-readers-display-none.php
- */
+/* Hide visually and from screen readers:  */
 
 .hidden {
     display: none !important;
     visibility: hidden;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
+/* Hide only visually, but have it available for screen readers: */
 
 .visuallyhidden {
     border: 0;
@@ -343,56 +295,16 @@ data-2595="@blur:0" data-2600="@blur:1" data-2995="@blur:1" data-3000="@blur:0"
     width: 1px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
+/* Hide visually and from screen readers, but maintain layout */
 
 .invisible {
     visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
@@ -403,7 +315,6 @@ data-2595="@blur:0" data-2600="@blur:1" data-2995="@blur:1" data-3000="@blur:0"
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
