@@ -241,6 +241,8 @@ nav > div {
   color: hsl(201, 50%, 5%);
 }
 #worldcenter {
+  opacity: 0;
+  animation: fadein .5s ease-in 0s forwards;
   position: relative;
   margin: 0 auto;
   white-space: nowrap;
