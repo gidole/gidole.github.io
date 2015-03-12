@@ -96,17 +96,17 @@ textarea {
 
 @font-face {
     font-family: 'gidole2regular';
-    src: url('/fonts/Gidole2-Regular.woff2') format('woff2'),
-         url('/fonts/Gidole2-Regular.woff') format('woff'),
-         url('/fonts/Gidole2-Regular.ttf') format('truetype');
+    src: url('/demo/fonts/Gidole2-Regular.woff2') format('woff2'),
+         url('/demo/fonts/Gidole2-Regular.woff') format('woff'),
+         url('/demo/fonts/Gidole2-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'gidolemono';
-    src: url('/fonts/Gidole-Mono.woff2') format('woff2'),
-         url('/fonts/Gidole-Mono.woff') format('woff'),
-         url('/fonts/Gidole-Mono.ttf') format('truetype');
+    src: url('/demo/fonts/Gidole-Mono.woff2') format('woff2'),
+         url('/demo/fonts/Gidole-Mono.woff') format('woff'),
+         url('/demo/fonts/Gidole-Mono.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
