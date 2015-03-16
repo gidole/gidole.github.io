@@ -1,239 +1,452 @@
-<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html class="no-js" lang="" data-5999="background-color:hsl(201, 6%, 25%)" data-6000="background-color:hsl(201, 0%, 100%)">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gidole &amp; Gidolinya Free Typefaces</title>
-    <meta name="description" content="Gidole and Gidolinya are open source modern and stylized DIN typefaces. They are named after my childhood town Gidole in Ethiopia. I'm currently working on more weights." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gidole Open Source Modern DIN</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gidole Open Source Modern DIN. A minimal, narrow and yet friendly typeface by @andreaslarsendk." />
     <meta name="author" content="@andreaslarsendk" />
-    <meta name="keywords" content="Gidole, Gidolinya, Open Source, Typefaces, Fonts, Free"
+    <meta name="keywords" content="Gidole, Open Source, Typeface, Font, Free"
     
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Gidole & Gidolinya Free Typefaces">
-    <meta itemprop="description" content="Gidole and Gidolinya are open source modern and stylized DIN typefaces. They are named after my childhood town Gidole in Ethiopia. I'm currently working on more weights.">
-    <meta itemprop="image" content="https://raw.githubusercontent.com/gidole/gidole.github.io/master/img/gidoleandgidolinya.png">
+    <meta itemprop="name" content="Gidole Open Source Modern DIN">
+    <meta itemprop="description" content="Gidole Open Source Modern DIN. A minimal, narrow and yet friendly typeface by @andreaslarsendk.">
+    <meta itemprop="image" content="https://raw.githubusercontent.com/gidole/gidole.github.io/master/images/GidoleOpenSourceModernDIN.png">
 
     <!-- Twitter Card data -->  
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:creator" content="@andreaslarsendk" />
-    <meta name="twitter:title" content="Gidole & Gidolinya Free Typefaces" />
-    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/gidole/gidole.github.io/master/img/gidoleandgidolinya.png" />
+    <meta name="twitter:title" content="Gidole Open Source Modern DIN" />
+    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/gidole/gidole.github.io/master/images/GidoleOpenSourceModernDIN.png" />
     <meta name="twitter:url" content="https://gidole.github.io" />
-    <meta name="twitter:image:width" content="2424" />
-    <meta name="twitter:image:height" content="1896" />
+    <meta name="twitter:image:width" content="1600" />
+    <meta name="twitter:image:height" content="1200" />
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Gidole & Gidolinya Free Typefaces" />
+    <meta property="og:title" content="Gidole Open Source Modern DIN" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://gidole.github.io" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/gidole/gidole.github.io/master/img/gidoleandgidolinyafacebook.png" />
-    <meta property="og:description" content="Gidole and Gidolinya are open source modern and stylized DIN typefaces. They are named after my childhood town Gidole in Ethiopia. I'm currently working on more weights." />
-    <meta property="og:site_name" content="Gidole & Gidolinya Free Typefaces" />
-  
-    <link rel="stylesheet" href="styles.css" type="text/css"/>
-    <noscript><style>#testdrive{opacity:0.25;pointer-events:none;}</style></noscript>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">    
+    <meta property="og:image" content="https://raw.githubusercontent.com/gidole/gidole.github.io/master/images/GidoleOpenSourceModernDINFace.png" />
+    <meta property="og:description" content="Gidole Open Source Modern DIN. A minimal, narrow and yet friendly typeface by @andreaslarsendk." />
+    <meta property="og:site_name" content="Gidole Open Source Modern DIN" />    
     
-    <script src=" //ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-<!--    <script src="js/fittext.js"></script>-->
-    <script>
-      $(window).load(function () {
-        $('.jumbotron').addClass('loaded');
-        $('.slideimg').append('<img id="simplethumb" src="img/GidoleMinimalSmall.png" /><img id="smooththumb" src="img/GidoleSmoothSmall.png" /><img id="legiblethumb" src="img/GidoleLegibleSmall.png" />');        
-        $('#simple').append('<div><img src="img/GidoleMinimal.png"></div>');
-        $('#smooth').append('<div><img src="img/GidoleSmooth.png"></div>');
-        $('#legible').append('<div><img src="img/GidoleLegible.jpg"></div>');
-
-        $.fn.addTouch=function(){this.each(function(t,n){$(n).bind("touchstart touchmove touchend touchcancel",function(){e(event)})});var e=function(e){var t=e.changedTouches,n=t[0],c="";switch(e.type){case"touchstart":c="mousedown";break;case"touchmove":c="mousemove",e.preventDefault();break;case"touchend":c="mouseup";break;default:return}var o=document.createEvent("MouseEvent");o.initMouseEvent(c,!0,!0,window,1,n.screenX,n.screenY,n.clientX,n.clientY,!1,!1,!1,!1,0,null),n.target.dispatchEvent(o)}};
-        
-        $('#simplethumb').on('click', function() {
-          $("#simple").toggleClass("visible").delay(200);
-        });
-        $('#smooththumb').on('click', function() {
-          $("#smooth").toggleClass("visible").delay(200);          
-        });
-        $('#legiblethumb').on('click', function() {
-          $("#legible").toggleClass("visible").delay(200);
-        });
-        $(document).keyup(function(e) {
-          if (e.keyCode == 27) { 
-            $(".visible").removeClass('visible');
-            $('nav').removeClass('fixedbig');
-          }
-        });
-        $('#darktoggle').on('click', function() {
-          $("html").addClass("fadewhite").delay(0).queue(function(){
-            $("html").toggleClass("dark").removeClass("fadewhite").dequeue().delay(200);
-          });
-        });
-        $("#typetoggle").on('click', function() {
-          $("html").toggleClass("Play").delay(200)
-        });
-        $("#trackingtoggle").on('click', function() {
-          $("html").toggleClass("trackingtest").delay(200);
-        });
-        $("#downloadlink").on('click', function() {
-          if($("#donateiframe").hasClass("visible")){
-            $("#donateiframe").removeClass("visible");
-            $("#downloaded").addClass("visible").delay(200);
-          }
-          else {
-          $('nav').addClass('fixedbig');
-          $("#downloaded").addClass("visible").delay(200);
-          }
-        });
-        $('#donateicon').on('click', function() {
-          if($("#downloaded").hasClass("visible")){
-            $("#downloaded").removeClass("visible");
-            $("#donateiframe").addClass("visible").delay(200);
-          }
-          else {
-          $('nav').addClass('fixedbig');
-          $("#donateiframe").addClass("visible").delay(200);
-          }
-        });
-        $('#donateicon').one('click', function() {
-          $('#donatewrapper').append('<iframe src="donate.html" ></iframe>');
-        });
-        $('.overlay').on('click', function() {
-          $(".overlay").removeClass("visible");
-          $('nav').removeClass('fixedbig');
-        });
-      });                       
-    </script>      
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#cc0085">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#cc0085">
     
   </head>
   <body>
-    <noscript class="text-center">This page will only display correctly with javascript turned on.</noscript>
-    <header class="jumbotron">
-        <h1 class="text-center">
-          <div id="title">Gidole</div>
-          <div id="tag">&amp; Gidolinya</div>
-        </h1>
-    </header >
-    <nav class="social text-center" id="sticky">
-      <div id="showscroll">
-        <div id="get">
-          <span>Get</span>
-          <br>
-          <div><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true" id="downloadlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m120 90h360v60h-360v-60m330 270h-90v150h-120v-150h-90l150-150zm-150 240c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></a><a target="_blank" href="https://github.com/gidole/sans" id="githubicon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m225 0v81c-83-18-101 40-101 40-14 35-33 44-33 44-27 19 2 18 2 18 30-2 46-31 46-31 26-45 70-32 87-25 3 20 10 33 19 41-67 7-137 33-137 148 0 33 12 59 31 80-3 8-13 38 3 80 0 0 25 8 83-31 47 13 102 13 150 0 57 39 82 31 82 31 17-42 7-72 3-80 20-21 31-47 31-80 0-115-70-141-137-148 11-9 21-28 21-56v-112c93 1 141 10 178 47 47 47 47 108 47 253s0 206-47 253-108 47-253 47-206 0-253-47-47-108-47-253 0-206 47-253c37-37 83-45 178-47" transform="matrix(1 0 0-1 0 600)"/></svg></a></div>
-        </div><div id="donate">
-          <span>Donate</span>
-          <br>
-          <div id="donateicon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m300 540c-133 0-240-107-240-240s107-240 240-240 240 107 240 240-107 240-240 240m60-300h120v120h-120v120h-120v-120h-120v-120h120v-120h120v120m-60 360c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></div>        
-        </div></div><div id="hidescroll"><div id="share">
-          <span>Share</span>
-          <br>
-          <div><a target="_blank" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fgidole.github.io%2F&text=Gidole%20%26%20Gidolinya%20Free%20Typefaces&original_referer=&via=andreaslarsendk&hashtags=gidole" id="twittericon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m99 164c178-108 388 20 382 221 17 12 32 27 43 45-15-7-32-12-50-14 18 11 32 28 39 48-17-10-36-17-56-21-61 64-167 9-149-79-72 3-137 38-179 91-27-43-8-93 27-117-15 1-28 5-40 11 0-43 30-78 70-86-12-4-26-4-39-2 11-35 43-60 81-61-35-26-77-41-129-36m201 436c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></a><a href="https://plus.google.com/share?url=http://gidole.github.io" target="_blank" id="googleicon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m212 84c109 0 148 62 148 115 0 56-44 74-72 97-17 14-14 28 1 40 25 19 47 40 47 82 0 32-15 52-27 65h21l34 33h-127c-84 0-123-56-123-108 0-49 40-95 106-91-4-18 0-34 9-44-77-6-139-41-139-98 0-44 38-91 122-91m-62 103c0 49 61 61 107 59 41-30 55-44 55-66 0-30-27-60-73-60-58 0-89 34-89 67m360 113v30h-60v60h-30v-60h-60v-30h60v-60h30v60h60m-234 94c0-47-41-48-43-48-40 0-59 53-59 89s21 49 40 49c43 0 62-60 62-90m24 206c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></a><a href="https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank" id="facebookicon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m300 600c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47m210-60h-75c-58 0-105-47-105-105v-75h-60v-90h60v-210h90v210h90v90h-90v60c0 17 13 30 30 30h60v90" transform="matrix(1 0 0-1 0 600)"/></svg></a><a href="https://www.pinterest.com/pin/create/link/?media=http://raw.githubusercontent.com/gidole/gidole.github.io/master/img/gidoleandgidolinya.png&url=http://gidole.github.io/&description=Gidole%20%26%20Gidolinya%20Free%20Typefaces" target="_blank" id="pinteresticon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m300 600c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47m30-426c107 0 156 85 156 163 0 99-83 179-186 179s-186-80-186-179c0-31 8-61 24-88 20-33 73-7 52 30-10 18-16 38-16 58 0 66 57 119 126 119s126-53 126-119c0-49-25-102-95-102-22 0-40 18-40 41 0 29 26 49 26 90 0 31-20 39-42 39s-50-15-50-67c0-26 6-44 6-44l-55-167c-13-39 48-66 64-14l27 89c16-18 39-28 63-28" transform="matrix(1 0 0-1 0 600)"/></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://gidole.github.io" target="_blank" id="linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m90 360v-270h90v270h-90m150 0v-270h90v159c0 25 20 45 45 45s45-20 45-45v-159h90v171c0 58-47 105-105 105-27 0-60-17-75-42v36h-90m-105 159c-30 0-54-24-54-54s24-54 54-54 54 24 54 54-24 54-54 54m165 81c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></a></div>
-        </div><div id="me">
-          <span>Me</span>
-          <br>
-          <div><a href="https://www.behance.net/andreaslarsen" target="_blank" id="behanceicon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m205 428h-115v-263h118c52 0 103 17 103 76 0 36-19 59-48 67 21 11 36 26 36 56 0 47-32 64-94 64m223-67c-57 0-97-42-97-101 0-62 38-102 97-102 46 0 77 25 89 65h-46c-5-13-23-25-42-25-31 0-48 18-48 49h138c3 35-4 59-19 78-14 21-39 36-72 36m-218-152h-62v73h63c26 0 42-12 42-38 0-25-18-35-43-35m258 71h-86c0 24 17 41 43 41 27 0 39-16 43-41m-264 104c23 0 39-7 39-31 0-21-13-31-38-31h-57v62h56m166 26v-25h107v25h-107m-70 190c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></a><a href="https://twitter.com/intent/follow?screen_name=andreaslarsendk" target="_blank" id="twittericon" id="mytwitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><path d="m99 164c178-108 388 20 382 221 17 12 32 27 43 45-15-7-32-12-50-14 18 11 32 28 39 48-17-10-36-17-56-21-61 64-167 9-149-79-72 3-137 38-179 91-27-43-8-93 27-117-15 1-28 5-40 11 0-43 30-78 70-86-12-4-26-4-39-2 11-35 43-60 81-61-35-26-77-41-129-36m201 436c145 0 206 0 253-47s47-108 47-253 0-206-47-253-108-47-253-47-206 0-253 47-47 108-47 253 0 206 47 253 108 47 253 47" transform="matrix(1 0 0-1 0 600)"/></svg></a></div>
-        </div>
-      </div>
-    </nav> 
-
-
-    <main class="wrapper">
-
-      
-      <h3>Gidole &amp; Gidolinya</h3>
-      <p>Gidole is a beautiful mountain town in southern Ethiopia and Gidolinya is the language spoken by the people living there. I lived there as a child - hence the names and why I have chosen to channel any potential goodwill from this hobby project to donations to the Ethiopian Red Cross Society (ERCS).</p>
-
-      
-      
-      <h3>Design</h3>
-      <div class="slideshow">
-        <p>The typefaces are inspired by the classic DIN #1451. The letters are drawn with Euler spirals using circles as guidelines. This gives them a minimal look with the smoothest curves and curve to tangent transitions possible.</p>
-        <div class="slideimg"></div>
-      </div>  
-
-      
-      <h3>Guidelines</h3>
-      <p>I recommend you increase and decrease the tracking for body text and big headlines, respectively. Subset the font if you are using it for web to reduce file size.</p>
-
-      <div id="playground">
-        <h3>Playground</h3>
-          <p>
-            <input type="checkbox" id="darktoggle" /><label for="darktoggle"><span class="ui"></span>White on dark</label><br>
-            <input type="checkbox" id="typetoggle" /><label for="typetoggle"><span class="ui"></span>Gidolinya typeface</label><br>
-            <input type="checkbox" id="trackingtoggle" /><label for="trackingtoggle"><span class="ui"></span>Disable tracking</label><br>
-          Testdrive the font by editting anything in the "Characters" section.
-          </p>
-      </div>        
-      <div contenteditable="true" spellcheck="false"so>
-        <h3>Characters</h3>
-        <p>Some of the >500 characters are shown below</p>
-        <p class="charmap">
-          A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
-          a b c d e f g h i j k l m n o p q r s t u v w x y z<br><br>
-          1 2 3 4 5 6 7 8 9 0<br><br>
-          &amp; @ # % &#182; &#167; &#169; &#174; ™<br>
-          $ € &#163; &#165; ₹ ₺ &#162; π β Ω † ‡<br>
-          ( ) [ ] { } | / \<br>
-          &#39; &quot; ‘ ’ “ ” * &#176; ′ ″ ‴ &#171; &#187; ‹ ›<br>
-          . , … _ : ; &#161; ! &#191; ? &#183; • - – — ~<br>
-          + − &#247; &#215; &#177; = ≠ ≈ &lt; &gt; ≤ ≥ √<br><br>
-          Å &#198; &#199; Đ Ə Ğ Ȋ Ĵ Ķ Ŀ Ŋ Ø Œ &#222; Ṛ ẞ Ŧ Ų Ẅ Ỹ Ž<br>
-          ą &#230; &#229; &#231; &#240; ə ǵ ſ ħ ī ĵ ĸ ł ŋ &#248; œ &#254; ȑ
-          &#223; ț μ ẁ &#255; ž
-        </p>
-      </div>
-
-      <h3>Open Source</h3>
-      <p>Help me by reporting <a href="https://github.com/gidole/Gidole-Typefaces/issues" target="_blank">issues</a> - issues can be anything from errors, to suggestions, to requests, etc. You can contribute directly by <a href="https://github.com/gidole/Gidole-Typefaces/fork">forking</a> and creating pull requests. <a href="http://fontforge.github.io/" target="_blank">FontForge</a> is a free font editor and I've also saved UFO versions.</p>
-
-      
-      <h3>Roadmap</h3>
-      <p>
-        &#187; Improving shapes + spacing<br>
-        &#187; Weights<br>
-        &#187; Opentype features<br>
-        &#187; Your contributions, requests, ideas etc.<br>
-      </p>
-
-      <h3>License</h3>
-      <p>Open Font License without reserved font name (<a href="https://github.com/gidole/Gidole-Typefaces/blob/master/Resources/GidoleFont/License.txt">license</a>). You're free to modify and use it for both commercial and private projects. A mention somewhere in your product isn't needed but much appreciated.</p>
-        
-      <h3>Credits</h3>
-      <p>I've gotten a lot great feedback from guys on <a href="http://typophile.com/node/121996" target="_blank">typophile</a> and <a href="http://www.reddit.com/r/typography/comments/2uz4k7/gidole_gidole_play_can_now_both_be_downloaded/" target="_blank">r/typography</a>. The signed distance field version of Gidolinya (<a href="https://github.com/gidole/Gidole-Typefaces/tree/master/Resources/GidoleSignedDistanceField" target="_blank">link</a>) was made by <a href="https://twitter.com/nonchip">@nonchip</a>.</p>
-
-      <h3>The End</h3>
-      <p>I'll post major updates on <a target="_blank" href="https://twitter.com/intent/follow?screen_name=andreaslarsendk">Twitter</a> where you can also contact me with questions.<br>
-        Let me know if you're using these - I'd love to see it!</p>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <noscript class="browserupgrade">Turn on javascript. Just want the download? Here: <a href="https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true">zip</a></noscript>
 
     
-    </main>
-
-    <div class="overlay visible">
-      <div class="wrapper">
-        <p>I'm currently working on a major revamp. <a href="https://twitter.com/intent/follow?screen_name=andreaslarsendk" target="_blank">Follow</a> me to get notified about updates. Click anywhere else to hide this message.</p>
+<!-- JUMBO -->    
+    <div id="uno" data-0="opacity[cubic]:1;" data-300="opacity[cubic]:0;">
+      <h1>Gidole</h1>      
+      <p class="spaced">Open Source Modern DIN</p>
+    </div> <!-- UNO -->
+    
+<!-- nav --> 
+    <div class="wrap" id="disc" data-300="opacity[cubic]:0;" data-600="opacity[cubic]:1;" data-900="opacity[cubic]:0">
+      <p>Please note that this displays the upcomming revision of the typeface still being fine tuned. Follow @andreaslarsendk for updates and/or download the "old" version.</p>
+    </div>
+    <nav class="wrap" data-300="opacity[cubic]:0;" data-600="opacity[cubic]:1;" data-900="opacity[cubic]:0">
+        <div id="get"><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true">Download</a></div>
+        <div id="github"><a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a></div>
+        <div id="share"><span id="shareTitle">Share</span><span id="shareSmile" class="invisible">:&#8198;)</span>
+          <div class="links">
+            <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fgidole.github.io%2F&text=Gidole%20%26%20Gidolinya%20Free%20Typefaces&original_referer=&via=andreaslarsendk&hashtags=gidole" target="_blank">Twitter</a><br>
+            <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank">Facebook</a><br>
+            <a href="https://plus.google.com/share?url=http://gidole.github.io" target="_blank">Google</a><br>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://gidole.github.io" target="_blank">Linkedin</a>
+          </div>
+        </div>
+    </nav>
+    
+<!-- Gidole -->    
+    <div class="wrap" data-900="opacity[cubic]:0" data-1200="opacity[cubic]:1" data-1800="opacity[cubic]:0;">
+      <div>
+      <h2>Gidole</h2>
+      <p><a target="_blank" href="http://en.wikipedia.org/wiki/Gidole">Gidole</a> is a beautiful mountain town in southern Ethiopia where I grew up. 
+        <br>It's my first font and I couldn't have made it without help from great people at <a target="_blank" href="http://typophile.com/node/121996">typophile</a> and <a target="_blank" href="http://www.reddit.com/r/typography/comments/2uz4k7/gidole_gidole_play_can_now_both_be_downloaded/">r/typography</a>.</p>
+        </div>
+    </div>
+    <div id="world" class="behind" data-0="opacity[quadratic]:0;" data-600="opacity[quadratic]:1;" data-1200="transform[inoverkvart]:scale(0.4);opacity[quadratic]:1;" data-1700="opacity:0;transform:scale(1)">
+      <div id="worldcenter">
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        .................................8480;[%867¿##########&}@8&.......&,778.......-.#,....-....8##;.................................<br>
+        ........................:::7,7.;:#;!8(&......4########!;8......................-6&...-,-@::,-;,..,-.............................<br>
+        ...........:#777#8888#&&777&;##&7#787&##8&7-..&%###&(6.............-#8;-&:77777#87788888888778877778888#78877777&;..............<br>
+        ...........7777777(;#8#@&&&&#:....:8&.;....;84..............;78#;:7::#877777877##:&8#&777777777777777787777#;77##-..............<br>
+        ............&........:7#87877##78##&:.&##&&#;...............#;7..&78:766;7;7767677;766;;;77777777#7776777:-....&6-..............<br>
+        .......................,&787&&;&&8&:&77888&,-8-...............76&777676&;76666&;##8##&;;&;68077;66;&6;&6778,...,................<br>
+        ........................&6&&7;;;66;76666#...................7;#&..-7;767.:-.76;7§[}48;;68844[(0(;;0&&678..,#....................<br>
+        .........................64#8#;;;7;6;6;......................780(;&.....-&0!}80#(((;876(;00848;#;6&&#.8;:8&.....................<br>
+        ..........................-&6;8;6:&.;#.....................:;[¿!%¿!}§##&%0}%%@6;0;[[((0&##;7677666&;;,..........................<br>
+        .............................;6;#...,#8:.................8%§!(§%%%¿¿!!¿§@[;;¿@#@[7..80##&8##&&;&#&6;:...........................<br>
+        ...............................-&#;7;....................,;;[%!}}¿&#@¿%@!(;-8%!#......&8;...;8;#7...#...........................<br>
+        ....................................7,;7;7##..............7&;;#8##88#8##8<span id="dot">·</span>86;0}.......:&.....#.8;...;&-.........................<br>
+        ......................................#;6777777..................;6;7677&;&;;;.......,.......;&:..87............................<br>
+        .....................................&77777778766:&...............#777787767..................-6;;&&&.,;#&#&,...................<br>
+        ......................................7777777676777;...............78887877;......................-;;;,..,-7;:..;,..............<br>
+        .......................................;#7777777777...............#67778777:.#;......................;7677,7:......,............<br>
+        .........................................067777777.................#;&&677..;7..,.................;66;667;##68....-.............<br>
+        ........................................8&77777#....................#8667.........................-6777774;8778.................<br>
+        ........................................87777&......................-:-............................&-....;;768..................<br>
+        ........................................77#;................................................................,;..................<br>
+        .......................................;87-.....................................................................................<br>
+        ........................................88-........;............................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
+        ................................................................................................................................<br>
       </div>
     </div>
 
-    <div id="downloaded" class="overlay">
-      <div class="wrapper" id="dlthanks">
-        <h2>Get karma</h2>
-        <p>Donate to the Ethiopian Red Cross Society (ERCS)<br>
-          Tell your friends, like on Github &amp; Behance and follow me for updates<br>
-          Thanks,<br>
-          Andreas
-        </p>
+<!-- Design -->    
+    <div class="wrap" data-1800="opacity[cubic]:0" data-2200="opacity[cubic]:1" data-2600="opacity[cubic]:0;">
+      <div>
+        <h2>Design</h2>
+        <p>The design is inspired by the classic <a target="_blank" href="http://en.wikipedia.org/wiki/DIN_1451">DIN</a> but with wider apertures, narrower glyphs and a more minimal appearance than other recent iterations.</p>
+      </div>  
+    </div>
+    
+    <div class="behind" data-1600="opacity[quadratic]:0" data-2200="opacity:1" data-2201="opacity:0">
+      <svg class="gooload" blur="0" viewBox="0 0 2600 4700">
+<!-- a1e2 -->
+        <path
+              data-1600="@d[easeCustom]:M1300,-150C2772.77,-150 3800,877.227 3800,2350C3800,3822.77 2772.77,4850 1300,4850C-172.766,4850 -1200,3822.77 -1200,2350C-1200,877.227 -172.766,-150 1300,-150Z"
+              data-2000="@d[easeCustom]:M1300,1100C2036.39,1100 2550,1613.61 2550,2350C2550,3086.39 2036.39,3600 1300,3600C563.617,3600 50,3086.39 50,2350C50,1613.61 563.617,1100 1300,1100Z">
+        </path>
+      </svg>
+    </div>
+    
+    <div class="behind" data-2200="opacity:0" data-2201="opacity:1" data-4600="opacity[quadratic]:1" data-4860="opacity:0;" >
+      <svg class="goo" blur="0" viewBox="0 0 2600 4700">
+<!-- a1e2 -->
+        <path
+              data-2200="@d[easeCustom]:M1300,1100C2036.39,1100 2550,1613.61 2550,2350C2550,3086.39 2036.39,3600 1300,3600C563.617,3600 50,3086.39 50,2350C50,1613.61 563.617,1100 1300,1100Z"
+              data-3200="@d[easeCustom]:M765,1885C947.623,1885 1075,2004.16 1075,2175C1075,2345.84 947.623,2465 765,2465C582.378,2465 455,2345.84 455,2175C455,2004.16 582.378,1885 765,1885Z"
+              data-3800="@d[easeCustom]:M1807.43,2165C2013.61,2165 2157.43,2308.49 2157.43,2515C2157.43,2721.51 2013.61,2865 1807.43,2865C1601.26,2865 1457.43,2721.51 1457.43,2515C1457.43,2308.49 1601.26,2165 1807.43,2165Z"
+              data-4400="@d[easeCustom]:M1291.08,1851.38C1404.18,1851.38 1483.08,1930.09 1483.08,2043.38C1483.08,2156.67 1404.18,2235.38 1291.08,2235.38C1177.98,2235.38 1099.08,2156.67 1099.08,2043.38C1099.08,1930.09 1177.98,1851.38 1291.08,1851.38Z">
+        </path>
+<!-- a2e1 -->
+        <path 
+              data-2200="@d[easeCustom]:M1300,1100C2036.39,1100 2550,1613.61 2550,2350C2550,3086.39 2036.39,3600 1300,3600C563.617,3600 50,3086.39 50,2350C50,1613.61 563.617,1100 1300,1100Z"
+              data-3200="@d[easeCustom]:M745,2327C915.841,2327 1035,2437.53 1035,2596C1035,2754.47 915.841,2865 745,2865C574.16,2865 455,2754.47 455,2596C455,2437.53 574.16,2327 745,2327Z"
+              data-3800="@d[easeCustom]:M1787.43,1885C1981.84,1885 2117.43,2020.6 2117.43,2215C2117.43,2409.4 1981.84,2545 1787.43,2545C1593.03,2545 1457.43,2409.4 1457.43,2215C1457.43,2020.6 1593.03,1885 1787.43,1885Z"
+              data-4400="@d[easeCustom]:M1273.48,2390.58C1438.42,2390.58 1553.48,2495.53 1553.48,2646.58C1553.48,2797.63 1438.42,2902.58 1273.48,2902.58C1108.54,2902.58 993.48,2797.63 993.48,2646.58C993.48,2495.53 1108.54,2390.58 1273.48,2390.58Z">
+        </path>
+<!-- a3s1 -->
+        <path 
+              data-2200="@d[easeCustom]:M1300,1100C2036.39,1100 2550,1613.61 2550,2350C2550,3086.39 2036.39,3600 1300,3600C563.617,3600 50,3086.39 50,2350C50,1613.61 563.617,1100 1300,1100Z"
+              data-3200="@d[easeCustom]:M745,2205C939.405,2205 1075,2340.6 1075,2535C1075,2729.4 939.405,2865 745,2865C550.596,2865 415,2729.41 415,2535C415,2340.6 550.596,2205 745,2205Z"
+              data-3800="@d[easeCustom]:M777,1885C945.484,1885 1063,1982.79 1063,2123C1063,2263.21 945.484,2361 777,2361C608.516,2361 491,2263.21 491,2123C491,1982.79 608.516,1885 777,1885Z"
+              data-4400="@d[easeCustom]:M1291.08,1851.38C1404.18,1851.38 1483.08,1930.09 1483.08,2043.38C1483.08,2156.67 1404.18,2235.38 1291.08,2235.38C1177.98,2235.38 1099.08,2156.67 1099.08,2043.38C1099.08,1930.09 1177.98,1851.38 1291.08,1851.38Z">
+        </path>
+<!-- n1s2 -->
+        <path 
+              data-2200="@d[easeCustom]:M1300,1100C2036.39,1100 2550,1613.61 2550,2350C2550,3086.39 2036.39,3600 1300,3600C563.617,3600 50,3086.39 50,2350C50,1613.61 563.617,1100 1300,1100Z"
+              data-3200="@d[easeCustom]:M1782,1885C1970.51,1885 2102,2016.49 2102,2205C2102,2393.51 1970.51,2525 1782,2525C1593.49,2525 1462,2393.51 1462,2205C1462,2016.49 1593.49,1885 1782,1885Z"
+              data-3800="@d[easeCustom]:M777,2361C959.623,2361 1087,2464.55 1087,2613C1087,2761.45 959.623,2865 777,2865C594.378,2865 467,2761.45 467,2613C467,2464.55 594.378,2361 777,2361Z"
+              data-4400="@d[easeCustom]:M1273.48,2390.58C1438.42,2390.58 1553.48,2495.53 1553.48,2646.58C1553.48,2797.63 1438.42,2902.58 1273.48,2902.58C1108.54,2902.58 993.48,2797.63 993.48,2646.58C993.48,2495.53 1108.54,2390.58 1273.48,2390.58Z">
+        </path>
+      </svg>
+    </div>
+
+
+<!-- an -->        
+    <div class="farbehind" data-2800="opacity[cubic]:0" data-3000="opacity[cubic]:1" data-3200="opacity[cubic]:1" data-3400="opacity[cubic]:0;">
+      <svg class="letter" viewBox="0 0 2600 2000">
+        <path d="M765,462C895,462 1001.72,513.237 1067,589C1150,685.335 1150,781.778 1150,879L1150,1560L1000,1560L1000,1448C940,1534 845,1576 725,1576C539.377,1576 380,1440.9 380,1239C380,1133 427,1050 489,997C592,909 717,909 855,909L1000,909L1000,844C1000,803 1000,734 952,675C912,626 847.321,596 765,596C671.811,596 576.551,632.5 502,669L445,545C533.781,503.557 644.146,462 765,462ZM530,1239C530,1366.88 621.434,1442 745,1442C833,1442 903.086,1407.07 944,1353C1000,1279 1000,1178 1000,1092L1000,1033L855,1033C730,1033 656,1033 597,1083C559,1115 530,1171 530,1239Z"/>
+        <path d="M1801.98,462C1939.98,462 2046.98,524 2107.98,612C2176.98,716 2176.98,829 2176.98,974L2176.98,1560L2026.98,1560L2026.98,974C2026.98,838 2026.98,754 1978.98,686C1939.98,631 1869.98,596 1781.98,596C1694.98,596 1626.98,632 1587.98,686C1536.98,756 1536.98,838 1536.98,974L1536.98,1560L1386.98,1560L1386.98,478L1536.98,478L1536.98,590C1604.98,507 1694.98,462 1801.98,462Z"/>
+      </svg>
+    </div>    
+
+<!-- se -->            
+    <div class="farbehind" data-3400="opacity[cubic]:0" data-3600="opacity[cubic]:1" data-3800="opacity[cubic]:1" data-4100="opacity[cubic]:0;">
+      <svg class="letter" viewBox="0 0 2600 2000">
+        <path d="M777,462C901,462 1023,503 1120,544L1069,671C982,634 878,596 777,596C612,596 566,701 566,764C566,835 612.082,884.819 663,908C745.636,945.62 830,931 954,977C1060.56,1016.53 1162,1115 1162,1259C1162,1416 1030,1576 777,1576C640,1576 505,1530 399,1483L453,1358C546,1400 659,1442 777,1442C950,1442 1012,1339 1012,1259C1012,1178 956.309,1122.18 894,1099C808,1067 703,1077 593,1026C498.84,982.344 416,891 416,764C416,608 549,462 777,462Z"/>
+        <path d="M1807.45,1576C1647.45,1576 1528.45,1510 1461.45,1413C1382.45,1299 1382.45,1160 1382.45,1019C1382.45,900 1382.45,801 1419.45,704C1474.45,559 1613.45,462 1787.45,462C1959.45,462 2099.45,560 2156.45,705C2192.45,797 2192.45,879 2192.45,1018L2192.45,1051L1532.45,1051C1532.45,1149 1533.45,1264 1589.45,1343C1633.45,1406 1706.45,1442 1807.45,1442C1909.45,1442 2011.45,1408 2093.45,1369L2150.45,1493C2054.45,1538 1931.45,1576 1807.45,1576ZM2042.45,927C2041.45,869 2036.45,803 2013.45,746C1977.45,656 1893.45,596 1787.45,596C1676.45,596 1596.45,658 1562.45,745C1541.45,799 1534.45,862 1533.45,927L2042.45,927Z"/>
+      </svg>
+    </div>   
+
+
+<!-- Construction -->    
+    <div class="wrap fff" data-4000="opacity[cubic]:0;" data-4400="opacity[cubic]:1" data-4800="opacity[cubic]:0;">
+      <div>
+        <h2>Open Source</h2>
+        <p>100% free <a target="_blank" href="https://github.com/gidole/Gidole-Typefaces/blob/master/Resources/GidoleFont/License.txt">OFL license</a>. Attribution is optional but much appreciated:)<br>I'm using <a target="_blank" href="http://fontforge.github.io/">Fontforge</a> and the source is on <a target="_blank" href="https://github.com/gidole/Gidole-Typefaces">Github</a>.</p>
       </div>
     </div>
-    <div id="donateiframe" class="overlay">
-      <div class="wrapper" id="donatewrapper">
-        <p>Thank you! You can use the widget or the fundraising <a href="https://www.ammado.com/community/153173" target="_blank">webpage</a> to donate to ERCS.</p>
-        <div id="iframeloading"><p>Iframe loading...</p></div>
+
+    <!-- &stroke -->            
+    <div id="stroke" data-4600="opacity[cubic]:0" data-4601="opacity[cubic]:1" data-5399="opacity[cubic]:1" data-5400="opacity[cubic]:0">
+      <svg id="ampstroke" viewBox="0 0 2600 4700">
+        <path 
+          stroke-dasharray="6630"
+          data-4600="@stroke-dashoffset:7680"    
+          data-5400="@stroke-dashoffset:13360"
+          d="M2647.28,3399.77C2044.08,3349.28 1856.93,3137.14 1711.28,2942.17C1540.18,2714.46 1372.83,2491.43 1166.48,2214.17C1132.88,2169.58 1098.48,2117.03 1098.48,2043.77C1098.48,1927.77 1181.68,1851.77 1290.48,1851.77C1399.28,1851.77 1482.48,1926.17 1482.48,2043.77C1482.48,2147.35 1418.29,2200.45 1363.28,2238.97C1292.08,2291.3 1220.88,2341.05 1149.68,2390.17C1082.95,2437.79 992.881,2504.93 992.881,2646.97C992.881,2800.57 1112.88,2902.97 1273.68,2902.97C1411.28,2902.97 1484.88,2837.37 1549.68,2765.37C1600.73,2708.75 1652.85,2651.03 1708.08,2590.17C1852.41,2430.53 2072.08,2223.77 2647.28,2380.57L2647.28,3399.77Z"></path>
+      </svg>
+    </div>  
+    <div class="ff" data-5350="opacity[cubic]:0" data-5400="opacity:1" data-6050="opacity:1" data-6100="opacity:0">
+      <svg id="ampfill" viewBox="0 0 2600 4700">
+        <path 
+          data-5400="@d[outkvart]:M2647.28,3399.77C2044.08,3349.28 1856.93,3137.14 1711.28,2942.17C1540.18,2714.46 1372.83,2491.43 1166.48,2214.17C1132.88,2169.58 1098.48,2117.03 1098.48,2043.77C1098.48,1927.77 1181.68,1851.77 1290.48,1851.77C1399.28,1851.77 1482.48,1926.17 1482.48,2043.77C1482.48,2147.35 1418.29,2200.45 1363.28,2238.97C1292.08,2291.3 1220.88,2341.05 1149.68,2390.17C1082.95,2437.79 992.881,2504.93 992.881,2646.97C992.881,2800.57 1112.88,2902.97 1273.68,2902.97C1411.28,2902.97 1484.88,2837.37 1549.68,2765.37C1600.73,2708.75 1652.85,2651.03 1708.08,2590.17C1852.41,2430.53 2072.08,2223.77 2647.28,2380.57L2647.28,3399.77Z"
+          data-6000="@d[inkvart]:M7777.32,7129.21C5960.86,7437.69 4674.57,7278.48 2831.98,6849.78C1089,6444.26 396.236,5827.99 -102.42,4813.78C-692.82,3612.98 -888.77,2834.57 -987.22,1499.38C-1127.44,-402.276 -415.222,-1644 974.38,-1649.42C2186.8,-1654.14 3313.28,-829.74 3235.98,414.58C3222.15,637.152 3107.81,774.78 2995.98,853.78C2966.91,874.153 2937.85,894.695 2908.78,915.38C2806.16,987.871 2715,1099.9 2715.18,1277.78C2715.81,1892.4 3194,2301.48 3838.38,2301.78C4355.3,2302.03 4683.52,2037.34 4942.38,1751.38C4965.73,1726.05 4988.59,1700.71 5011.18,1675.38C5720.65,891.666 5760.03,1675.38 6179.18,3552.18L7777.32,7129.21Z"></path>
+      </svg>
+    </div>      
+    
+<!-- >500 -->    
+    <div id="fivehundred" class="wrap inverted" data-4600="opacity:0;" data-4601="opacity:1" data-5000="@fff: 0;" data-5001="@fff: 1;" data-6000="opacity[cubic]:1" data-6400="opacity:0;">
+      <div>
+        <h2>>500 Glyphs</h2>
+        <p>“Ĝĭðőłę şþěªĸß (¿āļŀ?) ľåṭìñ ĺæṅģůąġëš, d04s c8mp1i5a23∂ al9∑6ra {√[α×∬β]±∆≈∞} and p↔︎in↓s ↑n a↕︎l dir→←tions.”<br>« €a£¢¥₺at¤₹$ @®e fΩr <span class="nowrap">¶#ſ§¡εẞ! »™</span></p>
       </div>
     </div>
-    <div class="overlay gallery" id="simple"></div>
-    <div class="overlay gallery" id="smooth"></div>
-    <div class="overlay gallery" id="legible"></div>
+ 
+<!-- Starwars -->            
+    <div id="starwars" class="wrap behind" data-6000="opacity[quadratic]:0" data-6400="opacity:1" data-7200="opacity[quadratic]:1;" data-7600="opacity:0">
+      <div id="starwarscontent" data-6200="margin-top:100%" data-7600="margin-top:-120%">
+        <div class="line0">Spacing</div>
+        <div class="line1">Alternates</div>
+        <div class="line2">Hairline weight</div>
+        <div class="line3">Black weight</div>
+        <div class="line4">Cyrillic</div>
+        <div class="line5">More weights</div>
+        <div class="line6">Itallics?</div>
+        <div class="line7">Small CAPS</div>
+        <div class="line8">Opentype features</div>
+        <div class="line9">Your ideas?</div>
+      </div>
+    </div>
+    
+<!-- Roadmap -->        
+    <div class="wrap forceforward inverted" data-6400="opacity[cubic]:0;" data-6800="opacity[cubic]:1" data-7200="opacity[cubic]:0;">
+      <div>
+        <h2>Roadmap</h2>
+        <p>The top priority is to improve spacing+kerning (<a target="_blank" href="https://github.com/gidole/Gidole-Typefaces/issues/3">help me?</a>), then to add some weights and full cyrillic+greek support.</p>
+      </div>
+    </div>
+    
+<!-- The End -->            
+    <div class="wrap forceforward inverted" data-7200="opacity[cubic]:0;" data-7600="opacity[cubic]:1">
+      <div>
+        <h2>The End</h2>
+        <p>Thanks for stopping by. Help me by reporting issues and ideas for <a href="http://github.com/gidole/Gidole-Typefaces/issues" target="_blank">font</a>/<a href="https://github.com/gidole/gidole.github.io/issues" target="_blank">website</a> and by spreading the word. <a href="https://twitter.com/intent/follow?screen_name=andreaslarsendk" target="_blank">Follow</a> me for updates.</p>
+      </div>
+    </div>
+
+<!-- NAV BUTTONS -->    
+    <div class="ffff" id="navibuttons"><div><span id="uparrow">↑</span><span id="downarrow">↓</span></div></div>
+
+<!-- COUNTER -->    
+<div class="counter ffff">
+      <div data-0="opacity[cubic]:1;" data-300="opacity[cubic]:0;">1</div>
+      <div data-300="opacity[cubic]:0;" data-600="opacity[cubic]:1;" data-900="opacity[cubic]:0">2</div>
+      <div class="eight" data-900="opacity[cubic]:0;" data-1200="opacity[cubic]:1;" data-1700="opacity[cubic]:0">3</div>
+      <div data-1700="opacity[cubic]:0;" data-2200="opacity[cubic]:1;" data-2700="opacity[cubic]:0">4</div>
+      <div class="eight" data-2700="opacity[cubic]:0;" data-3200="opacity[cubic]:1;" data-3500="opacity[cubic]:0">5</div>
+      <div class="eight" data-3500="opacity[cubic]:0;" data-3800="opacity[cubic]:1;" data-4100="opacity[cubic]:0">6</div>
+      <div class="seven" data-4100="opacity[cubic]:0;" data-4400="opacity[cubic]:1;" data-5350="opacity[cubic]:1;" data-5375="opacity[cubic]:0">7</div>
+      <div class="total" data-5350="opacity[cubic]:1;" data-5375="opacity[cubic]:0">/10</div>
+    </div>
+<div class="counter inverted ffff">
+      <div class="eight" data-5375="opacity[cubic]:0;" data-5400="opacity:1;" data-6100="opacity[cubic]:1;" data-6400="opacity:0">8</div>
+      <div class="nine" data-6400="opacity[cubic]:0;" data-6800="opacity[cubic]:1;" data-7200="opacity[cubic]:0">9</div>
+      <div class="eight" data-7200="opacity[cubic]:0;" data-7600="opacity[cubic]:1;">10</div>
+      <div class="total" data-5375="opacity[cubic]:0;" data-5400="opacity:1;">/10</div>
+</div>
+    <div id="loadfade" class="ffff"></div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
+    <script>
+      $(window).load(function () {
+        $("#loadfade").addClass("loaded");
+      });
+      $(function() {
+        var s = skrollr.init({
+          easing: {
+            easeCustom: function(p) {
+              return 10*(p*p*p*p*p) - 25*(p*p*p*p) + 18*(p*p*p) - 2*(p*p) + 0*p;
+            },
+            inkvart: function(p) {
+              return 0.5*p*p + 0.5*p
+            },
+            outkvart: function(p) {
+              return -0.5*p*p + 1.5*p;
+            },
+            inoverkvart: function(p) {
+              return 1.5*(p*p*p*p*p) - 5.5*(p*p*p*p) + 6.5*(p*p*p) - 1.5*(p*p) + 0*p;
+            },
+            outoverkvart: function(p) {
+              return 1.5*(p*p*p*p*p) - 2*(p*p*p*p) + 0.5*(p*p*p) + 0*(p*p) + 2*p;
+            }            
+          }
+        });
+        
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          $("#navibuttons").remove();
+        }
+        
+        $('#shareTitle, #get').on('click touch', function() {
+          $("#share").addClass("visible");
+          $("#shareTitle").addClass("invisible");
+          $("#shareSmile").removeClass("invisible");
+          return false;
+        });
+        $("#get").on("click touch", function() {
+          window.location.href = 'https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true';
+          return false;
+        });
+        
+        function scrollDown() {
+          if ($(window).scrollTop() < 500){ 
+            $('html, body').animate({ scrollTop: 600 }, 1500); 
+          }
+// til gidole
+          else if ($(window).scrollTop() > 500 && $(window).scrollTop() < 1100){ 
+            $('html, body').animate({ scrollTop: 1200 }, 1500); 
+          }
+// til design
+          else if($(window).scrollTop() > 1100 && $(window).scrollTop() < 2100){ 
+            $('html, body').animate({ scrollTop: 2200 }, 3000); 
+          }
+// til ae
+          else if($(window).scrollTop() > 2100 && $(window).scrollTop() < 3100){ 
+            $('html, body').animate({ scrollTop: 3200 }, 2000); 
+          }
+// til mß
+          else if($(window).scrollTop() > 3100 && $(window).scrollTop() < 3700){ 
+            $('html, body').animate({ scrollTop: 3800 }, 2000); 
+          }
+// til construction
+          else if($(window).scrollTop() > 3700 && $(window).scrollTop() < 4300){ 
+            $('html, body').animate({ scrollTop: 4400 }, 2000); 
+          }
+// til 500
+          else if($(window).scrollTop() > 4300 && $(window).scrollTop() < 5900){
+            $('html, body').animate({ scrollTop: 6000 }, 5000); 
+          }
+// til roadmap
+          else if($(window).scrollTop() > 5900 && $(window).scrollTop() < 6700){
+            $('html, body').animate({ scrollTop: 6800 }, 3000); 
+          }
+// til end
+          else if($(window).scrollTop() > 6700 && $(window).scrollTop() < 7500){
+            $('html, body').animate({ scrollTop: 7600 }, 3000); 
+          }
+          else {
+            return false; 
+          }
+        };
+        
+        function scrollUp() {
+// til menu
+          if ($(window).scrollTop() < 700){ 
+            $('html, body').animate({ scrollTop: 0 }, 1500); 
+          }
+// til gidole
+          else if ($(window).scrollTop() > 700 && $(window).scrollTop() < 1300){ 
+            $('html, body').animate({ scrollTop: 600 }, 1500); 
+          }
+// til design
+          else if($(window).scrollTop() > 1300 && $(window).scrollTop() < 2300){ 
+            $('html, body').animate({ scrollTop: 1200 }, 3000); 
+          }
+// til ae
+          else if($(window).scrollTop() > 2300 && $(window).scrollTop() < 3300){ 
+            $('html, body').animate({ scrollTop: 2200 }, 2000); 
+          }
+// til mß
+          else if($(window).scrollTop() > 3300 && $(window).scrollTop() < 3900){ 
+            $('html, body').animate({ scrollTop: 3200 }, 2000); 
+          }
+// til construction
+          else if($(window).scrollTop() > 3900 && $(window).scrollTop() < 4500){ 
+            $('html, body').animate({ scrollTop: 3800 }, 2000); 
+          }
+// til 500
+          else if($(window).scrollTop() > 4500 && $(window).scrollTop() < 6100){
+            $('html, body').animate({ scrollTop: 4400 }, 5000); 
+          }
+// til roadmap
+          else if($(window).scrollTop() > 6100 && $(window).scrollTop() < 6900){
+            $('html, body').animate({ scrollTop: 6000 }, 3000); 
+          }
+// til end
+          else if($(window).scrollTop() > 6900 && $(window).scrollTop() <= 7600){
+            $('html, body').animate({ scrollTop: 6800 }, 3000); 
+          }
+          else {
+            return false; 
+          }
+        };
+
+        $("#downarrow").on("click touch", function() {
+          scrollDown();
+        });
+        $("#uparrow").on("click touch", function() {
+          scrollUp();
+        });
+        
+        
+        $(document.documentElement).keydown(function(event) {
+// Downarrow
+          if (event.keyCode == 40 || event.keyCode == 39){
+            event.preventDefault();
+            scrollDown();
+          }
+          else if (event.keyCode == 38 || event.keyCode == 37){
+            event.preventDefault();
+            scrollUp();
+          }
+          else {
+            return false; 
+          }          
+        });
+
+      });
+    </script>
   </body>
 </html>
