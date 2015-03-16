@@ -74,6 +74,7 @@ h2 {
   letter-spacing: -0.02em;
   margin-left: -0.05em;
   line-height: 1em;
+  margin-top: 0.2em;
 }
 nav, body > div {
   opacity: 0;
