@@ -158,7 +158,7 @@
       </svg>
     </div>
     
-    <div class="behind" data-2200="opacity:0" data-2201="opacity:1" data-4600="opacity[quadratic]:1" data-4860="opacity:0;" >
+    <div class="behind" data-2200="opacity:0" data-2201="opacity:1" data-4400="opacity[quadratic]:1" data-4660="opacity:0;" >
       <svg class="goo" blur="0" viewBox="0 0 2600 4700">
 <!-- a1e2 -->
         <path
@@ -210,7 +210,7 @@
 
 
 <!-- Construction -->    
-    <div class="wrap fff" data-4000="opacity[cubic]:0;" data-4400="opacity[cubic]:1" data-4800="opacity[cubic]:0;">
+    <div class="wrap fff" data-4000="opacity[cubic]:0;" data-4400="opacity[cubic]:1" data-4600="opacity[cubic]:0;">
       <div>
         <h2>Open Source</h2>
         <p>100% free <a target="_blank" href="https://github.com/gidole/Gidole-Typefaces/blob/master/Resources/GidoleFont/License.txt">OFL license</a>. Attribution is optional but much appreciated:)<br>I'm using <a target="_blank" href="http://fontforge.github.io/">Fontforge</a> and the source is on <a target="_blank" href="https://github.com/gidole/Gidole-Typefaces">Github</a>.</p>
@@ -302,7 +302,12 @@
     <script src="js/main.js"></script>
     <script>
       $(window).load(function () {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          $("#navibuttons, #loadfade, #world").remove();
+        }
+        else {
         $("#loadfade").addClass("loaded");
+        }
       });
       $(function() {
         var s = skrollr.init({
@@ -325,9 +330,7 @@
           }
         });
         
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          $("#navibuttons").remove();
-        }
+
         
         $('#shareTitle, #get').on('click touch', function() {
           $("#share").addClass("visible");
