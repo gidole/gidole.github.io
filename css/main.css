@@ -270,6 +270,10 @@ nav > div {
   text-align: center;
   position: relative;
 }
+#pdf {
+  display: none;
+}
+}
 #shareSmile {
   position: absolute;
   left: 0;
@@ -325,19 +329,19 @@ nav > div {
   white-space: nowrap;
 }
 #dot {
-  color:hsl(321, 100%, 40%);
+  color:hsla(201, 6%, 50%, 0.5);
 }
 #duo {
   height: 100%;
 }
 .goo path, .gooload path {
-  fill: hsla(321, 100%, 40%, 0);
-  stroke: hsla(321, 100%, 40%, 0.3);
+  fill: none;
+  stroke: hsla(201, 6%, 50%, 0.5);
   stroke-width: 6;
 }
 .gooload path {
   stroke-width: 7;
-  stroke: hsla(321, 100%, 40%, 0.75);
+  stroke: hsla(201, 6%, 50%, 0.9);
 }
 #ampstroke path {
   fill: none;
@@ -489,6 +493,7 @@ nav > div {
    Media Queries
    ================================================== */
 @media only screen and (min-width: 50rem) {
+  #pdf {display: block;}
     body {  font-size: 2.6em }
     #kbhint {  visibility: visible !important }
 }
