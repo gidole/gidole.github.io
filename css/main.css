@@ -304,8 +304,8 @@ nav > div {
 }
 #world {
   font-family: 'gidolemono';
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: .5em;
+  line-height: 0.9em;
   height: 500%;
   top: -200%;
   overflow: hidden;
