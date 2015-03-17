@@ -109,7 +109,13 @@ nav, body > div {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
-.fff, div[fff="1"] {
+div[ffff="1"] {
+  z-index: 100;
+}
+div[fff="1"] {
+  z-index: 50;
+}
+.fff, div[fff="2"] {
   -webkit-transform: translateZ(950px);
           transform: translateZ(950px);
   -webkit-transform-style: preserve-3d;
@@ -324,15 +330,14 @@ nav > div {
 #duo {
   height: 100%;
 }
-.goo path {
-  fill: hsla(201, 6%, 15%, 0.2);
-  stroke: hsl(201, 6%, 15%);
-  stroke-width: 1px;
+.goo path, .gooload path {
+  fill: hsla(321, 100%, 40%, 0);
+  stroke: hsla(321, 100%, 40%, 0.3);
+  stroke-width: 6;
 }
 .gooload path {
-  stroke: hsla(201, 6%, 15%, 0.5);
-  fill: hsla(201, 6%, 15%, 0.5);
-  stroke-width: 1px;
+  stroke-width: 7;
+  stroke: hsla(321, 100%, 40%, 0.75);
 }
 #ampstroke path {
   fill: none;
@@ -371,8 +376,13 @@ nav > div {
   right: 0;
   top: 0;
   bottom: 0;
-  background: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%);
-  background: linear-gradient(to bottom, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%);
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
   pointer-events: none;
 }
 #starwarscontent > div {
