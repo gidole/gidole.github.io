@@ -22,10 +22,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 @font-face {
-    font-family: 'gidole2regular';
-    src: url('/fonts/Gidole2-Regular.woff2') format('woff2'),
-         url('/fonts/Gidole2-Regular.woff') format('woff'),
-         url('/fonts/Gidole2-Regular.ttf') format('truetype');
+    font-family: 'gidoleregular';
+    src: url('/fonts/Gidole-Regular.woff2') format('woff2'),
+         url('/fonts/Gidole-Regular.woff') format('woff'),
+         url('/fonts/Gidole-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -39,7 +39,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 html {
-  font-family: 'gidole2regular';
+  font-family: 'gidoleregular';
   color: white;
   background-color: hsl(201, 6%, 25%);
   font-size: 100%;
