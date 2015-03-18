@@ -72,8 +72,8 @@
     <nav class="wrap" data-300="opacity[cubic]:0;" data-600="opacity[cubic]:1;" data-900="opacity[cubic]:0">
         <div id="get"><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true">Download</a></div>
         <div id="github"><a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a></div>
-      <div id="pdf"><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/Resources/GidoleFont/ReadMe+TestPrint.pdf?raw=true" target="_blank">pdf</a></div>
-        <div id="share"><span id="shareTitle">Share</span><span id="shareSmile" class="invisible">:&#8198;)</span>
+<!--      <div id="pdf"><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/Resources/GidoleFont/ReadMe+TestPrint.pdf?raw=true" target="_blank">pdf</a></div>-->
+        <div id="share"><span id="sharetitle">Share</span><span id="sharesmile" class="invisible">:&#8198;)</span>
           <div class="links">
             <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fgidole.github.io%2F&text=Gidole%20%26%20Gidolinya%20Free%20Typefaces&original_referer=&via=andreaslarsendk&hashtags=gidole" target="_blank">Twitter</a><br>
             <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank">Facebook</a><br>
@@ -274,6 +274,7 @@
       </div>
     </div>
 
+
 <!-- NAV BUTTONS -->
     <div class="ffff" id="navibuttons"><div><span id="uparrow">↑</span><span id="downarrow">↓</span></div></div>
 
@@ -281,10 +282,10 @@
 <div class="counter ffff">
       <div data-0="opacity[cubic]:1;" data-300="opacity[cubic]:0;">1</div>
       <div data-300="opacity[cubic]:0;" data-600="opacity[cubic]:1;" data-900="opacity[cubic]:0">2</div>
-      <div class="eight" data-900="opacity[cubic]:0;" data-1200="opacity[cubic]:1;" data-1700="opacity[cubic]:0">3</div>
+      <div class="three" data-900="opacity[cubic]:0;" data-1200="opacity[cubic]:1;" data-1700="opacity[cubic]:0">3</div>
       <div data-1700="opacity[cubic]:0;" data-2200="opacity[cubic]:1;" data-2700="opacity[cubic]:0">4</div>
-      <div class="eight" data-2700="opacity[cubic]:0;" data-3200="opacity[cubic]:1;" data-3500="opacity[cubic]:0">5</div>
-      <div class="eight" data-3500="opacity[cubic]:0;" data-3800="opacity[cubic]:1;" data-4100="opacity[cubic]:0">6</div>
+      <div class="three" data-2700="opacity[cubic]:0;" data-3200="opacity[cubic]:1;" data-3500="opacity[cubic]:0">5</div>
+      <div class="three" data-3500="opacity[cubic]:0;" data-3800="opacity[cubic]:1;" data-4100="opacity[cubic]:0">6</div>
       <div class="seven" data-4100="opacity[cubic]:0;" data-4400="opacity[cubic]:1;" data-5350="opacity[cubic]:1;" data-5375="opacity[cubic]:0">7</div>
       <div class="total" data-5350="opacity[cubic]:1;" data-5375="opacity[cubic]:0">/10</div>
     </div>
@@ -294,7 +295,26 @@
       <div class="eight" data-7200="opacity[cubic]:0;" data-7600="opacity[cubic]:1;">10</div>
       <div class="total" data-5375="opacity[cubic]:0;" data-5400="opacity:1;">/10</div>
 </div>
+
     <div id="loadfade" class="ffff"></div>
+
+  <!-- After download -->
+    <div class="ffff inverted invisible" id="thankyou" data-0="opacity[cubic]:1;">
+      <div class="wrap">
+        <span><div id="close">×</div></span>
+        <h2>Get karma</h2>
+        <p>Be nice to other people :)<br>
+          Star Gidole on <a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a> and appreciate on <a target="_blank" href="http://behance.net/gallery/22341011/Gidole-Free-Typeface">Bēhance</a><br>
+          Tell your friends about Gidole on
+          <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fgidole.github.io%2F&text=Gidole%20%26%20Gidolinya%20Free%20Typefaces&original_referer=&via=andreaslarsendk&hashtags=gidole" target="_blank">Twitter</a>,
+          <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank">Facebook</a>,
+          <a href="https://plus.google.com/share?url=http://gidole.github.io" target="_blank">Google</a> or
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://gidole.github.io" target="_blank">Linkedin</a>.<br>
+          Thank you!
+        </p>
+      </div>
+    </div>
+
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -327,15 +347,23 @@
           }
         });
 
-
-        $('#shareTitle, #get').on('click touch', function() {
+        $('#sharetitle').on('click touch', function() {
           $("#share").addClass("visible");
-          $("#shareTitle").addClass("invisible");
-          $("#shareSmile").removeClass("invisible");
+          $("#sharetitle").addClass("invisible");
+          $("#sharesmile").removeClass("invisible");
           return false;
         });
         $("#get").on("click touch", function() {
-          window.location.href = 'https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true';
+//          window.location.href = 'https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true';
+          $("#thankyou").removeClass("invisible");
+          return false;
+        });
+        $("#close").on("click touch", function() {
+          $("#thankyou").addClass("invisible");
+          $(this).addClass("pressed").delay(200).queue(function(next){
+            $(this).removeClass("pressed");
+            next();
+          });
           return false;
         });
 
@@ -424,9 +452,31 @@
 
         $("#downarrow").on("click touch", function() {
           scrollDown();
+          if ($(window).scrollTop() == 7600){
+            $(this).addClass("shake").delay(500).queue(function(next){
+              $(this).removeClass("shake");
+              next();
+            });
+          } else {
+            $(this).addClass("pressed").delay(200).queue(function(next){
+              $(this).removeClass("pressed");
+              next();
+            });
+          }
         });
         $("#uparrow").on("click touch", function() {
           scrollUp();
+          if ($(window).scrollTop() == 0){
+            $(this).addClass("shake").delay(500).queue(function(next){
+              $(this).removeClass("shake");
+              next();
+            });
+          } else {
+            $(this).addClass("pressed").delay(200).queue(function(next){
+              $(this).removeClass("pressed");
+              next();
+            });
+          }
         });
 
 

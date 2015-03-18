@@ -44,6 +44,16 @@ html {
   background-color: hsl(201, 6%, 25%);
   font-size: 100%;
 }
+.pressed {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transition: .2s ease;
+}
+.shake {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transition: .5s ease;
+}
 .inverted, .inverted a {
   color: hsl(201, 6%, 25%);
   letter-spacing: .02em;
@@ -133,6 +143,40 @@ div[fff="1"] {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
+#thankyou {
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  pointer-events: all;
+  transition: 0.5s ease;
+}
+#thankyou.invisible {
+  background-color: rgba(255, 255, 255, 0.0);
+  transition: 0.5s ease 0.2s;
+}
+#thankyou > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s cubic-bezier(0.3, 1, 0.4, 1) 0.2s;
+  transition:         all 0.5s cubic-bezier(0.3, 1, 0.4, 1) 0.2s;
+  opacity: 1;
+}
+#thankyou.invisible > div {
+  -webkit-transition: all 0.5s cubic-bezier(0.6, 0, 0.7, 0);
+  transition:         all 0.5s cubic-bezier(0.6, 0, 0.7, 0);
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+#thankyou span {
+  float: right;
+}
+#close {
+  cursor: pointer;
+  font-size: 2.62em;
+}
+#close:hover {
+  color: hsl(321, 100%, 70%);
+}
 .furtherbehind {
   z-index: 1;
 }
@@ -143,23 +187,23 @@ a {
   color: white;
   text-decoration: none;
 }
-a, #shareTitle {
+a, #sharetitle {
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 74.9%, hsl(321, 100%, 40%) 75%, hsl(321, 100%, 40%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
   background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 74.9%,hsl(321, 100%, 40%) 75%,hsl(321, 100%, 40%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
   -webkit-transition: background .2s ease;
           transition: background .2s ease;
 }
-a:hover, #shareTitle:hover {
+a:hover, #sharetitle:hover {
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 6.9%, hsl(321, 100%, 40%) 7%, hsl(321, 100%, 40%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
   background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 6.9%,hsl(321, 100%, 40%) 7%,hsl(321, 100%, 40%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
 }
-.inverted a, .scrollToLink {
+.inverted a {
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 74.9%, hsl(321, 100%, 70%) 75%, hsl(321, 100%, 70%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
   background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 74.9%,hsl(321, 100%, 70%) 75%,hsl(321, 100%, 70%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
   -webkit-transition: background .2s ease;
           transition: background .2s ease;
 }
-.inverted a:hover, .scrollToLink:hover {
+.inverted a:hover {
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 6.9%, hsl(321, 100%, 70%) 7%, hsl(321, 100%, 70%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
   background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 6.9%,hsl(321, 100%, 70%) 7%,hsl(321, 100%, 70%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
 }
@@ -215,7 +259,7 @@ svg {
   cursor: pointer;
   padding: 0 0.1em;
 }
-#navibuttons span:active {
+#navibuttons span:hover {
   color: hsl(321, 100%, 40%);
 }
 .counter {
@@ -238,19 +282,22 @@ svg {
 .counter .total {
   right: 1em;
 }
-.counter .eight {
+.counter .three {
   right: 2.44em;
 }
+.counter .eight {
+  right: 2.34em;
+}
 .counter .seven {
-  right: 2.38em;
+  right: 2.34em;
 }
 .counter .nine {
-  right: 2.40em;
+  right: 2.30em;
 }
 nav a {
   margin: 0 auto;
 }
-.skrollable-between #shareTitle, .skrollable-between .scrollToLink {
+.skrollable-between #sharetitle {
   cursor: pointer;
 }
 .skrollable-between {
@@ -273,21 +320,24 @@ nav > div {
 #pdf {
   display: none;
 }
-}
-#shareSmile {
+#sharesmile {
   position: absolute;
   left: 0;
   right: 0;
   -webkit-transform: rotate(90deg) translateX(0.05em);
       -ms-transform: rotate(90deg) translateX(0.05em);
           transform: rotate(90deg) translateX(0.05em);
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
+  -webkit-transition: 1s ease;
+          transition: 1s ease;
+  visibility: visible;
+  opacity: 1;
 }
-#shareSmile.invisible {
+#sharesmile.invisible {
   -webkit-transform: rotate(0deg) translateX(0.05em);
       -ms-transform: rotate(0deg) translateX(0.05em);
           transform: rotate(0deg) translateX(0.05em);
+  visibility: hidden;
+  opacity: 0;
 }
 .links {
   position: absolute;
@@ -386,7 +436,6 @@ nav > div {
   background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
   background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
   background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
   pointer-events: none;
 }
 #starwarscontent > div {
