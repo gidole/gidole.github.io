@@ -70,7 +70,7 @@
 
 <!-- nav -->
     <nav class="wrap" data-300="opacity[cubic]:0;" data-600="opacity[cubic]:1;" data-900="opacity[cubic]:0">
-        <div id="get"><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true">Download</a></div>
+        <div id="get"><a id="download" href="#">Download</a></div>
         <div id="github"><a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a></div>
 <!--      <div id="pdf"><a href="https://github.com/gidole/Gidole-Typefaces/blob/master/Resources/GidoleFont/ReadMe+TestPrint.pdf?raw=true" target="_blank">pdf</a></div>-->
         <div id="share"><span id="sharetitle">Share</span><span id="sharesmile" class="invisible">:&#8198;)</span>
@@ -353,9 +353,14 @@
           $("#sharesmile").removeClass("invisible");
           return false;
         });
+        $("#download").on("click touch", function(e) {
+          e.preventDefault();
+        });
         $("#get").on("click touch", function() {
-          window.location.href = 'https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true';
-          $("#thankyou").removeClass("invisible");
+          $("#thankyou").removeClass("invisible").delay(600).queue(function(next){
+            window.location.href = 'https://github.com/gidole/Gidole-Typefaces/blob/master/gidole.zip?raw=true';
+            next();
+          });
           return false;
         });
         $("#close").on("click touch", function() {
