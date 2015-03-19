@@ -7,12 +7,12 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .inverted ::selection{background:hsl(321, 100%, 70%);color: black}
 
 .browserupgrade {
-    margin: 0em;
-    background: red;
-    color: white;
-    padding: 1em;
-    width: 100%;
-    text-align: center;
+  margin: 0em;
+  background: red;
+  color: white;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
   display: block;
   pointer-events: all;
   box-sizing: border-box;
