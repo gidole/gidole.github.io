@@ -65,8 +65,7 @@ body {
   font-size: 5.4vw;
   line-height: 1.5em;
   letter-spacing: .03em;
-  height: 5000px;
-  pointer-events:none;
+  pointer-events: none;
 }
 h1 {
   font-size: 6.5em;
@@ -272,29 +271,20 @@ svg {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   bottom: 20px;
-  right: 2.45em;
+  right: 2.08em;
   z-index: 90;
 }
 .counter .total {
   right: 1em;
 }
 .counter .three {
-  right: 2.44em;
+  right: 2.06em;
 }
-.counter .eight {
-  right: 2.34em;
-}
-.counter .seven {
-  right: 2.34em;
-}
-.counter .nine {
-  right: 2.30em;
+.counter .six {
+  right: 2.02em;
 }
 nav a {
   margin: 0 auto;
-}
-.skrollable-between #sharetitle {
-  cursor: pointer;
 }
 .skrollable-between {
   pointer-events: all;
@@ -312,48 +302,6 @@ nav {
 nav > div {
   text-align: center;
   position: relative;
-}
-#pdf {
-  display: none;
-}
-#sharesmile {
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transform: rotate(90deg) translateX(0.05em);
-      -ms-transform: rotate(90deg) translateX(0.05em);
-          transform: rotate(90deg) translateX(0.05em);
-  -webkit-transition: 1s ease;
-          transition: 1s ease;
-  visibility: visible;
-  opacity: 1;
-}
-#sharesmile.invisible {
-  -webkit-transform: rotate(0deg) translateX(0.05em);
-      -ms-transform: rotate(0deg) translateX(0.05em);
-          transform: rotate(0deg) translateX(0.05em);
-  visibility: hidden;
-  opacity: 0;
-}
-.links {
-  position: absolute;
-  text-align: right;
-  top: 0;
-  right: 0;
-  -webkit-transform: translate3d(0,1em,0);
-          transform: translate3d(0,1em,0);
-  -webkit-transition: .3s ease ;
-          transition: .3s ease ;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  visibility: hidden;
-}
-.visible .links {
-  -webkit-transform: translate3d(0,1.5em,0);
-          transform: translate3d(0,1.5em,0);
-  opacity: 1;
-  filter: alpha(opacity=100);
-  visibility: visible;
 }
 #mapintro p {
   z-index: 10;
@@ -397,76 +345,10 @@ nav > div {
 #stroke {
   z-index: 3;
 }
-#fivehundred {
-  z-index: 4;
-}
 #ampfill path {
   fill: white;
   stroke-width: 2em;
   stroke:white;
-}
-#starwars {
-  display: block;
-  color: hsla(201, 6%, 15%, 0.1);
-  overflow: hidden;
-  -webkit-transform: perspective(300px) rotateX(25deg);
-          transform: perspective(300px) rotateX(25deg);
-  z-index: 1;
-  left: -150%;
-  right: -150%;
-  text-align: center;
-  padding: 0;
-  font-size: 2.5vw;
-}
-#starwars:after
-{
-  position: fixed;
-  content: ' ';
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  pointer-events: none;
-}
-#starwarscontent > div {
-  z-index: 1;
-  line-height: 0.9em;
-}
-#starwars .line0 {
-  font-size: 8em;
-}
-#starwars .line1 {
-  font-size: 6.1em;
-}
-#starwars .line2 {
-  font-size: 4.2em;
-}
-#starwars .line3 {
-  font-size: 5em;
-}
-#starwars .line4 {
-  font-size: 9.6em;
-}
-#starwars .line5 {
-  font-size: 4.5em;
-}
-#starwars .line6 {
-  font-size: 8.5em;
-}
-#starwars .line7 {
-  font-size: 5.67em;
-}
-#starwars .line8 {
-  font-size: 3.38em;
-}
-#starwars .line9 {
-  font-size: 5.5em;
 }
 #whitefade {
   background-color: white;
@@ -491,12 +373,7 @@ nav > div {
   -moz-box-shadow: inset 0px 0px 20vw 0px rgba(0,0,0,0.1);
   box-shadow: inset 0px 0px 20vw 0px rgba(0,0,0,0.1);
 }
-#disc {
-  bottom: 50%;
-  font-size: 0.6em;
-  color: hsla(0, 0%, 100%, 0.3);
-  line-height: 1.5em;
-}
+
 @-webkit-keyframes fadein {
     from {  opacity: 0;  filter: alpha(opacity=0) }
     to {  opacity: 1;  filter: alpha(opacity=100) }
@@ -538,7 +415,6 @@ nav > div {
    Media Queries
    ================================================== */
 @media only screen and (min-width: 50rem) {
-  #pdf {display: block;}
     body {  font-size: 2.6em }
     #kbhint {  visibility: visible !important }
 }
