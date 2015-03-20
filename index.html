@@ -299,19 +299,19 @@
 
         function scrollDown() {
           if ($(window).scrollTop() < 500){
-            $('html, body').animate({ scrollTop: 600 }, 1800);
+            $('html, body').animate({ scrollTop: 600 }, 1000);
           }
 // til gidole
           else if ($(window).scrollTop() > 500 && $(window).scrollTop() < 1100){
-            $('html, body').animate({ scrollTop: 1200 }, 1800);
+            $('html, body').animate({ scrollTop: 1200 }, 1000);
           }
 // til design
           else if($(window).scrollTop() > 1100 && $(window).scrollTop() < 1700){
-            $('html, body').animate({ scrollTop: 1800 }, 1800);
+            $('html, body').animate({ scrollTop: 1800 }, 2000);
           }
 // til ae
           else if($(window).scrollTop() > 1700 && $(window).scrollTop() < 2300){
-            $('html, body').animate({ scrollTop: 2400 }, 1800);
+            $('html, body').animate({ scrollTop: 2400 }, 1400);
           }
 // til mß
           else if($(window).scrollTop() > 2300){
@@ -325,19 +325,19 @@
         function scrollUp() {
 // til menu
           if ($(window).scrollTop() < 700){
-            $('html, body').animate({ scrollTop: 0 }, 1800);
+            $('html, body').animate({ scrollTop: 0 }, 1000);
           }
 // til gidole
           else if ($(window).scrollTop() > 700 && $(window).scrollTop() < 1300){
-            $('html, body').animate({ scrollTop: 600 }, 1800);
+            $('html, body').animate({ scrollTop: 600 }, 1000);
           }
 // til design
           else if($(window).scrollTop() > 1300 && $(window).scrollTop() < 1900){
-            $('html, body').animate({ scrollTop: 1200 }, 1800);
+            $('html, body').animate({ scrollTop: 1200 }, 2000);
           }
 // til ae
           else if($(window).scrollTop() > 1900 && $(window).scrollTop() < 2500){
-            $('html, body').animate({ scrollTop: 1800 }, 1800);
+            $('html, body').animate({ scrollTop: 1800 }, 1400);
           }
 // til mß
           else if($(window).scrollTop() > 2500){
@@ -351,12 +351,12 @@
         $("#downarrow").on("click touch", function() {
           scrollDown();
           if ($(window).scrollTop() == 3300){
-            $(this).addClass("shake").delay(500).queue(function(next){
+            $(this).addClass("shake").delay(300).queue(function(next){
               $(this).removeClass("shake");
               next();
             });
           } else {
-            $(this).addClass("pressed").delay(200).queue(function(next){
+            $(this).addClass("pressed").delay(100).queue(function(next){
               $(this).removeClass("pressed");
               next();
             });
@@ -365,12 +365,12 @@
         $("#uparrow").on("click touch", function() {
           scrollUp();
           if ($(window).scrollTop() == 0){
-            $(this).addClass("shake").delay(500).queue(function(next){
+            $(this).addClass("shake").delay(300).queue(function(next){
               $(this).removeClass("shake");
               next();
             });
           } else {
-            $(this).addClass("pressed").delay(200).queue(function(next){
+            $(this).addClass("pressed").delay(100).queue(function(next){
               $(this).removeClass("pressed");
               next();
             });

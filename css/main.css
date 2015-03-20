@@ -43,12 +43,12 @@ html {
 .pressed {
   transform: translateY(4px);
   -webkit-transform: translateY(4px);
-  transition: .2s ease;
+  transition: .1s ease;
 }
 .shake {
   transform: scale(0);
   -webkit-transform: scale(0);
-  transition: .5s ease;
+  transition: .3s ease;
 }
 .inverted, .inverted a {
   color: hsl(201, 6%, 25%);
