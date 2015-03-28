@@ -199,6 +199,7 @@ a:hover, #sharetitle:hover {
           transition: background .2s ease;
 }
 .inverted a:hover {
+  color: black;
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 6.9%, hsl(321, 100%, 70%) 7%, hsl(321, 100%, 70%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
   background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 6.9%,hsl(321, 100%, 70%) 7%,hsl(321, 100%, 70%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
 }
