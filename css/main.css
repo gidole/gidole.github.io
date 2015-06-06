@@ -38,6 +38,8 @@ html {
   font-family: 'gidoleregular';
   color: white;
   background-color: hsl(201, 6%, 25%);
+  background: url('/img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   font-size: 100%;
 }
 .pressed {
@@ -51,7 +53,7 @@ html {
   transition: .3s ease;
 }
 .inverted, .inverted a {
-  color: hsl(201, 6%, 25%);
+  color: hsl(201, 10%, 10%);
   letter-spacing: .02em;
 }
 .inverted h2 {
@@ -183,10 +185,8 @@ a {
   text-decoration: none;
 }
 a, #sharetitle {
-  background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 74.9%, hsl(321, 100%, 40%) 75%, hsl(321, 100%, 40%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
-  background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 74.9%,hsl(321, 100%, 40%) 75%,hsl(321, 100%, 40%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
-  -webkit-transition: background .2s ease;
-          transition: background .2s ease;
+  /*background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 74.9%, hsl(321, 100%, 40%) 75%, hsl(321, 100%, 40%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
+  background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 74.9%,hsl(321, 100%, 40%) 75%,hsl(321, 100%, 40%) 88%,hsla(321, 100%, 40%, 0) 88.1%);*/
 }
 a:hover, #sharetitle:hover {
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 6.9%, hsl(321, 100%, 40%) 7%, hsl(321, 100%, 40%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
@@ -195,8 +195,6 @@ a:hover, #sharetitle:hover {
 .inverted a {
   background: -webkit-linear-gradient(top, hsla(321, 100%, 40%, 0) 74.9%, hsl(321, 100%, 70%) 75%, hsl(321, 100%, 70%) 88%, hsla(321, 100%, 40%, 0) 88.1%);
   background: linear-gradient(to bottom, hsla(321, 100%, 40%, 0) 74.9%,hsl(321, 100%, 70%) 75%,hsl(321, 100%, 70%) 88%,hsla(321, 100%, 40%, 0) 88.1%);
-  -webkit-transition: background .2s ease;
-          transition: background .2s ease;
 }
 .inverted a:hover {
   color: black;
@@ -243,10 +241,10 @@ svg {
 }
 #navibuttons > div {
   margin: 0 auto;
-  background-color: hsl(201, 6%, 30%);
+  /*background-color: hsl(201, 6%, 30%);
   box-shadow: 0 0 4vw rgba(0, 0, 0, 0.2);
   border-top-left-radius: .8em;
-  border-top-right-radius: .8em;
+  border-top-right-radius: .8em;*/
   padding: 0 .5em;
 }
 #navibuttons span {
@@ -316,7 +314,7 @@ nav > div {
   overflow: hidden;
   left: -10000px;
   right: -10000px;
-  color: hsl(201, 6%, 20%);
+  color: hsl(201, 10%, 10%);
 }
 #worldcenter {
   position: relative;
@@ -324,19 +322,15 @@ nav > div {
   white-space: nowrap;
 }
 #dot {
-  color:hsla(201, 6%, 50%, 0.5);
+  color:white;
 }
 #duo {
   height: 100%;
 }
 .goo path, .gooload path {
   fill: none;
-  stroke: hsla(201, 6%, 50%, 0.5);
+  stroke: hsl(201, 10%, 10%);
   stroke-width: 6;
-}
-.gooload path {
-  stroke-width: 7;
-  stroke: hsla(201, 6%, 50%, 0.9);
 }
 #ampstroke path {
   fill: none;
@@ -458,4 +452,3 @@ nav > div {
     h2,
     h3 {  page-break-after: avoid }
 }
-
