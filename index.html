@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,22 +34,12 @@
 
     <link rel="stylesheet" href="css/main.css">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#cc0085">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#cc0085">
@@ -61,6 +51,18 @@
     <![endif]-->
     <noscript class="browserupgrade">Turn on javascript. Just want the download? Here: <a href="https://github.com/andreaslarsen/Gidole/blob/master/gidole.zip?raw=true">zip</a></noscript>
 
+<!-- BACKGROUND -->
+    <div id="background" data-0="opacity[cubic]:1;
+    -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-filter: blur(0px);
+      filter: blur(0px);"
+    data-600="-webkit-filter[cubic]: blur(20px);
+      -moz-filter[cubic]: blur(20px);
+      -o-filter[cubic]: blur(20px);
+      -ms-filter[cubic]: blur(20px);
+      filter[cubic]: blur(20px);"></div>
 
 <!-- JUMBO -->
     <div id="uno" data-0="opacity[cubic]:1;" data-300="opacity[cubic]:0;">
@@ -79,10 +81,11 @@
     <div class="wrap" data-900="opacity[cubic]:0" data-1200="opacity[cubic]:1" data-1500="opacity[cubic]:0;">
       <div>
         <h2>Gidole</h2>
-        <p>Gidole is a small, beautiful mountain town in southern Ethiopia where I grew up.</p>
+        <p>Gidole is a small, beautiful mountain town in southern Ethiopia where I grew up.
+        <br>The font (my first) is a humanist and minimal DIN.</p>
       </div>
     </div>
-    <div id="world" class="behind" data-600="opacity[quadratic]:0;" data-1200="transform[inoverkvart]:scale(1);opacity[quadratic]:1;" data-1500="opacity:0;transform:scale(3)">
+    <div id="world" class="behind" data-300="opacity[cubic]:0;" data-1200="transform[inoverkvart]:scale(1);opacity[cubic]:1;" data-1500="opacity:0;transform:scale(3)">
       <div id="worldcenter">
 ...........................................<br>
 ................···········................<br>
@@ -208,7 +211,7 @@
 
 
 <!-- NAV BUTTONS -->
-    <div class="ffff" id="navibuttons"><div><span id="uparrow">↑</span><span id="downarrow">↓</span></div></div>
+    <div class="ffff" id="navibuttons" data-100="@switch: 0;" data-3020="@switch: 1;"><div><span id="uparrow">↑</span><span id="downarrow">↓</span></div></div>
 
 <!-- COUNTER -->
 <div class="counter ffff">
