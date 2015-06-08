@@ -376,7 +376,6 @@ svg {
   -webkit-align-items: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  pointer-events: none;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -389,6 +388,9 @@ svg {
   pointer-events: all;
   cursor: pointer;
   padding: 0 0.1em;
+}
+#navibuttons #backtomenu {
+  font-size: 0.62em;
 }
 #navibuttons[switch="1"] {
   color: hsl(201, 10%, 10%);
@@ -406,7 +408,6 @@ svg {
   filter: alpha(opacity=100);
   font-size: 0.62em;
   line-height: 1.1em;
-  pointer-events: none;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
@@ -435,7 +436,7 @@ svg {
 nav a {
   margin: 0 auto;
 }
-.skrollable-between {
+.skrollable-between.clickable, .skrollable-after.clickable.inverted  {
   pointer-events: all;
 }
 nav {
@@ -467,9 +468,7 @@ nav > div {
   color: hsl(201, 10%, 10%);
 }
 #worldcenter {
-  position: relative;
   margin: 0 auto;
-  white-space: nowrap;
 }
 #dot {
   color: white;
@@ -507,7 +506,6 @@ nav > div {
   transition-timing-function: cubic-bezier(1.000, 0.000, 1.000, 1.000);
   /* custom */
   opacity: 1;
-  pointer-events: none;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 20% 0px rgba(0, 0, 0, 0);
 }
