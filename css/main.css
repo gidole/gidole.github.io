@@ -465,20 +465,20 @@ nav > div {
   overflow: hidden;
   left: -10000px;
   right: -10000px;
-  color: hsl(201, 10%, 10%);
+  color: rgba(255,255,255,0.15);
 }
 #worldcenter {
   margin: 0 auto;
 }
 #dot {
-  color: white;
+  color: rgba(255,255,255,0.5);
 }
 #duo {
   height: 100%;
 }
 .goo path, .gooload path {
   fill: none;
-  stroke: hsl(201, 10%, 10%);
+  stroke: white;
   stroke-width: 6;
 }
 #ampstroke path {
