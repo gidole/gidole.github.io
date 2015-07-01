@@ -54,13 +54,11 @@
   <noscript class="browserupgrade">Turn on javascript. Just want the download? Here: <a href="https://github.com/andreaslarsen/Gidole/blob/master/gidole.zip?raw=true">zip</a></noscript>
 
   <!-- BACKGROUND -->
-  <div id="background"
-data-0="opacity[cubic]:1;
+  <div id="background" data-0="opacity[cubic]:1;
     -webkit-filter: blur(0px) saturate(1);
       -moz-filter: blur(0px) saturate(1);
       -ms-filter: blur(0px) saturate(1);
-      filter: blur(0px) saturate(1);"
-data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
+      filter: blur(0px) saturate(1);" data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
       -moz-filter[cubic]: blur(20px) saturate(1.2);
       -ms-filter[cubic]: blur(20px) saturate(1.2);
       filter[cubic]: blur(20px) saturate(1.2);"></div>
@@ -114,7 +112,8 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
       <br> .@···········@@@@@@@@@@@@@@@@@@@@·@·····@·.
       <br> .·············@@@@@@@@@@@@@@@@@@@@········.
       <br> .··············@@@@@@@@@@@@@@@@@@@@·······.
-      <br> .···············@@@@·@@@@@@@@@@<span id="dot">@</span>@@@·······.
+      <br> .···············@@@@·@@@@@@@@@@
+      <span id="dot">@</span>@@@·······.
       <br> .······················@@@@@@@@@@@········.
       <br> ..@@···················@@@@@@@@@@········..
       <br> ..@@@··················@@@@@@@@@·········..
@@ -196,7 +195,7 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
   <div id="slut" class="wrap inverted ff clickable" data-3000="opacity:0" data-3200="opacity:1">
     <div>
       <h2>The End</h2>
-      <p>More info + all glyphs in the pdf specimen. Gidole has recently been featured by <a href="https://github.com/showcases/fonts?s=stars">GitHub</a> (8th on the list and rising thanks to you).</p>
+      <p>More info + all glyphs in the <a href="https://github.com/larsenwork/Gidole/blob/master/Resources/GidoleFont/Readme%2BCharacters.pdf?raw=true">pdf</a>. Gidole has recently been featured by <a href="https://github.com/showcases/fonts?s=stars">GitHub</a> (8th on the list and rising thanks to you).</p>
     </div>
   </div>
 
@@ -232,16 +231,21 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
       <div id="close">
         <span>×</span>
       </div>
-      <h2>Thank you</h2>
-      <p>» <a href="https://www.ammado.com/community/153173/donate" target="_blank">Donate</a> to the Ethiopian Red Cross Society
-        <br>» Share on
-        <a href="https://twitter.com/intent/tweet?text=Gidole+-+Open+Source+Modern+DIN+by+@larsenwork&url=https%3A%2F%2Fgidole.github.io" target="_blank">Twitter</a>,
-        <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank">Facebook</a>,
-        <a href="https://plus.google.com/share?url=http://gidole.github.io" target="_blank">Google</a> +
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://gidole.github.io" target="_blank">Linkedin</a>
-        <br>» Star/like on <a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a> + <a target="_blank" href="http://behance.net/gallery/22341011/Gidole-Free-Typeface">Bēhance</a>
-        <br><a href="https://twitter.com/intent/follow?screen_name=larsenwork" target="_blank">Follow</a> me for updates
+      <h3>Thank and help me</h3>
+      <p>
+        <small>
+          » <a href="https://www.ammado.com/community/153173/donate" target="_blank">Donate</a> to the Ethiopian Red Cross Society
+          <br>» <a href="https://twitter.com/intent/tweet?text=Gidole+-+Open+Source+Modern+DIN+by+@larsenwork&url=https%3A%2F%2Fgidole.github.io" target="_blank">Tweet</a>,
+          <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank">like</a> or
+          <a href="https://plus.google.com/share?url=http://gidole.github.io" target="_blank">+1</a>
+          <br>» Star on <a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a> - currently 8th on <a href="https://github.com/showcases/fonts?s=stars" target="_blank">this list</a> and rising thanks to you
+        </small>
       </p>
+    </div>
+    <div id="me">
+      <small>
+        <a href="http://twitter.com/larsenwork" target="_blank"><img id="lazyme" src="" data-src="img/face.png" />@larsenwork</a>
+      </small>
     </div>
   </div>
 
@@ -254,6 +258,8 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
   <script>
     $(window).load(function() {
       $("#loadfade").addClass("loaded");
+      $("#lazyme").attr('src', 'img/face.png');
+      // $('#background').css('background-image', 'url("/img/bg.jpg")');
     });
     $(function() {
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -284,7 +290,8 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
         e.preventDefault();
       });
       $("#get").on("click touch", function() {
-        $("#thankyou").removeClass("invisible").delay(500).queue(function(next) {
+        $(".counter").addClass("invisible");
+        $("#thankyou").removeClass("invisible").delay(1000).queue(function(next) {
           window.location.href = 'https://github.com/andreaslarsen/Gidole/blob/master/gidole.zip?raw=true';
           next();
         });
@@ -292,6 +299,7 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
       });
       $("#close").on("click touch", function() {
         $("#thankyou").addClass("invisible");
+        $(".counter").removeClass("invisible");
         $(this).addClass("pressed").delay(200).queue(function(next) {
           $(this).removeClass("pressed");
           next();
@@ -412,7 +420,7 @@ data-600="-webkit-filter[cubic]: blur(20px) saturate(1.2);
             next();
           });
         }
-    	});
+      });
 
 
       $(document.documentElement).keydown(function(event) {
