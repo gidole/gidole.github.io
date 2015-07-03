@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @font-face {
   font-family: 'gidoleregular';
-  src: url('/fonts/gidole-regular.woff') format('woff'), url('/fonts/gidole-regular.ttf') format('truetype');
+  src: url('/fonts/gidole.woff') format('woff'), url('/fonts/gidole.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
