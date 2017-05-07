@@ -230,20 +230,30 @@
       <div id="close">
         <span>×</span>
       </div>
-      <h3>Thank you</h3>
+      <h3>Thank you! &#128591;</h3>
       <p>
         <small>
-          » <a href="https://www.ammado.com/community/153173/donate" target="_blank">Donate</a> to the Ethiopian Red Cross Society
-          <br>» <a href="https://twitter.com/intent/tweet?text=Font:+Gidole+-+a+highly+recommended+open+source+modern+DIN+by+@larsenwork&url=https%3A%2F%2Fgidole.github.io" target="_blank">Tweet</a>,
-          <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=http%3A%2F%2Fgidole.github.io" target="_blank">like</a> or
-          <a href="https://plus.google.com/share?url=http://gidole.github.io" target="_blank">+1</a>
-          <br>» Star on <a href="http://github.com/gidole/Gidole-Typefaces" target="_blank">Github</a> - currently 7th on <a href="https://github.com/showcases/fonts?s=stars" target="_blank">this list</a> and rising thanks to you!
+          <ul>
+            <li><a href="https://www.betterplace.org/en/fundraising-events/29774-larsenwork-paying-it-forward-ethiopian-charities" target="_blank">Donate</a> to a Ethiopian charity</li>
+            <li><a href="https://twitter.com/intent/tweet?text=Font:+Gidole+-+a+highly+recommended+open+source+modern+DIN+by+@larsenwork&url=https%3A%2F%2Fgidole.github.io" target="_blank">Tweet</a> and help spread the word</li>
+            <li><a href="https://github.com/larsenwork/Gidole" target="_blank">Star on Github</a>—currently 7th on <a href="https://github.com/showcases/fonts?s=stars" target="_blank">this list</a> thanks to you!</li>
+          </ul>
         </small>
       </p>
     </div>
     <div id="me">
       <small>
-        <a href="http://twitter.com/larsenwork" target="_blank"><img id="lazyme" src="" data-src="img/face.png" />@larsenwork</a>
+        <a href="http://twitter.com/larsenwork" target="_blank">
+          <svg viewBox="0 0 40 40">
+            <defs>
+              <mask id="maskCircle" x="0" y="0" width="40" height="40" >
+                <circle cx="20" cy="20" r="20" style="stroke:none; fill: #fff"/>
+              </mask>
+            </defs>
+            <image xlink:href="/img/andreas.jpg" width="40" height="40" style="mask: url(#maskCircle)" />
+          </svg>
+          @larsenwork
+        </a>
       </small>
     </div>
   </div>
@@ -257,7 +267,6 @@
   <script>
     $(window).load(function() {
       $("#loadfade").addClass("loaded");
-      $("#lazyme").attr('src', 'img/face.png');
       // $('#background').css('background-image', 'url("/img/bg.jpg")');
     });
     $(function() {
